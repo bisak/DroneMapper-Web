@@ -2,12 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18c67967-c78a-4fab-b5d8-8cb962107451" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations/DroneMapper.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Apache_Localhost.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getimages.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/libs/exif.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploader/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploader/.idea/jQuery-File-Upload-9.12.5.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploader/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploader/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploader/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploader/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploader/server/gae-go/app.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploader/server/gae-go/app/main.go" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploader/server/gae-go/static/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploader/server/gae-go/static/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploader/server/gae-python/app.yaml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploader/server/gae-python/main.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploader/server/gae-python/static/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/uploader/server/gae-python/static/robots.txt" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/uploader/index.html" afterPath="$PROJECT_DIR$/uploader/uploader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/DroneMapper.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/DroneMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app.js" afterPath="$PROJECT_DIR$/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/map-style.css" afterPath="$PROJECT_DIR$/styles/map-style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploader/js/main.js" afterPath="$PROJECT_DIR$/uploader/js/main.js" />
     </list>
     <ignored path="DroneMapper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,95 +45,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="497">
+              <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+              <folding>
+                <marker date="1470516367960" expanded="true" signature="236:242" ph="©" />
+                <marker date="1470516367960" expanded="true" signature="521:527" ph="©" />
+                <marker date="1470516367960" expanded="true" signature="799:805" ph="©" />
+                <marker date="1470516367960" expanded="true" signature="1075:1081" ph="©" />
+                <marker date="1470516367960" expanded="true" signature="1359:1365" ph="©" />
+                <marker date="1470516367960" expanded="true" signature="1661:1667" ph="©" />
+                <marker date="1470516367960" expanded="true" signature="1833:1839" ph="©" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="48" column="34" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map-style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/map-style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <marker date="1470228071094" expanded="true" signature="236:242" ph="©" />
-                <marker date="1470228071094" expanded="true" signature="521:527" ph="©" />
-                <marker date="1470228071094" expanded="true" signature="799:805" ph="©" />
-                <marker date="1470228071094" expanded="true" signature="1075:1081" ph="©" />
-                <marker date="1470228071094" expanded="true" signature="1359:1365" ph="©" />
-                <marker date="1470228071094" expanded="true" signature="1661:1667" ph="©" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/uploader/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2530">
-              <caret line="63" column="7" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uploader/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.fileupload.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uploader/js/jquery.fileupload.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.fileupload-image.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/uploader/js/jquery.fileupload-image.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-663">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="-107">
+              <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -127,8 +79,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -149,9 +101,19 @@
         <option value="$PROJECT_DIR$/scripts/libs/uploadify/uploadify.php" />
         <option value="$PROJECT_DIR$/styles/style.css" />
         <option value="$PROJECT_DIR$/styles/map-style.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/scripts/app.js" />
         <option value="$PROJECT_DIR$/uploader/index.html" />
+        <option value="$PROJECT_DIR$/uploader.html" />
+        <option value="$PROJECT_DIR$/tests/testhtml.html" />
+        <option value="$PROJECT_DIR$/uploader/uploader.html" />
+        <option value="$PROJECT_DIR$/tests/buffer.txt" />
+        <option value="$PROJECT_DIR$/uploader/js/app.js" />
+        <option value="$PROJECT_DIR$/uploader/js/main.js" />
+        <option value="$PROJECT_DIR$/tests/getimages.php" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/tests/index.html" />
+        <option value="$PROJECT_DIR$/scripts/getimages.php" />
+        <option value="$PROJECT_DIR$/getimages.php" />
+        <option value="$PROJECT_DIR$/scripts/app.js" />
       </list>
     </option>
   </component>
@@ -163,8 +125,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1370" />
-    <option name="height" value="745" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -191,7 +154,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -206,7 +168,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DroneMapper" />
+              <option name="myItemId" value="htdocs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -216,7 +178,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DroneMapper" />
+              <option name="myItemId" value="htdocs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -230,7 +192,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DroneMapper" />
+              <option name="myItemId" value="htdocs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -238,7 +200,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -248,7 +214,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DroneMapper" />
+              <option name="myItemId" value="htdocs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -256,7 +222,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="php" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="files" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -266,21 +240,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="DroneMapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DroneMapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DroneMapper" />
+              <option name="myItemId" value="htdocs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -291,10 +251,11 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -302,24 +263,25 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testproj" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="options&#9;ACTION&#9;WebDeployment.Options" />
+    <property name="SearchEverywhereHistoryKey" value="live te&#9;ACTION&#9;InsertLiveTemplate&#10;local histor&#9;ACTION&#9;LocalHistory&#10;options&#9;ACTION&#9;WebDeployment.Options" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Github\DroneMapper\scripts\libs" />
-      <recent name="C:\Github\DroneMapper\styles" />
-      <recent name="C:\Github\DroneMapper\tests" />
-      <recent name="C:\Github\DroneMapper" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\images" />
-      <recent name="C:\xampp\htdocs\styles" />
-      <recent name="C:\xampp\htdocs\scripts\libs" />
-      <recent name="C:\Github\DroneMapper\tests" />
-      <recent name="C:\Github\DroneMapper\pictures" />
+      <recent name="C:\xampp\htdocs" />
+      <recent name="C:\xampp\htdocs\scripts" />
+      <recent name="C:\xampp\htdocs\tests" />
+      <recent name="C:\xampp\htdocs\DroneMapper\tests" />
+      <recent name="C:\xampp\htdocs\DroneMapper\pictures" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs" />
+      <recent name="C:\xampp\htdocs\scripts" />
+      <recent name="C:\xampp\htdocs\tests" />
+      <recent name="C:\xampp\htdocs\DroneMapper" />
+      <recent name="C:\xampp\htdocs\DroneMapper\scripts" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.DroneMapper">
@@ -376,12 +338,8 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="Uploader" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="false" uri="http://localhost/DroneMapper/uploader">
-      <method />
-    </configuration>
-    <list size="2">
+    <list size="1">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.DroneMapper" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.Uploader" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -405,20 +363,37 @@
       <workItem from="1470213550675" duration="5384000" />
       <workItem from="1470222186302" duration="420000" />
       <workItem from="1470222736017" duration="6405000" />
+      <workItem from="1470250278960" duration="20000" />
+      <workItem from="1470250328504" duration="1151000" />
+      <workItem from="1470290033544" duration="7836000" />
+      <workItem from="1470326488061" duration="4699000" />
+      <workItem from="1470340847083" duration="1458000" />
+      <workItem from="1470343082659" duration="3521000" />
+      <workItem from="1470396589933" duration="1730000" />
+      <workItem from="1470398395672" duration="676000" />
+      <workItem from="1470400022421" duration="1054000" />
+      <workItem from="1470401091035" duration="9000" />
+      <workItem from="1470402031381" duration="1987000" />
+      <workItem from="1470404765247" duration="3212000" />
+      <workItem from="1470420237126" duration="3544000" />
+      <workItem from="1470424055928" duration="5907000" />
+      <workItem from="1470434037081" duration="846000" />
+      <workItem from="1470480025636" duration="7299000" />
+      <workItem from="1470489085641" duration="8716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47715000" />
+    <option name="totallyTimeSpent" value="101380000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1370" height="745" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2533235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21669106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32763976" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -432,6 +407,9 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.php" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -449,240 +427,288 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1470228071094" expanded="true" signature="236:242" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="521:527" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="799:805" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="1075:1081" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="1359:1365" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="1661:1667" ph="©" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/map-style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1470228071094" expanded="true" signature="236:242" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="521:527" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="799:805" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="1075:1081" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="1359:1365" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="1661:1667" ph="©" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/bootstrapExample.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10251">
-          <caret line="603" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="646" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/tests.html" />
-    <entry file="file://$PROJECT_DIR$/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1470228071094" expanded="true" signature="236:242" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="521:527" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="799:805" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="1075:1081" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="1359:1365" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="1661:1667" ph="©" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/bootstrapExample.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/favicon.ico" />
-    <entry file="file://$PROJECT_DIR$/styles/theme.css" />
-    <entry file="file://$PROJECT_DIR$/images/favicon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/leaflet-providers-master/index.html" />
-    <entry file="file://$PROJECT_DIR$/tests/leaflet-providers-master/css/gh-fork-ribbon.css" />
-    <entry file="file://$PROJECT_DIR$/scripts/libs/leaflet-providers.js" />
-    <entry file="file://$PROJECT_DIR$/styles/L.Control.Locate.min.css" />
-    <entry file="file://$PROJECT_DIR$/scripts/libs/L.Control.Locate.min.js" />
-    <entry file="file://$PROJECT_DIR$/tests/photoLib/examples/css/map.css" />
-    <entry file="file://$PROJECT_DIR$/tests/photoLib/examples/norvegiana.html" />
-    <entry file="file://$PROJECT_DIR$/tests/photoLib/examples/cartodb.html" />
-    <entry file="file://$PROJECT_DIR$/pictures/testpic.JPG" />
-    <entry file="file://$PROJECT_DIR$/tests/jQuery-File-Upload-master/js/cors/jquery.xdr-transport.js" />
-    <entry file="file://$PROJECT_DIR$/tests/jQuery-File-Upload-master/js/jquery.fileupload-image.js" />
-    <entry file="file://$PROJECT_DIR$/tests/jQuery-File-Upload-master/js/main.js" />
-    <entry file="file://$PROJECT_DIR$/tests/jQuery-File-Upload-master/server/php/index.php" />
-    <entry file="file://$PROJECT_DIR$/tests/jQuery-File-Upload-master/server/php/UploadHandler.php" />
-    <entry file="file://$PROJECT_DIR$/tests/tests.html" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/libs/dropzone.js" />
-    <entry file="file://$PROJECT_DIR$/scripts/libs/jquery.uploadify.min.js" />
-    <entry file="file://$PROJECT_DIR$/scripts/libs/uploadify/jquery.uploadify.min.js" />
-    <entry file="file://$PROJECT_DIR$/scripts/libs/uploadify/uploadify.php" />
-    <entry file="file://$PROJECT_DIR$/scripts/libs/uploadify/index.php" />
-    <entry file="file://$PROJECT_DIR$/styles/leaflet.css" />
-    <entry file="file://$PROJECT_DIR$/scripts/libs/bootstrap.min.js" />
-    <entry file="file://$PROJECT_DIR$/scripts/libs/leaflet.js" />
-    <entry file="file://$PROJECT_DIR$/scripts/libs/Leaflet.fullscreen.min.js" />
     <entry file="file://$PROJECT_DIR$/styles/bootstrap.min.css" />
     <entry file="file://$PROJECT_DIR$/styles/leaflet.fullscreen.css" />
     <entry file="file://$PROJECT_DIR$/tests/bootstrapExample.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
           <caret line="44" column="33" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="33" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/basic-plus.html" />
+    <entry file="file://$PROJECT_DIR$/styles/map-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uploader/basic-plus.html">
+    <entry file="file://$PROJECT_DIR$/uploader/server/gae-python/static/favicon.ico" />
+    <entry file="file://$PROJECT_DIR$/uploader/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/js/jquery.fileupload-video.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pictures/pic.JPG" />
+    <entry file="file://$PROJECT_DIR$/tests/binaryajax.js" />
+    <entry file="file://$PROJECT_DIR$/uploader/js/jquery.fileupload-process.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/js/jquery.fileupload-jquery-ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/cors/result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/cors/postmessage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/js/jquery.iframe-transport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/test/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/testhtml.html" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="431" column="0" selection-start-line="431" selection-start-column="0" selection-end-line="431" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/pictures/pic2.jpg" />
+    <entry file="file://$PROJECT_DIR$/pictures/pic.JPG" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="996" column="0" selection-start-line="996" selection-start-column="0" selection-end-line="996" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1470228071094" expanded="true" signature="236:242" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="521:527" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="799:805" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="1075:1081" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="1359:1365" ph="©" />
-            <marker date="1470228071094" expanded="true" signature="1661:1667" ph="©" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/pictures/DJI_0004.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/uploader/server/php/files/thumbnail/DJI_0003.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/js/jquery.fileupload-image.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="48" column="34" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/uploader/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="18" column="77" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/libs/jquery-3.1.0.min.js" />
+    <entry file="file://$PROJECT_DIR$/pictures/DJI_0003.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/libs/exif.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6879">
+          <caret line="440" column="0" selection-start-line="440" selection-start-column="0" selection-end-line="440" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/index.html" />
+    <entry file="file://$PROJECT_DIR$/tests/exif.js" />
+    <entry file="file://$PROJECT_DIR$/tests/buffer.txt" />
+    <entry file="file://$PROJECT_DIR$/uploader/server/php/files/DJI_0025.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/server/php/files/DJI_0064.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getimages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/uploader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="89" column="59" selection-start-line="89" selection-start-column="59" selection-end-line="89" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/uploader/js/jquery.fileupload.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="134" column="28" selection-start-line="134" selection-start-column="22" selection-end-line="134" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/js/jquery.fileupload-validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-413">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/.jshintrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-277">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/server/php/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uploader/js/jquery.fileupload-image.js">
+    <entry file="file://$PROJECT_DIR$/uploader/server/php/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
+        <state relative-caret-position="-159">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/server/php/UploadHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22810">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/server/php/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-107">
+          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/server/php/files/DJI_0003.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/server/php/files/DJI_0014.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uploader/server/php/files/DJI_0004.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <marker date="1470516367960" expanded="true" signature="236:242" ph="©" />
+            <marker date="1470516367960" expanded="true" signature="521:527" ph="©" />
+            <marker date="1470516367960" expanded="true" signature="799:805" ph="©" />
+            <marker date="1470516367960" expanded="true" signature="1075:1081" ph="©" />
+            <marker date="1470516367960" expanded="true" signature="1359:1365" ph="©" />
+            <marker date="1470516367960" expanded="true" signature="1661:1667" ph="©" />
+            <marker date="1470516367960" expanded="true" signature="1833:1839" ph="©" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/map-style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uploader/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2530">
-          <caret line="63" column="7" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
