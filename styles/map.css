@@ -1,27 +1,9 @@
 #map {
     width: 1000px;
     height: 550px;
-    margin-top: 80px;
     border-radius: 5px;
     overflow: hidden;
     /*Bug? workaraund found on  http://stackoverflow.com/questions/8705249/css-border-radius-not-trimming-image-on-webkit */
     perspective: 1px;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
-}
-
-
-#map:-moz-full-screen {
-    margin: 0;
-}
-
-#map:-webkit-full-screen {
-    margin: 0;
-}
-
-#map:fullscreen {
-    margin: 0;
-}
-
-#map:-ms-fullscreen {
-    margin: 0;
 }

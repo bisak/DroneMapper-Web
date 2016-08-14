@@ -17,8 +17,11 @@
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
           rel='stylesheet'/>
     <link href="styles/style.css" rel="stylesheet">
-    <link href="styles/map-style.css" rel="stylesheet">
+    <link href="styles/map.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css"/>
+    <link rel="stylesheet" href="styles/signin.css">
 
+    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"
             integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -26,7 +29,9 @@
     <script src="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.js"
             charset="utf-8"></script>
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-    <script src="../scripts/libs/exif.js"></script>
+    <script src="/scripts/libs/exif.js"></script>
+    <script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
+    <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
 
 </head>
 
@@ -42,22 +47,36 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">DroneMapper</a>
+            <a class="navbar-brand" href="/">DroneMapper</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="uploader/uploader.html">Upload</a></li>
-
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="uploader.html">Upload</a></li>
+                <li><a href="signin.html" id="signInLinkButton" style="display: none;">Sign in</a></li>
+                <li><a href="#" id="signOutButton" style="display: none;">Sign out</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
 
-<div class="container" id="mapContainer">
-    <div id="map"></div>
 
+<div class="container" id="mapContainer">
+    <h3 style="margin-top: 20px">DroneMapper</h3>
+    <div id="map"></div>
 </div><!-- /.container -->
+
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-filter=":even">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+
 <script src="scripts/app.js"></script>
+<script src="/scripts/map.js"></script>
 </body>
 </html>

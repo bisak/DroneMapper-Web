@@ -13,19 +13,24 @@
     <!-- Bootstrap styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Generic page styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="uploader/css/style.css">
     <!-- blueimp Gallery styles -->
     <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
     <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
-    <link rel="stylesheet" href="css/jquery.fileupload.css">
-    <link rel="stylesheet" href="css/jquery.fileupload-ui.css">
+    <link rel="stylesheet" href="uploader/css/jquery.fileupload.css">
+    <link rel="stylesheet" href="uploader/css/jquery.fileupload-ui.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css"/>
+    <link rel="stylesheet" href="styles/signin.css">
+
     <!-- CSS adjustments for browsers with JavaScript disabled -->
     <noscript>
-        <link rel="stylesheet" href="css/jquery.fileupload-noscript.css">
+        <link rel="stylesheet" href="uploader/css/jquery.fileupload-noscript.css">
     </noscript>
     <noscript>
-        <link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css">
+        <link rel="stylesheet" href="uploader/css/jquery.fileupload-ui-noscript.css">
     </noscript>
+    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+    <script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
 </head>
 <body>
 <div class="navbar navbar-default navbar-fixed-top">
@@ -37,12 +42,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">DroneMapper</a>
+            <a class="navbar-brand" href="/">DroneMapper</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
                 <li class="active"><a href="">Upload</a></li>
+                <li><a href="signin.html" id="signInLinkButton" style="display: none;">Sign in</a></li>
+                <li><a href="#" id="signOutButton" style="display: none;">Sign out</a></li>
+
             </ul>
         </div>
     </div>
@@ -187,7 +195,7 @@
 </script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
-<script src="js/vendor/jquery.ui.widget.js"></script>
+<script src="uploader/js/vendor/jquery.ui.widget.js"></script>
 <!-- The Templates plugin is included to render the upload/download listings -->
 <script src="//blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
 <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
@@ -199,26 +207,29 @@
 <!-- blueimp Gallery script -->
 <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
 <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-<script src="js/jquery.iframe-transport.js"></script>
+<script src="uploader/js/jquery.iframe-transport.js"></script>
 <!-- The basic File Upload plugin -->
-<script src="js/jquery.fileupload.js"></script>
+<script src="uploader/js/jquery.fileupload.js"></script>
 <!-- The File Upload processing plugin -->
-<script src="js/jquery.fileupload-process.js"></script>
+<script src="uploader/js/jquery.fileupload-process.js"></script>
 <!-- The File Upload image preview & resize plugin -->
-<script src="js/jquery.fileupload-image.js"></script>
+<script src="uploader/js/jquery.fileupload-image.js"></script>
 <!-- The File Upload audio preview plugin -->
-<script src="js/jquery.fileupload-audio.js"></script>
+<script src="uploader/js/jquery.fileupload-audio.js"></script>
 <!-- The File Upload video preview plugin -->
-<script src="js/jquery.fileupload-video.js"></script>
+<script src="uploader/js/jquery.fileupload-video.js"></script>
 <!-- The File Upload validation plugin -->
-<script src="js/jquery.fileupload-validate.js"></script>
+<script src="uploader/js/jquery.fileupload-validate.js"></script>
 <!-- The File Upload user interface plugin -->
-<script src="js/jquery.fileupload-ui.js"></script>
+<script src="uploader/js/jquery.fileupload-ui.js"></script>
 <!-- The main application script -->
-<script src="js/main.js"></script>
+<script src="uploader/js/main.js"></script>
 <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9 -->
 <!--[if (gte IE 8)&(lt IE 10)]>
-<script src="js/cors/jquery.xdr-transport.js"></script>
+<script src="uploader/js/cors/jquery.xdr-transport.js"></script>
 <![endif]-->
+
+<script src="/scripts/app.js"></script>
+
 </body>
 </html>
