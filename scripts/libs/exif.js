@@ -585,7 +585,7 @@
                     return vals;
                 }
 
-            case 4: // long, 32 bit int
+            case 4: // longt, 32 bit int
                 if (numValues == 1) {
                     return file.getUint32(entryOffset + 8, !bigEnd);
                 } else {
@@ -596,7 +596,7 @@
                     return vals;
                 }
 
-            case 5:    // rational = two long values, first is numerator, second is denominator
+            case 5:    // rational = two longt values, first is numerator, second is denominator
                 if (numValues == 1) {
                     numerator = file.getUint32(valueOffset, !bigEnd);
                     denominator = file.getUint32(valueOffset+4, !bigEnd);

@@ -11,10 +11,12 @@ let map = L.map('map', {
     zoom: 7,
     layers: outdoors,
     fullscreenControl: true,
+    minZoom: 3,
+    inertiaDeceleration: 10000
 });
 
 
-let lc = L.control.locate({
+L.control.locate({
     strings: {
         title: "Locate",
     },
@@ -35,59 +37,44 @@ let baseMaps = {
 };
 
 L.control.layers(baseMaps).addTo(map);
-
-
-/*function loadImages(images) {
-    let imgArray = [];
-
-    images.forEach((src, index) => {
-        let img = new Image();
-        img.src = src;
-        imgArray.push(img);
-    });
-
-    imgArray.forEach((img) => {
-        img.onload = function () {
-            EXIF.getData(img, function () {
-                let imageLat = EXIF.getTag(this, 'GPSLatitude');
-                let imageLong = EXIF.getTag(this, 'GPSLongitude');
-                let imageAlt = EXIF.getTag(this, 'GPSAltitude');
-                let imageName = this.src.split("/").reverse()[0].split(".")[0];
-
-                imageLat = imageLat[0].numerator + imageLat[1].numerator /
-                    (60 * imageLat[1].denominator) + imageLat[2].numerator / (3600 * imageLat[2].denominator);
-                imageLong = imageLong[0].numerator + imageLong[1].numerator /
-                    (60 * imageLong[1].denominator) + imageLong[2].numerator / (3600 * imageLong[2].denominator);
-                imageAlt = imageAlt.numerator / imageAlt.denominator;
-
-                let imageDisplayString = '<h4>' + imageName + '&nbsp;&nbsp;&nbsp;Altitude: ' + imageAlt + 'm.' + '</h4>' + '<img src="' + this.src + '" alt="Cool Photo" style="border-radius: 5px;" height="360" width="640">';
-
-
-                L.marker([imageLat, imageLong])
-                    .bindPopup(imageDisplayString, {
-                        maxWidth: 1920,
-                        autoPanPadding: L.point(50, 50)
-                    })
-                    .addTo(map)
-            });
-        };
-    });
-}*/
+map.setMaxBounds([[90, -180], [-90, 180]]);
 
 firebase.database().ref().child("images/").on('child_added',
     function (snapshot) {
         let imageUrl = snapshot.val().url;
         let imageName = snapshot.val().name;
         let imageLat = snapshot.val().lat;
-        let imageLong = snapshot.val().long;
+        let imageLong = snapshot.val().longt;
         let imageAlt = snapshot.val().alt;
 
-        let imageDisplayString = '<h4>' + imageName + '&nbsp;&nbsp;&nbsp;Altitude: ' + imageAlt + 'm.' + '</h4>' + '<img src="' + imageUrl + '" alt="Cool Photo" style="border-radius: 5px;" height="360" width="640">';
+        let pictureWidth = Math.round($(document).width() / 2.2);
+        let pictureHeight = Math.round($(document).height() / 2.2);
+
+        if (pictureHeight > pictureWidth) {
+            pictureHeight = Math.round($(document).width() / 2.2);
+            pictureWidth = Math.round($(document).height() / 2.2);
+        }
+        //let imageDisplayString = '<h4>' + imageName + '&nbsp;&nbsp;&nbsp;Altitude: ' + imageAlt + 'm.' + '</h4>' + '<img src=' + imageUrl + ' style="height="' + pictureHeight + 'px;' + ' width=' + pictureWidth + 'px;' + '" >';
+
+        let imageDisplayString = '<h4>' + imageName + '&nbsp;&nbsp;&nbsp;Altitude: ' + imageAlt + 'm.' + '</h4>' + '<div class="link" style="height:' + pictureHeight + 'px; width:' + pictureWidth + 'px;"><a href="' + imageUrl + '"><img src=' + imageUrl + ' style="height:' + pictureHeight + 'px;' + ' width:' + pictureWidth + 'px;' + '" ></a></div>';
 
         L.marker([imageLat, imageLong])
             .bindPopup(imageDisplayString, {
                 maxWidth: 1920,
-                autoPanPadding: L.point(50, 50)
+                autoPanPadding: L.point(50, 50),
+                keepInView: true
             })
-            .addTo(map)
+            .addTo(map);
+
+
     });
+
+$("#map").on('click', '.link', function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+});
+

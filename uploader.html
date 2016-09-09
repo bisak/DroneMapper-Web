@@ -18,6 +18,7 @@
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"
             integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
     <script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
     <script src="/scripts/libs/exif.js"></script>
@@ -26,34 +27,35 @@
 
 </head>
 <body>
-<div class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target=".navbar-fixed-top .navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/">DroneMapper</a>
         </div>
-        <div class="navbar-collapse collapse">
+        <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
-                <li class="active"><a href="">Upload</a></li>
+                <li class="active"><a href="uploader.html">Upload</a></li>
                 <li><a href="signin.html" id="signInLinkButton" style="display: none;">Sign in</a></li>
                 <li><a href="#" id="signOutButton" style="display: none;">Sign out</a></li>
-
             </ul>
-        </div>
+        </div><!--/.nav-collapse -->
     </div>
-</div>
+</nav>
 <div class="container" style="margin-top: 3%;">
     <label class="btn btn-default" for="uploadSlector">
         <input id="uploadSlector" type="file" multiple style="display:none;">
         Upload
     </label>
+
     <span class='label label-info' id="upload-file-info"></span>
+
 
     <div id="progressBarContainer" class="progress" style="visibility:hidden; width: 20%; margin-top: 20px;">
         <div id="uploadProgressBar" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
@@ -63,7 +65,7 @@
     </div>
 
 
-    <div id="blueimp-gallery" class="blueimp-gallery">
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
         <div class="slides"></div>
         <h3 class="title"></h3>
         <a class="prev">‹</a>
@@ -77,19 +79,12 @@
 
     </div>
 
+
+
+
 </div>
 
 <script src="scripts/libs/blueimp-gallery.min.js"></script>
-<script>
-    document.getElementById('links').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-                link = target.src ? target.parentNode : target,
-                options = {index: link, event: event},
-                links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-    };
-</script>
 <script src="/scripts/app.js"></script>
 <script src="/scripts/upload.js"></script>
 

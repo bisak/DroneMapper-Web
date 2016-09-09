@@ -1,9 +1,8 @@
 #map {
-    width: 1000px;
     height: 550px;
     border-radius: 5px;
     overflow: hidden;
-    /*Bug? workaraund found on  http://stackoverflow.com/questions/8705249/css-border-radius-not-trimming-image-on-webkit */
-    perspective: 1px;
+    z-index: 0;
+    /*Bug? workaraund found on  http://stackoverflow.com/questions/8705249/css-border-radius-not-trimming-image-on-webkit <-- this bugs mozilla. http://stackoverflow.com/a/32144276/4971352 another fix here*/
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
 }

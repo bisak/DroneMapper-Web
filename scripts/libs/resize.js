@@ -1,37 +1,23 @@
 window.resize = (function () {
-
     'use strict';
-
     function Resize() {
-        //
     }
 
     Resize.prototype = {
-
-        init: function (outputQuality) {
-            this.outputQuality = (outputQuality === 'undefined' ? 0.8 : outputQuality);
+        init: function () {
         },
-
-        photo: function (file, maxSize, outputType, callback) {
-
+        photo: function (file, maxSize, callback) {
             var _this = this;
-
             var reader = new FileReader();
             reader.onload = function (readerEvent) {
-                _this.resize(readerEvent.target.result, maxSize, outputType, callback);
+                _this.resize(readerEvent.target.result, maxSize, callback);
             };
             reader.readAsDataURL(file);
-
         },
-
-        resize: function (dataURL, maxSize, outputType, callback) {
-
+        resize: function (dataURL, maxSize, callback) {
             var _this = this;
-
             var image = new Image();
-            image.onload = function (imageEvent) {
-
-                // Resize image
+            image.onload = function () {
                 var canvas = document.createElement('canvas'),
                     width = image.width,
                     height = image.height;
@@ -50,33 +36,16 @@ window.resize = (function () {
                 canvas.height = height;
                 canvas.getContext('2d').drawImage(image, 0, 0, width, height);
 
-                _this.output(canvas, outputType, callback);
+                _this.output(canvas, callback);
 
             };
             image.src = dataURL;
-
         },
-
-        output: function (canvas, outputType, callback) {
-
-            switch (outputType) {
-
-                case 'file':
-                    canvas.toBlob(function (blob) {
-                        callback(blob);
-                    }, 'image/jpeg', 0.8);
-                    break;
-
-                case 'dataURL':
-                    callback(canvas.toDataURL('image/jpeg', 0.8));
-                    break;
-
-            }
-
+        output: function (canvas, callback) {
+            canvas.toBlob(function (blob) {
+                callback(blob);
+            }, 'image/jpeg', 0.99);
         }
-
     };
-
     return Resize;
-
 }());
