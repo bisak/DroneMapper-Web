@@ -47,14 +47,21 @@ firebase.database().ref().child("images/").on('child_added',
         let imageLong = snapshot.val().longt;
         let imageAlt = snapshot.val().alt;
 
-        let pictureWidth = Math.round($(document).width() / 2.2);
+        let pictureWidth = Math.round($(document).width() /2.2);
         let pictureHeight = Math.round($(document).height() / 2.2);
 
         if (pictureHeight > pictureWidth) {
             pictureHeight = Math.round($(document).width() / 2.2);
             pictureWidth = Math.round($(document).height() / 2.2);
         }
-        //let imageDisplayString = '<h4>' + imageName + '&nbsp;&nbsp;&nbsp;Altitude: ' + imageAlt + 'm.' + '</h4>' + '<img src=' + imageUrl + ' style="height="' + pictureHeight + 'px;' + ' width=' + pictureWidth + 'px;' + '" >';
+
+        /*function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
+
+         var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
+
+         return {width: srcWidth * ratio, height: srcHeight * ratio};
+         }*/ //Implemet that maybe :):):)
+
 
         let imageDisplayString = '<h4>' + imageName + '&nbsp;&nbsp;&nbsp;Altitude: ' + imageAlt + 'm.' + '</h4>' + '<div class="link" style="height:' + pictureHeight + 'px; width:' + pictureWidth + 'px;"><a href="' + imageUrl + '"><img src=' + imageUrl + ' style="height:' + pictureHeight + 'px;' + ' width:' + pictureWidth + 'px;' + '" ></a></div>';
 

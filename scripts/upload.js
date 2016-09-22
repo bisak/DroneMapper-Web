@@ -65,7 +65,7 @@ $("#uploadSlector").change(function (evt) {
                                 imageData.thumbnailUrl = thumbnailUrl;
                                 //imageData.thumbnailPath = thumbnailPath;
 
-                                dbRef.child("images/" + fileName + "-" + pictureId).set(imageData);
+                                dbRef.child("/images/").push().set(imageData);
 
                                 $("#progressBarContainer").css("visibility", "hidden");
                                 $('#upload-file-info').css("display", "none");
@@ -79,7 +79,7 @@ $("#uploadSlector").change(function (evt) {
 });
 
 
-firebase.database().ref().child("images/").on('child_added',
+dbRef.child("images/").on('child_added',
     function (snapshot) {
         $('#links').append("<a href=" + snapshot.val().url + " title=" + snapshot.val().name + ">" +
             "<img style='width: 150px; height: 84px; margin: 1px; border-radius: 3px; ' src=" + snapshot.val().thumbnailUrl + ">" +
