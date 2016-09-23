@@ -1,13 +1,5 @@
-var dbRef = firebase.database().ref();
-var pointList = [];
-var greenIcon = L.icon({
-    iconUrl: '/dot.png',
-
-    iconSize: [10, 10],
-    iconAnchor: [5, 5],
-    popupAnchor: [10, 10]
-});
-
+let dbRef = firebase.database().ref();
+let pointList = [];
 
 
 dbRef.child("realtime-flights").on('child_added', function (snapshot) {
@@ -15,10 +7,10 @@ dbRef.child("realtime-flights").on('child_added', function (snapshot) {
     let droneLong = snapshot.val().longitude;
 
 
-    var point = new L.LatLng(droneLat, droneLong);
+    let point = new L.LatLng(droneLat, droneLong);
     pointList.push(point);
 
-    var firstpolyline = new L.Polyline(pointList, {
+    let firstpolyline = new L.Polyline(pointList, {
         color: 'orange',
         weight: 2,
         opacity: 1,

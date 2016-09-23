@@ -1,13 +1,13 @@
-var storageRef = firebase.storage().ref();
-var dbRef = firebase.database().ref();
+let storageRef = firebase.storage().ref();
+let dbRef = firebase.database().ref();
 
-var resize = new window.resize();
+let resize = new window.resize();
 resize.init();
 
 $("#uploadSlector").change(function (evt) {
     let files = evt.target.files;
 
-    for (var i = 0; i < files.length; i++) {
+    for (let i = 0; i < files.length; i++) {
         let file = evt.target.files[i];
 
         let pictureId = UUID();
