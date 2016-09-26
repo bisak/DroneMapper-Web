@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="false">
+  <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
@@ -24,5 +24,11 @@
     <orderEntry type="library" name="leaflet" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="jquery-3.1.0" level="application" />
+    <orderEntry type="library" name="jquery-3.1.0" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="leaflet" level="application" />
+    <orderEntry type="library" name="L.Control.Locate" level="application" />
+    <orderEntry type="library" name="Leaflet.fullscreen" level="application" />
+    <orderEntry type="library" name="alertify" level="application" />
   </component>
 </module>

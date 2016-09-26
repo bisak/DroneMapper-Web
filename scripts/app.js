@@ -17,13 +17,22 @@ firebase.auth().onAuthStateChanged(function (user) {
         }
         $("#signInLinkButton").hide();
         $("#signOutButton").show();
+        $("#uploadButton").show();
+        alertify.success("Logged In")
+
     } else {
+        $("#uploadButton").hide();
         $("#signOutButton").hide();
         $("#signInLinkButton").show();
     }
 });
 
 $('#signOutButton').click(function () {
-    firebase.auth().signOut();
-    alertify.success("Logged Out")
+    firebase.auth().signOut().then(function() {
+        window.location.href = "/";
+        alertify.success("Logged Out Successfully")
+    }, function(error) {
+        alertify.success("Error loogging out")
+    });
+
 });

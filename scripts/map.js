@@ -47,11 +47,11 @@ firebase.database().ref().child("images/").on('child_added',
         let imageLong = snapshot.val().longt;
         let imageAlt = snapshot.val().alt;
 
-        let pictureWidth = Math.round($(document).width() /2.2);
-        let pictureHeight = Math.round($(document).height() / 2.2);
+        let pictureWidth = Math.round($(document).width() / 2.2);
+        let pictureHeight = Math.round($(document).height() / 2.1);
 
         if (pictureHeight > pictureWidth) {
-            pictureHeight = Math.round($(document).width() / 2.2);
+            pictureHeight = Math.round($(document).width() / 2.1);
             pictureWidth = Math.round($(document).height() / 2.2);
         }
 
@@ -63,12 +63,12 @@ firebase.database().ref().child("images/").on('child_added',
          }*/ //Implemet that maybe :):):)
 
 
-        let imageDisplayString = '<h4>' + imageName + '&nbsp;&nbsp;&nbsp;Altitude: ' + imageAlt + 'm.' + '</h4>' + '<div class="link" style="height:' + pictureHeight + 'px; width:' + pictureWidth + 'px;"><a href="' + imageUrl + '"><img src=' + imageUrl + ' style="height:' + pictureHeight + 'px;' + ' width:' + pictureWidth + 'px;' + '" ></a></div>';
-
+        //let imageDisplayString = '<h4>' + imageName + '&nbsp;&nbsp;&nbsp;Altitude: ' + imageAlt + 'm.' + '</h4>' + '<div class="link" style="height:' + pictureHeight + 'px; width:' + pictureWidth + 'px;"><a href="' + imageUrl + '"><img src=' + imageUrl + ' style="height:' + pictureHeight + 'px;' + ' width:' + pictureWidth + 'px;' + '" ></a></div>';
+        let imageDisplayString = `<h4>${imageName}&nbsp;&nbsp;&nbsp;Altitude: ${imageAlt}m.</h4><div class="link" style="min-height:${pictureHeight}px; width:${pictureWidth}px;"><a href="${imageUrl}"><img src=${imageUrl} style="/*height:${pictureHeight}px; */width:${pictureWidth}px;" ></a></div>`
         L.marker([imageLat, imageLong])
             .bindPopup(imageDisplayString, {
                 maxWidth: 1920,
-                autoPanPadding: L.point(50, 50),
+                autoPanPadding: L.point(80, 80),
                 keepInView: true
             })
             .addTo(map);

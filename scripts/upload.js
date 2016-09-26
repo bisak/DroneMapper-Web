@@ -34,7 +34,7 @@ $("#uploadSlector").change(function (evt) {
                 function (snapshot) {
                     var progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
                     $("#progressBarContainer").css("visibility", "visible");
-                    $("#uploadProgressBar").css("width", progress + "%").html(progress + "%");
+                    $("#uploadProgressBar").css("width", progress + "%");
                 }, function () {
                     $('#upload-file-info').append("ERROR");
                 }, function () {
@@ -46,7 +46,6 @@ $("#uploadSlector").change(function (evt) {
                             function (snapshot) {
                                 var progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
                                 $("#progressBarContainer").css("visibility", "visible");
-                                $("#uploadProgressBar").css("width", progress + "%").html(progress + "%");
                             }, function () {
                                 $('#upload-file-info').append("ERROR");
                             }, function () {
