@@ -1,6 +1,3 @@
-/**
- * Created by Biser Atanasov on 10-Aug-16.
- */
 var config = {
     apiKey: "AIzaSyCkH7eapxWelLQqYWZel8H2vlaaQ7wGkVU",
     authDomain: "dronemapper-83b1a.firebaseapp.com",
