@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <link rel="icon" href="/img/favicon.png">
+    <title>DroneFlightMapper 2.0</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/styles/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css"/>
+
+</head>
+<body>
+<nav class="indigo" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">DroneFlightMapper</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+            <li><a href="gallery" class="galleryLinkButton">Gallery</a></li>
+            <li class="active"><a href="upload" class="uploaderLinkButton">Upload</a></li>
+            <li><a href="#" class="signOutLinkButton" style="display: none;">Log out</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="gallery" class="galleryLinkButton">Gallery</a></li>
+            <li class="active"><a href="upload" class="uploaderLinkButton">Upload</a></li>
+            <li><a href="#" class="signOutLinkButton" style="display: none;">Log out</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="section">
+        <form action="#">
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>File</span>
+                    <input id="uploadSlector" type="file" multiple>
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Upload one or more pictures">
+                </div>
+            </div>
+        </form>
+        <div class="bars">
+
+        </div>
+    </div>
+    <div class="section">
+        <div class="uploaded-images">
+
+        </div>
+    </div>
+</div>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="/scripts/libs/materialize.min.js"></script>
+<script src="/scripts/init.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
+<script src="/scripts/libs/exif.js"></script>
+<script src="/scripts/libs/canvas-to-blob.min.js"></script>
+<script src="/scripts/libs/resize.js"></script>
+<script src="/scripts/app.js"></script>
+<script src="scripts/upload.js"></script>
+
+</body>
+</html>

@@ -6,30 +6,28 @@ var config = {
 };
 firebase.initializeApp(config);
 
-firebase.auth().onAuthStateChanged(function (user) {
+let auth = firebase.auth();
+
+auth.onAuthStateChanged(function (user) {
     if (user) {
-        let url = window.location.href;
-        if (url.includes("/signin.html")) {
+        if (window.location.href.includes("login")) {
             window.location.href = "/";
         }
-        $("#signInLinkButton").hide();
-        $("#signOutButton").show();
-        $("#uploadButton").show();
-        alertify.success("Logged In")
-
+        $(".signInLinkButton").hide();
+        $(".signOutLinkButton").show();
+        $(".galleryLinkButton").show();
     } else {
-        $("#uploadButton").hide();
-        $("#signOutButton").hide();
-        $("#signInLinkButton").show();
+        $(".galleryLinkButton").hide();
+        $(".signOutLinkButton").hide();
+        $(".signInLinkButton").show();
     }
 });
 
-$('#signOutButton').click(function () {
-    firebase.auth().signOut().then(function() {
+$('.signOutLinkButton').click(function () {
+    firebase.auth().signOut().then(function () {
         window.location.href = "/";
         alertify.success("Logged Out Successfully")
-    }, function(error) {
+    }, function (error) {
         alertify.success("Error loogging out")
     });
-
 });

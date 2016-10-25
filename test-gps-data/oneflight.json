@@ -1,0 +1,452 @@
+{
+  "realtime-flights" : {
+    "-KSAkbgY3XPSw6NFyEI7" : {
+      "latitude" : 42.68173753268967,
+      "longitude" : 26.31482574731594
+    },
+    "-KSAkbw9INxdF9DDyeob" : {
+      "latitude" : 42.68173701792137,
+      "longitude" : 26.314825363998242
+    },
+    "-KSAkcAneVtGaHCCp3W4" : {
+      "latitude" : 42.68173666374725,
+      "longitude" : 26.314825463076662
+    },
+    "-KSAkcQQKpp1__FnWurP" : {
+      "latitude" : 42.68173588288018,
+      "longitude" : 26.31482463956005
+    },
+    "-KSAkcf1OPzhOlOv6Wrn" : {
+      "latitude" : 42.681737727812234,
+      "longitude" : 26.314821600411314
+    },
+    "-KSAkcueBZbb5AM1oieX" : {
+      "latitude" : 42.68173677693558,
+      "longitude" : 26.314821509279668
+    },
+    "-KSAkd9HwR296bi7_Fhd" : {
+      "latitude" : 42.68173608864328,
+      "longitude" : 26.314821886169057
+    },
+    "-KSAkdOuFIICkLRvUTUO" : {
+      "latitude" : 42.68173371611973,
+      "longitude" : 26.314823848314955
+    },
+    "-KSAkddYJyv3jrmoV7R_" : {
+      "latitude" : 42.681732344774,
+      "longitude" : 26.314824294243582
+    },
+    "-KSAkdt9EngZgS3x9AXe" : {
+      "latitude" : 42.68173099971153,
+      "longitude" : 26.31482545232018
+    },
+    "-KSAke7nFX6fxUJ-2TDW" : {
+      "latitude" : 42.68173050565053,
+      "longitude" : 26.314826963831177
+    },
+    "-KSAkeNQeOf4EjK8rJBw" : {
+      "latitude" : 42.68173049956214,
+      "longitude" : 26.314829239371715
+    },
+    "-KSAkec2SWRXb2rLnR1t" : {
+      "latitude" : 42.68172832074461,
+      "longitude" : 26.314829497444713
+    },
+    "-KSAkerfTzW0pRQ-cAKh" : {
+      "latitude" : 42.68172790570649,
+      "longitude" : 26.31482913000679
+    },
+    "-KSAkf6HIjDShF-prZrx" : {
+      "latitude" : 42.68172764226774,
+      "longitude" : 26.314828797560413
+    },
+    "-KSAkfLuu55W3Nb5aLKK" : {
+      "latitude" : 42.68172702519059,
+      "longitude" : 26.314828624267648
+    },
+    "-KSAkfaZhTGHRaFw3kXS" : {
+      "latitude" : 42.681726918573794,
+      "longitude" : 26.31482882672856
+    },
+    "-KSAkfq9hgFpVbRUO2Rf" : {
+      "latitude" : 42.681727318652776,
+      "longitude" : 26.31482426631501
+    },
+    "-KSAkg4nq89XyiNE2_4Y" : {
+      "latitude" : 42.681727312264506,
+      "longitude" : 26.314823235473206
+    },
+    "-KSAkgKPM92WxuHsiLSG" : {
+      "latitude" : 42.681727890000374,
+      "longitude" : 26.314824748805776
+    },
+    "-KSAkg_1QdljNCrwnSD4" : {
+      "latitude" : 42.68172011594898,
+      "longitude" : 26.314816181530848
+    },
+    "-KSAkgofuVq34q9_xy-s" : {
+      "latitude" : 42.68170598284317,
+      "longitude" : 26.31479685049932
+    },
+    "-KSAkh3MgWaroNKbwwqb" : {
+      "latitude" : 42.68169595582913,
+      "longitude" : 26.314787918120157
+    },
+    "-KSAkhIuOlZHgrydygXU" : {
+      "latitude" : 42.681695182767456,
+      "longitude" : 26.314793809310412
+    },
+    "-KSAkhY_WeoXL5CSDQe4" : {
+      "latitude" : 42.681696332835955,
+      "longitude" : 26.31479438219278
+    },
+    "-KSAkhnAj-f6pMtwA6Tu" : {
+      "latitude" : 42.68169231558474,
+      "longitude" : 26.314787670093068
+    },
+    "-KSAki1nldED-rFT-ymc" : {
+      "latitude" : 42.68167752234713,
+      "longitude" : 26.314772658167648
+    },
+    "-KSAkiHQcnsP6QQ0yI0z" : {
+      "latitude" : 42.68164717618493,
+      "longitude" : 26.314742927700223
+    },
+    "-KSAkiX2XjoKzOoWl1bS" : {
+      "latitude" : 42.681610221407844,
+      "longitude" : 26.314707546129146
+    },
+    "-KSAkilfsxGzjBAFcdyV" : {
+      "latitude" : 42.681566137031254,
+      "longitude" : 26.3146624892566
+    },
+    "-KSAkj0Ilaol3uNsqKTj" : {
+      "latitude" : 42.68152231971088,
+      "longitude" : 26.314617938394
+    },
+    "-KSAkjFub-cptVGwrv4B" : {
+      "latitude" : 42.681468124339894,
+      "longitude" : 26.314572704271594
+    },
+    "-KSAkjVYm4n6pY7MtXe2" : {
+      "latitude" : 42.68140327293155,
+      "longitude" : 26.31452331003478
+    },
+    "-KSAkjk9OnmqVLaHiVWt" : {
+      "latitude" : 42.6813413659544,
+      "longitude" : 26.314472772795884
+    },
+    "-KSAkjzmSRjtgrAU_GCs" : {
+      "latitude" : 42.6812764596324,
+      "longitude" : 26.314416600984632
+    },
+    "-KSAkkEQj_vwqa1kJvpd" : {
+      "latitude" : 42.68120814973268,
+      "longitude" : 26.314354975805493
+    },
+    "-KSAkkU2GVaotMGeYjSj" : {
+      "latitude" : 42.681150852750825,
+      "longitude" : 26.314303199217825
+    },
+    "-KSAkkif8DE3ElxiFmNP" : {
+      "latitude" : 42.68106028856783,
+      "longitude" : 26.314225963322116
+    },
+    "-KSAkkyIK2XZn42aujuZ" : {
+      "latitude" : 42.68098235088093,
+      "longitude" : 26.31416390227598
+    },
+    "-KSAklCv03eMPrIyQS6G" : {
+      "latitude" : 42.68090535924796,
+      "longitude" : 26.31410176839052
+    },
+    "-KSAklSXs8dLfmp6u5rB" : {
+      "latitude" : 42.68082727268302,
+      "longitude" : 26.31403772207452
+    },
+    "-KSAklh9DVRbmpGjP8DB" : {
+      "latitude" : 42.68075643849004,
+      "longitude" : 26.31398114442618
+    },
+    "-KSAklwmesnt6lVNth43" : {
+      "latitude" : 42.680715144670145,
+      "longitude" : 26.313954465703734
+    },
+    "-KSAkmBP_I02q3ClpnVw" : {
+      "latitude" : 42.68070617977563,
+      "longitude" : 26.31395688623296
+    },
+    "-KSAkmR18JZ6AX7jMpUd" : {
+      "latitude" : 42.680706427571295,
+      "longitude" : 26.313967640310043
+    },
+    "-KSAkmfejDDOEBMHJWbR" : {
+      "latitude" : 42.680706764616566,
+      "longitude" : 26.31397844755215
+    },
+    "-KSAkmvHkA6iRVjyAB_X" : {
+      "latitude" : 42.68070674497709,
+      "longitude" : 26.313987134618454
+    },
+    "-KSAkn9vPw1gzDnE1zD7" : {
+      "latitude" : 42.6807092959143,
+      "longitude" : 26.313999073478964
+    },
+    "-KSAknPXUe0uSQqjcd7t" : {
+      "latitude" : 42.6807175402149,
+      "longitude" : 26.314014562269392
+    },
+    "-KSAkneAZ0YnkxJUaK6Q" : {
+      "latitude" : 42.680735336936664,
+      "longitude" : 26.314039349685565
+    },
+    "-KSAkntm1h7hr1IFBq1L" : {
+      "latitude" : 42.68076396256919,
+      "longitude" : 26.314072701723777
+    },
+    "-KSAko8PsrfkgPo4uCWs" : {
+      "latitude" : 42.68079377285272,
+      "longitude" : 26.31410489530174
+    },
+    "-KSAkoO1lXDWrcxij0RK" : {
+      "latitude" : 42.68083473074129,
+      "longitude" : 26.314150479432783
+    },
+    "-KSAkocednKiiezOffxH" : {
+      "latitude" : 42.68086750189424,
+      "longitude" : 26.314187800556017
+    },
+    "-KSAkosIV0ksNKBQSKzm" : {
+      "latitude" : 42.68088116970641,
+      "longitude" : 26.314204317594566
+    },
+    "-KSAkp6vLVlQK042gQQC" : {
+      "latitude" : 42.68087877001784,
+      "longitude" : 26.314201266265613
+    },
+    "-KSAkpMYY61emVHl3Hdu" : {
+      "latitude" : 42.68087902180264,
+      "longitude" : 26.314201431444065
+    },
+    "-KSAkpb9GdDq1LENZBLF" : {
+      "latitude" : 42.680889454536405,
+      "longitude" : 26.314198214019605
+    },
+    "-KSAkpqmMxBmuvUm8V5q" : {
+      "latitude" : 42.68089938685323,
+      "longitude" : 26.314193004695223
+    },
+    "-KSAkq5PXfmX45YK3H-w" : {
+      "latitude" : 42.68091117781469,
+      "longitude" : 26.314191395811505
+    },
+    "-KSAkqL2SOorpeHVk069" : {
+      "latitude" : 42.6809343693565,
+      "longitude" : 26.314199679207448
+    },
+    "-KSAkq_fIwkgz2gehjTw" : {
+      "latitude" : 42.68097083544798,
+      "longitude" : 26.31421955170589
+    },
+    "-KSAkqpH6qOmW-cFXFzU" : {
+      "latitude" : 42.681026508226104,
+      "longitude" : 26.314257501116106
+    },
+    "-KSAkr3vYfAzeqZv5RdM" : {
+      "latitude" : 42.68109395174331,
+      "longitude" : 26.31431174942577
+    },
+    "-KSAkrJYVX9YeAdF7ECb" : {
+      "latitude" : 42.68115666093609,
+      "longitude" : 26.314362620560665
+    },
+    "-KSAkrZ98yQz096kp9ui" : {
+      "latitude" : 42.68123519048674,
+      "longitude" : 26.314422651825247
+    },
+    "-KSAkrnqCXprUwfSvg_2" : {
+      "latitude" : 42.68130532176934,
+      "longitude" : 26.314474041311264
+    },
+    "-KSAks2PudvPoXwV4XkC" : {
+      "latitude" : 42.68136542337681,
+      "longitude" : 26.314516465381974
+    },
+    "-KSAksI27yOVf_uy3XbY" : {
+      "latitude" : 42.681412285773256,
+      "longitude" : 26.314549833962563
+    },
+    "-KSAksXf0ihE9WnynTCK" : {
+      "latitude" : 42.68144996765419,
+      "longitude" : 26.314578269482595
+    },
+    "-KSAksmLEG-LR-Lc9o2Q" : {
+      "latitude" : 42.681478437319235,
+      "longitude" : 26.31459995882886
+    },
+    "-KSAkt0uiYX3oz-HiZ7y" : {
+      "latitude" : 42.681507829108,
+      "longitude" : 26.314622609141647
+    },
+    "-KSAktGXb8M7heHLJMCe" : {
+      "latitude" : 42.68152934759428,
+      "longitude" : 26.314641373948596
+    },
+    "-KSAktW9wT-ZLSS9UQUR" : {
+      "latitude" : 42.68154687591347,
+      "longitude" : 26.31465855379876
+    },
+    "-KSAktkmF5w8cRX_qvc4" : {
+      "latitude" : 42.681561129860114,
+      "longitude" : 26.314674003429847
+    },
+    "-KSAku-P74S5hib2-boa" : {
+      "latitude" : 42.681576113286184,
+      "longitude" : 26.314692860117198
+    },
+    "-KSAkuF1pzrg1DHWGm25" : {
+      "latitude" : 42.68158633374385,
+      "longitude" : 26.31470828758852
+    },
+    "-KSAkuUeJpCJTt_EQHfT" : {
+      "latitude" : 42.68159374032634,
+      "longitude" : 26.314721119523647
+    },
+    "-KSAkujHLHbP9OcH2LyP" : {
+      "latitude" : 42.68159866994527,
+      "longitude" : 26.314731236376552
+    },
+    "-KSAkuyuNSjtxNmBgu9o" : {
+      "latitude" : 42.68160252418445,
+      "longitude" : 26.314740127621306
+    },
+    "-KSAkvDXcRv2ZTo4cO13" : {
+      "latitude" : 42.681607521187374,
+      "longitude" : 26.314748106369535
+    },
+    "-KSAkvT9319f4D8R7KXC" : {
+      "latitude" : 42.68161392946843,
+      "longitude" : 26.314754415188887
+    },
+    "-KSAkvhm7ntzmFz3lTt_" : {
+      "latitude" : 42.68162063260957,
+      "longitude" : 26.314758673380602
+    },
+    "-KSAkvxPJ2Po-pW_YeJv" : {
+      "latitude" : 42.68162682962451,
+      "longitude" : 26.31476199107292
+    },
+    "-KSAkwC2PaUgwnrS2ZPo" : {
+      "latitude" : 42.681630218942296,
+      "longitude" : 26.314763870729962
+    },
+    "-KSAkwRfsgFl7dM5YJWq" : {
+      "latitude" : 42.68163023373381,
+      "longitude" : 26.31476436537384
+    },
+    "-KSAkwgHL0lhVEAThpV3" : {
+      "latitude" : 42.681630239673446,
+      "longitude" : 26.314764908482385
+    },
+    "-KSAkwvuC22vcIpRXRgc" : {
+      "latitude" : 42.681630324368115,
+      "longitude" : 26.31476383486453
+    },
+    "-KSAkxAYODXByo1lmyAr" : {
+      "latitude" : 42.68163003603373,
+      "longitude" : 26.314763387414054
+    },
+    "-KSAkxQ9hG8Y0NcXZkIU" : {
+      "latitude" : 42.681629389600424,
+      "longitude" : 26.314764504725872
+    },
+    "-KSAkxemqCmZ3Ss03y4g" : {
+      "latitude" : 42.68163599878358,
+      "longitude" : 26.31477176920561
+    },
+    "-KSAkxuQxlCA3LJjPjlE" : {
+      "latitude" : 42.68165162902799,
+      "longitude" : 26.314784460349436
+    },
+    "-KSAky91ywODauTl_vxe" : {
+      "latitude" : 42.68166783679106,
+      "longitude" : 26.314796776259346
+    },
+    "-KSAkyOfm6ve1XtGoDXN" : {
+      "latitude" : 42.68168000263202,
+      "longitude" : 26.314809312479962
+    },
+    "-KSAkydHmHlT6nkhLJTP" : {
+      "latitude" : 42.68168211120407,
+      "longitude" : 26.314813753469465
+    },
+    "-KSAkysuNHoOhOTbo1PX" : {
+      "latitude" : 42.68168914178097,
+      "longitude" : 26.314815517167087
+    },
+    "-KSAkz7Xt00rD9sVjNs-" : {
+      "latitude" : 42.681699582910525,
+      "longitude" : 26.314819163606504
+    },
+    "-KSAkzNAqmd9gjGgDXxD" : {
+      "latitude" : 42.68170904154884,
+      "longitude" : 26.314822635031714
+    },
+    "-KSAkzbm_3_qdHPtS2Wd" : {
+      "latitude" : 42.68171764368619,
+      "longitude" : 26.314825676504615
+    },
+    "-KSAkzrPySvpJKksimio" : {
+      "latitude" : 42.68172219974448,
+      "longitude" : 26.314826565444253
+    },
+    "-KSAl-61MpQmHtiipAk5" : {
+      "latitude" : 42.68172514033702,
+      "longitude" : 26.3148316520704
+    },
+    "-KSAl-Le9joYsvOvtmxU" : {
+      "latitude" : 42.68172619252714,
+      "longitude" : 26.31483624248752
+    },
+    "-KSAl-aI9rHM1kRkW2uf" : {
+      "latitude" : 42.6817250240321,
+      "longitude" : 26.314836778529145
+    },
+    "-KSAl-puLY9GUN3gZki6" : {
+      "latitude" : 42.68172328000697,
+      "longitude" : 26.314835390283324
+    },
+    "-KSAl04YAMJYFFuIaFOs" : {
+      "latitude" : 42.68172368196476,
+      "longitude" : 26.314836271040217
+    },
+    "-KSAl0KAa6EeWp2POdYZ" : {
+      "latitude" : 42.68172412478559,
+      "longitude" : 26.31483627252206
+    },
+    "-KSAl0ZnNK2ee-5fFB_H" : {
+      "latitude" : 42.681724389912695,
+      "longitude" : 26.314834999055623
+    },
+    "-KSAl0oPA4g2T5DqeotX" : {
+      "latitude" : 42.68172355151674,
+      "longitude" : 26.314829599781458
+    },
+    "-KSAl131R52AZnSx3hm3" : {
+      "latitude" : 42.6817241084834,
+      "longitude" : 26.31482311933999
+    },
+    "-KSAl1Ie1lSMIprdY4wv" : {
+      "latitude" : 42.68172310833291,
+      "longitude" : 26.314817289191954
+    },
+    "-KSAl1YHlierww3FrcT-" : {
+      "latitude" : 42.68172388954841,
+      "longitude" : 26.314818488052136
+    },
+    "-KSAl1mudTp2kEWOeAzI" : {
+      "latitude" : 42.68172398574309,
+      "longitude" : 26.314817920413038
+    }
+  }
+}

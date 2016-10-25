@@ -1,20 +1,20 @@
-/**
- * Created by Biser Atanasov on 11-Aug-16.
- */
-
-
-$('#signInButton').click(function () {
-    let email = ($("#inputEmail").val());
-    let password = ($("#inputPassword").val());
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+$('#loginButton').click(function () {
+    let email = ($("#email-login").val());
+    let password = ($("#password-login").val());
+    auth.signInWithEmailAndPassword(email, password).then(function () {
+        window.location.href = "/";
+    }).catch(function (error) {
         alertify.error(error.message);
     });
 });
 
-$('#signUpButton').click(function () {
+$('#registerButton').click(function () {
     let email = ($("#inputEmail").val());
     let password = ($("#inputPassword").val());
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+    auth.createUserWithEmailAndPassword(email, password).then(function () {
+        console.log("register success");
+    }).catch(function (error) {
         alertify.error(error.message);
     });
 });
+

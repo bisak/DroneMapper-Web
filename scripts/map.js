@@ -6,22 +6,31 @@ let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v9/ti
     sateliteStreets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Satelite Streets'}),
     openStreetMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://openstreetmap.org">оpenStreetMap</a> оpenStreetMap'});
 
+let mapHeight= Math.round($(window).height() / 1.22);
+$(window).resize(function() {
+    mapHeight= Math.round($(window).height() / 1.22);
+    $('#map').css("height", mapHeight+"px");
+});
+$('#map').css("height", mapHeight+"px");
+
+
+
 let map = L.map('map', {
     center: [42.7339, 25.4858],
     zoom: 7,
     layers: outdoors,
     fullscreenControl: true,
     minZoom: 3,
-    inertiaDeceleration: 10000
 });
 
 
 L.control.locate({
     strings: {
         title: "Locate",
-    },
-    keepCurrentZoomLevel: true
-}).addTo(map);
+},
+keepCurrentZoomLevel: true
+}).
+addTo(map);
 
 
 map.zoomControl.setPosition('bottomright');
@@ -39,6 +48,8 @@ let baseMaps = {
 L.control.layers(baseMaps).addTo(map);
 map.setMaxBounds([[90, -180], [-90, 180]]);
 
+
+
 firebase.database().ref().child("images/").on('child_added',
     function (snapshot) {
         let imageUrl = snapshot.val().url;
@@ -47,41 +58,21 @@ firebase.database().ref().child("images/").on('child_added',
         let imageLong = snapshot.val().longt;
         let imageAlt = snapshot.val().alt;
 
-        let pictureWidth = Math.round($(document).width() / 2.2);
-        let pictureHeight = Math.round($(document).height() / 2.1);
+        let pictureWidth = Math.round($(window).width() / 5);
 
-        if (pictureHeight > pictureWidth) {
-            pictureHeight = Math.round($(document).width() / 2.1);
-            pictureWidth = Math.round($(document).height() / 2.2);
-        }
+        let markerIcon = new L.Icon.Default();
+        markerIcon.options.shadowSize = [0,0];
 
-        /*function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
-
-         var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
-
-         return {width: srcWidth * ratio, height: srcHeight * ratio};
-         }*/ //Implemet that maybe :):):)
-
-
-        //let imageDisplayString = '<h4>' + imageName + '&nbsp;&nbsp;&nbsp;Altitude: ' + imageAlt + 'm.' + '</h4>' + '<div class="link" style="height:' + pictureHeight + 'px; width:' + pictureWidth + 'px;"><a href="' + imageUrl + '"><img src=' + imageUrl + ' style="height:' + pictureHeight + 'px;' + ' width:' + pictureWidth + 'px;' + '" ></a></div>';
-        let imageDisplayString = `<h4>${imageName}&nbsp;&nbsp;&nbsp;Altitude: ${imageAlt}m.</h4><div class="link" style="min-height:${pictureHeight}px; width:${pictureWidth}px;"><a href="${imageUrl}"><img src=${imageUrl} style="/*height:${pictureHeight}px; */width:${pictureWidth}px;" ></a></div>`
-        L.marker([imageLat, imageLong])
+        //let imageDisplayString = `<h4>${imageName}&nbsp;&nbsp;&nbsp;Altitude: ${imageAlt}m.</h4><div class="link" style="min-height:${pictureHeight}px; width:${pictureWidth}px;"><a href="${imageUrl}"><img src=${imageUrl} style="/*height:${pictureHeight}px; */width:${pictureWidth}px;" ></a></div>`
+        let imageDisplayString = `<img class='materialboxed' width="${pictureWidth}" src=${imageUrl}>`;
+        L.marker([imageLat, imageLong], {icon : markerIcon})
             .bindPopup(imageDisplayString, {
-                maxWidth: 1920,
-                autoPanPadding: L.point(80, 80),
-                keepInView: true
+                autoPanPadding: L.point(20, 20),
             })
             .addTo(map);
 
-
     });
 
-$("#map").on('click', '.link', function (event) {
-    event = event || window.event;
-    var target = event.target || event.srcElement,
-        link = target.src ? target.parentNode : target,
-        options = {index: link, event: event},
-        links = this.getElementsByTagName('a');
-    blueimp.Gallery(links, options);
+$("#map").on('click', '.materialboxed', function (event) {
+    $('.materialboxed').materialbox();
 });
-

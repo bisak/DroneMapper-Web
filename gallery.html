@@ -9,41 +9,36 @@
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/styles/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css"/>
-    <link rel="stylesheet" href="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.css"/>
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
-          rel='stylesheet'/>
     <link href="/styles/style.css" rel="stylesheet">
-    <link href="/styles/map.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <style> #materialbox-overlay {
-        background-color: transparent;
-    }
-    </style>
+
 </head>
 <body>
 <nav class="indigo" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">DroneFlightMapper</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">DroneFlightMapper</a>
         <ul class="right hide-on-med-and-down">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="gallery" class="galleryLinkButton">Gallery</a></li>
-            <li><a href="login" class="signInLinkButton" style="display: none;">Login</a></li>
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="gallery" class="galleryLinkButton">Gallery</a></li>
+            <li><a href="upload" class="uploaderLinkButton">Upload</a></li>
             <li><a href="#" class="signOutLinkButton" style="display: none;">Log out</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="gallery" class="galleryLinkButton">Gallery</a></li>
-            <li><a href="login" class="signInLinkButton" style="display: none;">Login</a></li>
-            <li><a href="#" class="signOutLinkButton" style="display: none;">Sign out</a></li>
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="gallery" class="galleryLinkButton">Gallery</a></li>
+            <li><a href="upload" class="uploaderLinkButton">Upload</a></li>
+            <li><a href="#" class="signOutLinkButton" style="display: none;">Log out</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
 </nav>
 
-<div class="section no-pad">
-    <div id="map"></div>
+<div class="container">
+    <div class="section">
+        <div class="images">
+
+        </div>
+    </div>
 </div>
 
 
@@ -57,8 +52,7 @@
             <div class="col l4 s12">
                 <h5 class="white-text">Contact</h5>
                 <ul>
-                    <li><a class="white-text" href="mailto:biser.p.atanasov@gmail.com">biser.p.atanasov@gmail.com</a>
-                    </li>
+                    <li><a class="white-text" href="mailto:biser.p.atanasov@gmail.com">biser.p.atanasov@gmail.com</a></li>
                     <li><a class="white-text" href="https://www.facebook.com/biskazz">Biser Atanasov</a></li>
                     <li><a class="white-text" href="https://twitter.com/biskazz">biskazz</a></li>
                 </ul>
@@ -67,8 +61,7 @@
                 <h5 class="white-text">Github</h5>
                 <ul>
                     <li><a class="white-text" href="https://github.com/biskazz/DroneFlightMapper-Web">Web</a></li>
-                    <li><a class="white-text" href="https://github.com/biskazz/DroneFlightMapper-Android">Android</a>
-                    </li>
+                    <li><a class="white-text" href="https://github.com/biskazz/DroneFlightMapper-Android">Android</a></li>
                 </ul>
             </div>
         </div>
@@ -81,21 +74,15 @@
 </footer>
 
 
+
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="/scripts/libs/materialize.min.js"></script>
 <script src="/scripts/init.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
-<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
-<script src="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.js"
-        charset="utf-8"></script>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 <script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
-<script src="/scripts/libs/leaflet.rotatedMarker.js"></script>
 <script src="/scripts/app.js"></script>
-<script src="/scripts/map.js"></script>
-<script src="/scripts/realtime-flights-visualise.js"></script>
-
+<script src="/scripts/gallery.js"></script>
 </body>
 </html>

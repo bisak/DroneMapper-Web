@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$/index.html" libraries="{ECMAScript 6}" />
-    <file url="PROJECT" libraries="{L.Control.Locate, Leaflet.fullscreen, alertify, bootstrap, firebase, jquery-3.1.0, leaflet}" />
+    <file url="PROJECT" libraries="{L.Control.Locate, Leaflet.fullscreen, alertify, bootstrap, firebase, jquery-3.1.0, jquery-3.1.1, leaflet, material}" />
   </component>
 </project>

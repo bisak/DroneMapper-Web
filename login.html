@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <link rel="icon" href="/img/favicon.png">
+    <title>DroneFlightMapper 2.0</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/styles/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css"/>
+
+</head>
+<body>
+
+<nav class="indigo" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Login / Register</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="login" class="signInLinkButton" style="display: none;">Login</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="login" class="signInLinkButton" style="display: none;">Login</a></li>
+
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+<div class="container white z-depth-1" id="login-form">
+    <ul class="tabs teal">
+        <li class="tab col s3"><a class="white-text active" href="#login">login</a></li>
+        <li class="tab col s3"><a class="white-text" href="#register">register</a></li>
+    </ul>
+    <div id="login" class="col s12">
+        <form class="col s12">
+            <div class="form-container">
+                <h3 class="teal-text">Hello</h3>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email-login" type="email" class="validate">
+                        <label for="email-login">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password-login" type="password" class="validate">
+                        <label for="password-login">Password</label>
+                    </div>
+                </div>
+                <br>
+                <center>
+                    <button id="loginButton" onclick="return false" class="btn waves-effect waves-light teal">Log In
+                    </button>
+                    <br>
+                    <br>
+                </center>
+            </div>
+        </form>
+    </div>
+
+
+    <div id="register" class="col s12">
+        <form class="col s12">
+            <div class="form-container">
+                <h3 class="teal-text">Welcome</h3>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="first_name_register" type="text" class="validate">
+                        <label for="first_name_register">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name_register" type="text" class="validate">
+                        <label for="last_name_register">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="username_register" type="text" class="validate">
+                        <label for="username_register">Username</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email_register" type="email" class="validate">
+                        <label for="email_register">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password-confirm" type="password" class="validate">
+                        <label for="password-confirm">Confirm Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select multiple>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">DJI Phantom 3 Standard</option>
+                            <option value="2">DJI Phantom 3 4K</option>
+                            <option value="3">DJI Phantom 3 Advanced</option>
+                            <option value="4">DJI Phantom 3 Professional</option>
+                            <option value="5">DJI Phantom 4</option>
+                            <option value="6">DJI Mavic</option>
+                            <option value="7">DJI Inspire 1</option>
+                        </select>
+                        <label>Select your drone(s)</label>
+                    </div>
+                    <center>
+                        <button class="btn waves-effect waves-light teal" type="submit" name="action">Register</button>
+                    </center>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<footer class="page-footer orange darken-2">
+    <div class="container">
+        <div class="row">
+            <div class="col l4 s12">
+                <h5 class="white-text">Info</h5>
+                <p class="white-text">DroneFlightMapper is an open source project ... add description</p>
+            </div>
+            <div class="col l4 s12">
+                <h5 class="white-text">Contact</h5>
+                <ul>
+                    <li><a class="white-text" href="mailto:biser.p.atanasov@gmail.com">biser.p.atanasov@gmail.com</a>
+                    </li>
+                    <li><a class="white-text" href="https://www.facebook.com/biskazz">Biser Atanasov</a></li>
+                    <li><a class="white-text" href="https://twitter.com/biskazz">biskazz</a></li>
+                </ul>
+            </div>
+            <div class="col l4 s12">
+                <h5 class="white-text">Github</h5>
+                <ul>
+                    <li><a class="white-text" href="https://github.com/biskazz/DroneFlightMapper-Web">Web</a></li>
+                    <li><a class="white-text" href="https://github.com/biskazz/DroneFlightMapper-Android">Android</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Biser Atanasov</a>
+        </div>
+    </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="/scripts/libs/materialize.min.js"></script>
+<script src="/scripts/init.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
+<script src="/scripts/app.js"></script>
+<script src="/scripts/signIn.js"></script>
+
+</body>
+
+</html>
