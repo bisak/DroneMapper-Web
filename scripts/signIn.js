@@ -18,3 +18,4 @@ $('#registerButton').click(function () {
     });
 });
 
+//TODO Fix Registration! Not working AT ALL now.

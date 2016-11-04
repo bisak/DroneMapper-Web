@@ -9,3 +9,5 @@ dbRef.child("images/").on('child_added',
 $(document).ready(function () {
     $('.materialboxed').materialbox();
 });
+
+$('.images').css("min-height",  Math.round($(window).height() / 1.22)+"px");

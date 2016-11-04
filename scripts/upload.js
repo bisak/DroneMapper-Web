@@ -3,6 +3,8 @@ let dbRef = firebase.database().ref();
 let resize = new window.resize();
 resize.init();
 
+$('.uploaded-images').css("min-height", Math.round($(window).height() / 2)+"px");
+
 $("#uploadSlector").change(function (evt) {
     let files = evt.target.files;
 
@@ -64,13 +66,13 @@ $("#uploadSlector").change(function (evt) {
 
                                     dbRef.child("/images/" + key).set(imageData)
                                         .then(function () {
-                                            console.log('Synchronization succeeded');
+                                            alertify.success('Sync success!')
                                             $(`.${key}`).hide();
                                             $('.uploaded-images').append(`<p>${fileName}</p><img style="border-radius: 2px;" class="materialboxed responsive-img z-depth-2" width="650" src="${src}"><div class="divider"></div>`);
                                             $('.materialboxed').materialbox();
                                         })
                                         .catch(function (error) {
-                                            console.log('Synchronization failed');
+                                            alertify.error('Synchronization failed');
                                         });
                                 });
                         });
@@ -83,3 +85,5 @@ $("#uploadSlector").change(function (evt) {
 
     }
 });
+
+//TODO FIX THE ENTIRE FUCKING FILE!!!!!!!!!!!!!!!!!

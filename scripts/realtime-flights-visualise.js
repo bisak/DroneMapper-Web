@@ -29,6 +29,7 @@ realtimeFlightsRef.on('child_added', function (snapshotOne) {
         let droneLat = snapshotTwo.val().latitude;
         let droneLng = snapshotTwo.val().longitude;
         let droneHDG = snapshotTwo.val().heading;
+        let timeLast = snapshotTwo.val().time;
         mrkr.setLatLng([droneLat, droneLng]);
         mrkr.setRotationAngle(droneHDG);
     });
@@ -37,6 +38,15 @@ realtimeFlightsRef.on('child_added', function (snapshotOne) {
     });
     mrkr.addTo(map);
 });
+
+realtimeFlightsRef.on('child_added', function (snapshotOne) {
+    realtimeFlightsRef.child(snapshotOne.key).limitToLast(1).on('child_added', function (snapshotTwo) {
+        let timeLast = snapshotTwo.val().time;
+        console.log(timeLast);//TODO this is in order to remove data from the realtime flights node which is older than 1 minute. Now yet finished.
+    });
+});
+
+
 
 
 
