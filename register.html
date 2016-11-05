@@ -15,8 +15,8 @@
 </head>
 <body>
 
-<nav class="indigo" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Login / Register</a>
+<nav class="blue darken-3" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Register</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="/">Home</a></li>
             <li class="active"><a href="login" class="signInLinkButton" style="display: none;">Login</a></li>
@@ -37,6 +37,7 @@
         <br>
         <div class="row">
             <form class="col s12 z-depth-1">
+                <br>
                 <div class="row">
                     <div class="input-field col s6">
                         <input id="first_name" type="text" class="validate">
@@ -68,9 +69,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s12">
-                        <select multiple>
-                            <option value="" disabled selected>Choose your option</option>
+                    <div class="input-field col s12 blue-grey-text">
+                        <select id="drone-select" multiple>
+                            <option value="" disabled>Choose your option</option>
                             <option value="1">DJI Phantom 3 Standard</option>
                             <option value="2">DJI Phantom 3 4K</option>
                             <option value="3">DJI Phantom 3 Advanced</option>
@@ -84,8 +85,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col s12 center">
-                        <button class="btn waves-effect waves-light teal" type="submit" name="action">Register</button>
+                    <div class="center">
+                        <button id="registerButton" onclick="return false"
+                                class="btn waves-effect waves-light teal z-depth-1 blue-grey">Register
+                        </button>
                     </div>
                 </div>
             </form>
@@ -94,7 +97,7 @@
     </div>
 </main>
 
-<footer class="page-footer blue-grey darken-2">
+<footer class="page-footer blue-grey darken-3">
     <div class="container">
         <div class="row">
             <div class="col l4 s12">

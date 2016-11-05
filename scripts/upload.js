@@ -1,13 +1,12 @@
-let storageRef = firebase.storage().ref();
-let dbRef = firebase.database().ref();
+//TODO FIX THE ENTIRE FUCKING FILE!!!!!!!!!!!!!!!!!
+//Maalee tva e edin grozen,grozen, grozen JS. :/
+
 let resize = new window.resize();
 resize.init();
 
-$('.uploaded-images').css("min-height", Math.round($(window).height() / 2)+"px");
 
 $("#uploadSlector").change(function (evt) {
     let files = evt.target.files;
-
     for (let i = 0; i < files.length; i++) {
         let file = evt.target.files[i];
         let src = URL.createObjectURL(file);
@@ -85,5 +84,3 @@ $("#uploadSlector").change(function (evt) {
 
     }
 });
-
-//TODO FIX THE ENTIRE FUCKING FILE!!!!!!!!!!!!!!!!!

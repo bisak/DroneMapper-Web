@@ -11,3 +11,7 @@
     box-shadow: 0 3px 14px rgba(25,25,25,1);
     background-color: rgba(25,25,25,0.08);
 }
+
+#materialbox-overlay {
+    background-color: transparent;
+}

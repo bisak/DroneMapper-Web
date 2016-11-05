@@ -1,14 +1,13 @@
-let dbRef = firebase.database().ref();
 let realtimeFlightsRef = dbRef.child("realtime-flights");
 let savedFlightsRef = dbRef.child("saved-flights");
 
-var myIcon = L.icon({
+let myIcon = L.icon({
     iconUrl: '/img/drone-hdg.png',
     iconSize: [28, 28],
     iconAnchor: [14, 14],
 });
 
-/*savedFlightsRef.on('child_added', function (snapshotOne) {
+savedFlightsRef.on('child_added', function (snapshotOne) {
     let polyline = new L.Polyline([], {
         color: 'orange',
         weight: 3,
@@ -21,7 +20,7 @@ var myIcon = L.icon({
         polyline.addLatLng([droneLat, droneLng]);
     });
     map.addLayer(polyline);
-});*/
+});
 
 realtimeFlightsRef.on('child_added', function (snapshotOne) {
     let mrkr = L.marker([], {icon: myIcon});
@@ -42,7 +41,7 @@ realtimeFlightsRef.on('child_added', function (snapshotOne) {
 realtimeFlightsRef.on('child_added', function (snapshotOne) {
     realtimeFlightsRef.child(snapshotOne.key).limitToLast(1).on('child_added', function (snapshotTwo) {
         let timeLast = snapshotTwo.val().time;
-        console.log(timeLast);//TODO this is in order to remove data from the realtime flights node which is older than 1 minute. Not yet finished.
+        console.log(timeLast);//TODO this is in order to remove data from the realtime flights node which is older than 1 minute. Not yet finished. v2. Fix from android side
     });
 });
 

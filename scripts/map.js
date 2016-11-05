@@ -12,9 +12,6 @@ $(window).resize(function() {
     $('#homeMap').css("height", mapHeight+"px");
 });
 $('#homeMap').css("height", mapHeight+"px");
-
-
-
 let map = L.map('homeMap', {
     center: [42.7339, 25.4858],
     zoom: 7,
@@ -22,8 +19,6 @@ let map = L.map('homeMap', {
     fullscreenControl: true,
     minZoom: 3,
 });
-
-
 L.control.locate({
     strings: {
         title: "Locate",
@@ -31,10 +26,7 @@ L.control.locate({
 keepCurrentZoomLevel: true
 }).
 addTo(map);
-
-
 map.zoomControl.setPosition('bottomright');
-
 let baseMaps = {
     "Outdoors": outdoors,
     "Streets": streets,
@@ -44,13 +36,9 @@ let baseMaps = {
     "Satelite Streets": sateliteStreets,
     "OpenStreetMap": openStreetMap
 };
-
 L.control.layers(baseMaps).addTo(map);
 map.setMaxBounds([[90, -180], [-90, 180]]);
-
-
-
-firebase.database().ref().child("images/").on('child_added',
+dbRef.child("images/").on('child_added',
     function (snapshot) {
         let imageUrl = snapshot.val().url;
         let imageName = snapshot.val().name;
@@ -70,9 +58,7 @@ firebase.database().ref().child("images/").on('child_added',
                 autoPanPadding: L.point(20, 20),
             })
             .addTo(map);
-
     });
-
 $("#homeMap").on('click', '.materialboxed', function (event) {
     $('.materialboxed').materialbox();
 });
