@@ -13,5 +13,10 @@
     <orderEntry type="library" name="firebase-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="jquery-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="materialize-css-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="jquery-3.1.1" level="application" />
+    <orderEntry type="library" name="leaflet-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="leaflet.fullscreen-DefinitelyTyped" level="project" />
+    <orderEntry type="library" name="alertify" level="project" />
+    <orderEntry type="library" name="firebase" level="application" />
   </component>
 </module>

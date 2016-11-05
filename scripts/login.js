@@ -17,5 +17,3 @@ $('#registerButton').click(function () {
         alertify.error(error.message);
     });
 });
-
-//TODO Fix Registration! Not working AT ALL now.

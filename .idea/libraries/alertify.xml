@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="alertify" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/__cdn.jsdelivr.net_alertifyjs_1.8.0_alertify.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/__cdn.jsdelivr.net_alertifyjs_1.8.0_alertify.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

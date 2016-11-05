@@ -9,13 +9,13 @@ let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v9/ti
 let mapHeight= Math.round($(window).height() / 1.22);
 $(window).resize(function() {
     mapHeight= Math.round($(window).height() / 1.22);
-    $('#map').css("height", mapHeight+"px");
+    $('#homeMap').css("height", mapHeight+"px");
 });
-$('#map').css("height", mapHeight+"px");
+$('#homeMap').css("height", mapHeight+"px");
 
 
 
-let map = L.map('map', {
+let map = L.map('homeMap', {
     center: [42.7339, 25.4858],
     zoom: 7,
     layers: outdoors,
@@ -73,6 +73,6 @@ firebase.database().ref().child("images/").on('child_added',
 
     });
 
-$("#map").on('click', '.materialboxed', function (event) {
+$("#homeMap").on('click', '.materialboxed', function (event) {
     $('.materialboxed').materialbox();
 });

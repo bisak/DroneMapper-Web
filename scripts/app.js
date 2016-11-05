@@ -3,8 +3,10 @@ var config = {
     authDomain: "dronemapper-83b1a.firebaseapp.com",
     databaseURL: "https://dronemapper-83b1a.firebaseio.com",
     storageBucket: "dronemapper-83b1a.appspot.com",
+    messagingSenderId: "915987875489"
 };
 firebase.initializeApp(config);
+
 
 let auth = firebase.auth();
 

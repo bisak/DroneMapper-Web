@@ -6,9 +6,12 @@ body {
     background: #f5f5f5;
 }
 
-.page-footer{
-   // position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
