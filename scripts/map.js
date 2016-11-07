@@ -6,9 +6,9 @@ let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v9/ti
     sateliteStreets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Satelite Streets'}),
     openStreetMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://openstreetmap.org">оpenStreetMap</a> оpenStreetMap'});
 
-let mapHeight= Math.round($(window).height() / 1.22);
+let mapHeight= Math.round($(window).height() / 1.2);
 $(window).resize(function() {
-    mapHeight= Math.round($(window).height() / 1.22);
+    mapHeight= Math.round($(window).height() / 1.2);
     $('#homeMap').css("height", mapHeight+"px");
 });
 $('#homeMap').css("height", mapHeight+"px");
@@ -58,7 +58,9 @@ dbRef.child("images/").on('child_added',
                 autoPanPadding: L.point(20, 20),
             })
             .addTo(map);
+
     });
-$("#homeMap").on('click', '.materialboxed', function (event) {
+
+$("#homeMap").on('click', '.leaflet-marker-icon', function (event) {
     $('.materialboxed').materialbox();
 });
