@@ -11,3 +11,7 @@
 #materialbox-overlay {
     background-color: transparent;
 }
+
+img.materialboxed.initialized{
+    width: 100%;
+}
