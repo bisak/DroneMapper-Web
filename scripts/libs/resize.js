@@ -4,8 +4,6 @@ window.resize = (function () {
     }
 
     Resize.prototype = {
-        init: function () {
-        },
         photo: function (file, maxSize, callback) {
             var _this = this;
             var reader = new FileReader();
