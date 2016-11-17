@@ -25,7 +25,7 @@ auth.onAuthStateChanged(function (user) {
         $(".signOutLinkButton").show();
         $(".galleryLinkButton").show();
         firebase.database().ref("users/" + userId).on('value', function (snapshot) {
-            $("nav div ul").append(snapshot.val().username);
+            $("nav div ul").append(`<li><a>${snapshot.val().username}</a></li>`);
         });
         dbRef.child("images/" + userId).on('child_added',
             function (snapshot) {

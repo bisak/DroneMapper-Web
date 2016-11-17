@@ -30,8 +30,8 @@ realtimeFlightsRef.on('child_added', function (snapshotOne) {
         let droneHDG = snapshotTwo.val().heading;
         let droneSpeed = snapshotTwo.val().speed;
         let droneAltitude = snapshotTwo.val().altitude;
-        console.log(droneSpeed)
-        mrkr.bindPopup("Speed: "+ droneSpeed + "   Altitude: " +  droneAltitude);
+        let displayDiv = `<div class="telemetryData">Speed: ${droneSpeed}<br><hr>Altitude: ${droneAltitude}</div>`;
+        mrkr.bindPopup(displayDiv);
         mrkr.setLatLng([droneLat, droneLng]);
         mrkr.setRotationAngle(droneHDG);
     });

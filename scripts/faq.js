@@ -17,29 +17,11 @@ auth.onAuthStateChanged(function (user) {
         $(".signOutLinkButton").show();
         $(".galleryLinkButton").show();
         firebase.database().ref("users/" + userId).on('value', function (snapshot) {
-            $("nav div ul").append(`<li><a>${snapshot.val().username}</a></li>`);
+            $("nav div ul").append(snapshot.val().username);
         });
     } else {
         $(".galleryLinkButton").hide();
         $(".signOutLinkButton").hide();
         $(".signInLinkButton").show();
     }
-});
-$('.signOutLinkButton').click(function () {
-    firebase.auth().signOut().then(function () {
-        window.location.href = "/";
-        alertify.success("Logged Out Successfully")
-    }, function (error) {
-        alertify.success("Error loogging out")
-    });
-});
-
-$('#loginButton').click(function () {
-    let email = ($("#email-login").val());
-    let password = ($("#password-login").val());
-    auth.signInWithEmailAndPassword(email, password).then(function (data) {
-        window.location.href = "/";
-    }).catch(function (error) {
-        alertify.error(error.message);
-    });
 });

@@ -4,14 +4,31 @@
 
 .leaflet-popup-content-wrapper {
     border-radius: 2px;
-    box-shadow: 0 3px 14px rgba(25,25,25,1);
-    background-color: rgba(25,25,25,0.08);
+    box-shadow: 0 3px 14px rgba(25, 25, 25, 1);
+    background-color: rgba(0, 0, 0, 0.10);
 }
 
 #materialbox-overlay {
     background-color: transparent;
 }
 
-img.materialboxed.initialized{
+img.materialboxed.initialized {
     width: 100%;
+}
+
+.telemetryData {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 2px;
+    font-size: 1.4em;
+    color: white;
+    width: 130px;
+}
+
+.leaflet-container a.leaflet-popup-close-button{
+    color: black;
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover{
+    color: darkred;
 }
