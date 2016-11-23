@@ -14,20 +14,19 @@
 
 </head>
 <body>
-
 <nav class="blue darken-3" role="navigation">
     <div class="nav-wrapper container">
         <a id="logo-container" href="/" class="brand-logo"><img id="logo" src="/img/logo.png">DroneMapper</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="/">Home</a></li>
-            <li><a href="login" class="signInLinkButton" style="display: none;">Login</a></li>
-            <li class="active"><a href="register" class="signInLinkButton" style="display: none;">Register</a></li>
+            <li><a href="gallery" class="galleryLinkButton">Gallery</a></li>
+            <li><a href="#" class="signOutLinkButton" style="display: none;">Log out</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
             <li><a href="/">Home</a></li>
-            <li><a href="login" class="signInLinkButton" style="display: none;">Login</a></li>
-            <li class="active"><a href="register" class="signInLinkButton" style="display: none;">Register</a></li>
+            <li><a href="gallery" class="galleryLinkButton">Gallery</a></li>
+            <li><a href="#" class="signOutLinkButton" style="display: none;">Log out</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -35,68 +34,40 @@
 
 <main>
     <div class="container">
-        <br>
-        <br>
-        <div class="row">
-            <form class="col s12 z-depth-1">
-                <br>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">First Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Last Name</label>
-                    </div>
+        <h3>Ресурси на проекта</h3>
+        <div class="section">
+            <div class="row">
+                <div class="col s12 m4">
+                    <ul>
+                        <li>Уеб сайт <a style="font-size: 1.25em;" href="http://dronemapper.sliven.org/">[...]</a></li>
+                        <li>Андроид приложение <a style="font-size: 1.25em;" href="https://goo.gl/tmGx90">[...]</a></li>
+                    </ul>
                 </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="username" type="text" class="validate">
-                        <label for="username">Username</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email</label>
-                    </div>
+                <div class="col s12 m4">
+                    <ul>
+                        <li>Уеб Сорс код в .zip <a style="font-size: 1.25em;"
+                                                   href="DroneMapper-Web-master.zip">[...]</a></li>
+                        <li>Уеб Сорс код в GitHub <a style="font-size: 1.25em;"
+                                                     href="https://github.com/biskazz/DroneMapper-Web">[...]</a></li>
+                        <li>Андроид Сорс код в .zip <a style="font-size: 1.25em;"
+                                                       href="DroneMapper-Android-master.zip">[...]</a></li>
+                        <li>Андроид Сорс код в GitHub <a style="font-size: 1.25em;"
+                                                         href="https://github.com/biskazz/DroneMapper-Android">[...]</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="password" type="password" class="validate">
-                        <label for="password">Password</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="password_confirm" type="password" class="validate">
-                        <label for="password_confirm">Confirm Password</label>
-                    </div>
+                <div class="col s12 m4">
+                    <ul>
+                        <li>Документация в .docx формат <a style="font-size: 1.25em;" href="DroneMapper.docx">[...]</a>
+                        </li>
+                        <li>Документация в .pdf формат <a style="font-size: 1.25em;" href="DroneMapper.pdf">[...]</a>
+                        </li>
+                        <li>Презентация в .pptx формат <a style="font-size: 1.25em;" href="">TODO</a></li>
+                        <li>Презентация в Google Slides <a style="font-size: 1.25em;" href="">TODO</a></li>
+                    </ul>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12 blue-grey-text">
-                        <select id="drone-select" multiple>
-                            <option value="" disabled>Choose your option</option>
-                            <option value="1">DJI Phantom 3 Standard</option>
-                            <option value="2">DJI Phantom 3 4K</option>
-                            <option value="3">DJI Phantom 3 Advanced</option>
-                            <option value="4">DJI Phantom 3 Professional</option>
-                            <option value="5">DJI Phantom 4</option>
-                            <option value="6">DJI Mavic</option>
-                            <option value="7">DJI Inspire 1</option>
-                            <option value="8">Other</option>
-                        </select>
-                        <label>Select your drone(s)</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="center">
-                        By registering you agree to our <a href="faq">disclaimer</a>.<br><br>
-                        <button id="registerButton" onclick="return false"
-                                class="btn waves-effect waves-light teal z-depth-1 blue-grey">Register
-                        </button>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
-        <br>
     </div>
 </main>
 
@@ -143,7 +114,6 @@
 <script src="/scripts/init.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
 <script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
-<script src="/scripts/register.js"></script>
+<script src="/scripts/faq.js"></script>
 </body>
-
 </html>

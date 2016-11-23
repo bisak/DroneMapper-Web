@@ -13,19 +13,26 @@ main {
     flex: 1 0 auto;
 }
 
-.side-nav{
+.side-nav {
     z-index: 9999;
 }
 
 @media (min-width: 1025px) {
-    .badgeGooglePlay{
+    .badgeGooglePlay {
         width: 200px;
         margin-left: -14px;
     }
 }
 
-@media(max-width: 1024px){
-    .badgeGooglePlay{
+@media (max-width: 1024px) {
+    .badgeGooglePlay {
         width: 100%;
     }
+}
+
+#logo {
+    height: 50px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    margin-right: 10px;
 }
