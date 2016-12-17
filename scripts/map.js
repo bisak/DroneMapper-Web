@@ -1,96 +1,123 @@
-let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Streets'}),
-    outdoors = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Outdoors'}),
-    dark = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Dark'}),
-    light = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Light'}),
-    satelite = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Satelite'}),
-    sateliteStreets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Satelite Streets'}),
-    openStreetMap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://openstreetmap.org">оpenStreetMap</a> оpenStreetMap'});
-
-var config = {
-    apiKey: "AIzaSyCkH7eapxWelLQqYWZel8H2vlaaQ7wGkVU",
-    authDomain: "dronemapper-83b1a.firebaseapp.com",
-    databaseURL: "https://dronemapper-83b1a.firebaseio.com",
-    storageBucket: "dronemapper-83b1a.appspot.com",
-    messagingSenderId: "915987875489"
-};
-firebase.initializeApp(config);
-let userId = 0;
-let auth = firebase.auth();
-let dbRef = firebase.database().ref();
-let storageRef = firebase.storage().ref();
-auth.onAuthStateChanged(function (user) {
-    if (user) {
-        userId = user.uid;
-        $(".signInLinkButton").hide();
-        $(".signOutLinkButton").show();
-        $(".galleryLinkButton").show();
-        firebase.database().ref("users/" + userId).on('value', function (snapshot) {
-            $("nav div ul").append(`<li><a>${snapshot.val().username}</a></li>`);
-        });
-        dbRef.child("images/" + userId).on('child_added',
-            function (snapshot) {
-                let imageUrl = snapshot.val().url;
-                let imageName = snapshot.val().name;
-                let imageLat = snapshot.val().lat;
-                let imageLong = snapshot.val().longt;
-                let imageAlt = snapshot.val().alt;
-                let pictureWidth = Math.round($(window).width() / 5);
-                let markerIcon = new L.Icon.Default();
-                markerIcon.options.shadowSize = [0, 0];
-                let imageDisplayString = `<img class='materialboxed' width="${pictureWidth}" src=${imageUrl}>`;
-                L.marker([imageLat, imageLong], {icon: markerIcon})
-                    .bindPopup(imageDisplayString, {
-                        autoPanPadding: L.point(20, 20),
-                    })
-                    .addTo(map);
-            });
-    } else {
-        $(".galleryLinkButton").hide();
-        $(".signOutLinkButton").hide();
-        $(".signInLinkButton").show();
+let map;
+/*Map initialization happens here*/
+function initMap() {
+    if (map) {
+        map.remove();
+        $("#homeMap").empty();
     }
-});
-$('.signOutLinkButton').click(function () {
-    firebase.auth().signOut().then(function () {
-        window.location.href = "/";
-        alertify.success("Logged Out Successfully")
-    }, function (error) {
-        alertify.success("Error loogging out")
+    /*Users can choose map*/
+    let baseMaps = {
+        "Outdoors": L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Outdoors'}),
+        "Streets": L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Streets'}),
+        "Dark": L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Dark'}),
+        "Light": L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Light'}),
+        "Satelite": L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Satelite'}),
+        "Satelite Streets": L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Satelite Streets'}),
+        "OpenStreetMap": L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://openstreetmap.org">оpenStreetMap</a> оpenStreetMap'})
+    };
+    /*Make map responsive*/
+    $('#homeMap').css("height", Math.round($(window).height() / 1.2) + "px");
+    $(window).resize(function () {
+        $('#homeMap').css("height", Math.round($(window).height() / 1.2) + "px");
     });
-});
+    /*Create map and append it to body*/
+    map = L.map('homeMap', {
+        center: [42.7339, 25.4858],
+        zoom: 7,
+        layers: baseMaps.Outdoors,
+        minZoom: 3,
+    });
+    /*Add controls and other components*/
+    map.zoomControl.setPosition('bottomright');
+    L.control.layers(baseMaps).addTo(map);
+    map.setMaxBounds([[90, -180], [-90, 180]]);
+}
 
+function loadImagesOnMap(user) {
+    let dbRef = firebase.database().ref();
+    let uid = user.uid;
+    dbRef.child("images/" + uid).on('child_added', loadImagesSuccess);
 
-let mapHeight = Math.round($(window).height() / 1.2);
-$(window).resize(function () {
-    mapHeight = Math.round($(window).height() / 1.2);
-    $('#homeMap').css("height", mapHeight + "px");
-});
-$('#homeMap').css("height", mapHeight + "px");
-let map = L.map('homeMap', {
-    center: [42.7339, 25.4858],
-    zoom: 7,
-    layers: outdoors,
-    fullscreenControl: true,
-    minZoom: 3,
-});
-L.control.locate({
-    strings: {
-        title: "Locate",
-    },
-    keepCurrentZoomLevel: true
-}).addTo(map);
-map.zoomControl.setPosition('bottomright');
-let baseMaps = {
-    "Outdoors": outdoors,
-    "Streets": streets,
-    "Dark": dark,
-    "Light": light,
-    "Satelite": satelite,
-    "Satelite Streets": sateliteStreets,
-    "OpenStreetMap": openStreetMap
-};
-L.control.layers(baseMaps).addTo(map);
-map.setMaxBounds([[90, -180], [-90, 180]]);
-$("#homeMap").on('click', '.leaflet-marker-icon', function (event) {
-    $('.materialboxed').materialbox();
-});
+    function loadImagesSuccess(data) {
+        let imageUrl = data.val().url;
+        let imageName = data.val().name;
+        let imageLat = data.val().lat;
+        let imageLong = data.val().longt;
+        let imageAlt = Math.round(data.val().alt);
+        let imageWidth = Math.round($(window).width() / 3);
+        let markerIcon = new L.Icon.Default();
+        markerIcon.options.shadowSize = [0, 0];
+
+        /*AIzaSyAEfTn6B8-W9g80G52yihV0-tpcspdRcU4*/ //<--Elevation api key google
+
+        /*TODO get elevation and calculate real altitude*/
+
+        /*$.ajax({
+            method: "GET",
+            url: `https://crossorigin.me/https://maps.googleapis.com/maps/api/elevation/json?locations=${imageLat},${imageLong}&key=AIzaSyAEfTn6B8-W9g80G52yihV0-tpcspdRcU4`
+        }).then(function (data) {
+            console.log(data)
+        })*/
+
+        let imageDisplayString = `<blockquote><h5><strong>${imageAlt}m</strong> a.s.l.</h5></blockquote><img class='materialboxed' width="${imageWidth}" src=${imageUrl}>`;
+        L.marker([imageLat, imageLong], {icon: markerIcon})
+            .bindPopup(imageDisplayString, {
+                autoPanPadding: L.point(20, 20),
+            })
+            .addTo(map);
+    }
+}
+
+/*Fix this method */
+function realtimeFlightsVisualize() {
+    let dbRef = firebase.database().ref();
+    let realtimeFlightsRef = dbRef.child("realtime-flights");
+    let savedFlightsRef = dbRef.child("saved-flights");
+    let droneIcon = L.icon({
+        iconUrl: '/img/drone-hdg.png',
+        iconSize: [28, 28],
+        iconAnchor: [14, 14],
+    });
+
+    savedFlightsRef.on('child_added', function (snapshotOne) {
+        let polyline = new L.Polyline([], {
+            color: 'orange',
+            weight: 3,
+            opacity: 1,
+            smoothFactor: 0,
+        });
+        savedFlightsRef.child(snapshotOne.key).on('child_added', function (snapshotTwo) {
+            let droneLat = snapshotTwo.val().latitude;
+            let droneLng = snapshotTwo.val().longitude;
+            polyline.addLatLng([droneLat, droneLng]);
+        });
+        map.addLayer(polyline);
+    });
+
+    realtimeFlightsRef.on('child_added', function (snapshotOne) {
+        let drone = L.marker([], {icon: droneIcon});
+        realtimeFlightsRef.child(snapshotOne.key).on('child_added', function (snapshotTwo) {
+            let droneLat = snapshotTwo.val().latitude;
+            let droneLng = snapshotTwo.val().longitude;
+            let droneHDG = snapshotTwo.val().heading;
+            let droneSpeed = snapshotTwo.val().speed;
+            let droneAltitude = snapshotTwo.val().altitude;
+            let displayDiv = `<div class="telemetryData">Speed: ${droneSpeed}<br><hr>Altitude: ${droneAltitude}</div>`;
+            drone.bindPopup(displayDiv);
+            drone.setLatLng([droneLat, droneLng]);
+            drone.setRotationAngle(droneHDG);
+        });
+        realtimeFlightsRef.child(snapshotOne.key).on('child_removed', function (snapshotSome) {
+            drone.remove();
+        });
+        drone.addTo(map);
+    });
+}
+
+function makeImageOnMapEnlargeable() {
+    /*Added some delay to ensure stability*/
+    setTimeout(function () {
+        $('.materialboxed').materialbox();
+    }, 10)
+}
+

@@ -3,47 +3,219 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <link rel="icon" href="/img/favicon.png">
-    <title>DroneMapper</title>
+    <title>SPA DroneMapper</title>
+    <link href="styles/images/favicon.png" rel="icon" type="image/x-icon"/>
 
-    <!-- CSS  -->
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="styles/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" rel="stylesheet"/>
-    <link href="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.css" rel="stylesheet"/>
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
-          rel='stylesheet'/>
-    <link href="styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/themes/default.min.css"/>
     <link href="styles/map.css" rel="stylesheet">
-    <link href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css" rel="stylesheet"/>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="styles/style.css" rel="stylesheet"/>
 </head>
 <body>
 <nav class="blue darken-3" role="navigation">
     <div class="nav-wrapper container">
-        <a id="logo-container" href="/" class="brand-logo"><img id="logo" src="img/logo.png">DroneMapper</a>
+        <a id="logo-container" href="#" class="brand-logo"><img id="logo" src="styles/images/logo.png">DroneMapper</a>
         <ul class="right hide-on-med-and-down">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="gallery" class="galleryLinkButton">Gallery</a></li>
-            <li><a href="login" class="signInLinkButton" style="display: none;">Login</a></li>
-            <li><a href="#" class="signOutLinkButton" style="display: none;">Log out</a></li>
+            <li class="active"><a href="#" class="homeViewButton">Home</a></li>
+            <li><a href="#" class="galleryViewButton">Gallery</a></li>
+            <li><a href="#" class="uploadViewButton">Upload</a></li>
+            <li><a href="#" class="loginViewButton">Login</a></li>
+            <li><a href="#" class="registerViewButton">Register</a></li>
+            <li><a href="#" class="logoutButton">Log out</a></li>
+            <!--<li id="avatarContainer" style="display: none">
+                <div class="chip">
+                    <img id="avatarImage" src="">
+                    <span id="usernameContainer"></span>
+                </div>
+            </li>-->
         </ul>
         <ul id="nav-mobile" class="side-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="gallery" class="galleryLinkButton">Gallery</a></li>
-            <li><a href="login" class="signInLinkButton" style="display: none;">Login</a></li>
-            <li><a href="#" class="signOutLinkButton" style="display: none;">Log out</a></li>
+            <li><a href="#" class="homeViewButton">Home</a></li>
+            <li><a href="#" class="galleryViewButton">Gallery</a></li>
+            <li><a href="#" class="uploadViewButton">Upload</a></li>
+            <li><a href="#" class="loginViewButton">Login</a></li>
+            <li><a href="#" class="registerViewButton">Register</a></li>
+            <li><a href="#" class="logoutButton">Log out</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
 </nav>
 
-<div class="section no-pad">
-    <div id="homeMap">
+<main>
+    <section id="homeView">
+        <div class="section no-pad">
+            <div id="homeMap">
 
-    </div>
-</div>
+            </div>
+        </div>
+    </section>
 
+    <section id="galleryView">
+        <div class="container">
+            <div class="section">
+                <div class="gallery-images">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="uploadView">
+        <div class="container">
+            <div class="section">
+                <div class="row">
+                    <div class="file-field input-field">
+                        <div class="btn teal">
+                            <span>File</span>
+                            <input id="uploadSlector" type="file" multiple>
+                        </div>
+                        <div class="file-path-wrapper" style="width: 75%">
+                            <input class="file-path validate" type="text" placeholder="Upload picture(s)">
+                        </div>
+                    </div>
+                </div>
+                <div class="bars" style="width: 75%">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="loginView">
+        <div class="container">
+            <br>
+            <h3 class="center">Login</h3>
+            <br>
+            <div class="row">
+                <form id="loginForm" class="col s12 m8 l8 z-depth-1 offset-m2 offset-l2">
+                    <br>
+                    <div class="row">
+                        <div class="input-field col s10 offset-s1 offset-m1 offset-l1">
+                            <input id="login-email" type="text" class="validate">
+                            <label for="login-email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s10 offset-s1 offset-m1 offset-l1">
+                            <input id="login-password" type="password" class="validate">
+                            <label for="login-password">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center">
+                            <button type="button" class="btn waves-effect waves-light teal z-depth-1 loginButton">
+                                Log In
+                            </button>
+                            <br>
+                            <br>
+                            Not Registered?
+                            <br>
+                            <a href="#" class="registerViewButton">Register</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="registerView">
+        <div class="container">
+            <br>
+            <h3 class="center">Register</h3>
+            <br>
+            <div class="row">
+                <form id="registerForm" class="col  s12 m10 l10 offset-m1 offset-l1 z-depth-1">
+                    <br>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="register-firstName" type="text" class="validate">
+                            <label for="register-firstName">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="register-lastName" type="text" class="validate">
+                            <label for="register-lastName">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="register-username" type="text" class="validate">
+                            <label for="register-username">Username</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="register-email" type="email" class="validate">
+                            <label for="register-email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="register-password" type="password" class="validate">
+                            <label for="register-password">Password</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="register-password-confirm" type="password" class="validate">
+                            <label for="register-password-confirm">Confirm Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 blue-grey-text">
+                            <select id="register-drone-select" multiple>
+                                <option value="" disabled>Choose your option</option>
+                                <option value="1">DJI Phantom 3 Standard</option>
+                                <option value="2">DJI Phantom 3 4K</option>
+                                <option value="3">DJI Phantom 3 Advanced</option>
+                                <option value="4">DJI Phantom 3 Professional</option>
+                                <option value="5">DJI Phantom 4</option>
+                                <option value="6">DJI Mavic</option>
+                                <option value="7">DJI Inspire 1</option>
+                                <option value="8">Other</option>
+                            </select>
+                            <label>Select your drone(s)</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center">
+                            By registering you agree to our <a class="faqViewButton" href="#">disclaimer</a>.<br><br>
+                            <button type="button"
+                                    class="btn waves-effect waves-light teal z-depth-1 registerButton">Register
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <br>
+        </div>
+    </section>
+
+
+    <section id="faqView">
+        <div class="container">
+            <div class="section">
+                <br>
+                <h4>Disclaimer</h4>
+                <p class="red-text">We are not responsible for any damage caused while using our software nor the
+                    uploaded pictures.</p>
+
+                <p>DroneMapper is fully open source project. Sources are found on GitHub:</p>
+                <p>Web: <a href="https://github.com/biskazz/DroneFlightMapper-Web">https://github.com/biskazz/DroneFlightMapper-Web</a>
+                    <br>
+                    Mobile:<a href="https://github.com/biskazz/DroneFlightMapper-Android">https://github.com/biskazz/DroneFlightMapper-Android</a>
+                </p>
+                <p>The project is developed and maintained solely by Biser Atanasov.
+                    <br>If you have suggestions or ideas feel free to contact me at
+                    <a href="mailto:biser.p.atanasov@gmail.com">biser.p.atanasov@gmail.com</a>
+                </p>
+                <br>
+                <p style="font-size: 1.25em" class="right-align">
+                    <-- Back to <a href="#" class="registerViewButton">register</a>
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer class="page-footer blue-grey darken-3">
     <div class="container">
@@ -75,26 +247,35 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Biser Atanasov</a>
+            Made by <a class="orange-text text-lighten-3" href="#">Biser Atanasov</a>
         </div>
     </div>
 </footer>
 
 
-<!--  Scripts-->
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script src="scripts/libs/materialize.min.js"></script>
-<script src="scripts/init.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
-<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
-<script src="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.js"
-        charset="utf-8"></script>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-<script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
+<!--Libraries-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 <script src="scripts/libs/leaflet.rotatedMarker.js"></script>
-<script src="scripts/map.js"></script>
-<script src="scripts/realtime-flights-visualise.js"></script>
+<script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
+<script src="scripts/libs/exif.js"></script>
+<script src="scripts/libs/canvas-to-blob.min.js"></script>
+<script src="scripts/libs/resize.js"></script>
 
+<!--Own Scripts-->
+<script src="scripts/init.js"></script>
+<script src="scripts/helper.js"></script>
+<script src="scripts/navigation.js"></script>
+<script src="scripts/map.js"></script>
+<script src="scripts/home.js"></script>
+<script src="scripts/upload.js"></script>
+<script src="scripts/gallery.js"></script>
+<script src="scripts/register.js"></script>
+<script src="scripts/login.js"></script>
+<script src="scripts/logout.js"></script>
+<!--Add your scripts ABOVE bindEvents.js-->
+<script src="scripts/bindEvents.js"></script>
 </body>
 </html>
