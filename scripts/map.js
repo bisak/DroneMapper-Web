@@ -48,18 +48,7 @@ function loadImagesOnMap(user) {
         let markerIcon = new L.Icon.Default();
         markerIcon.options.shadowSize = [0, 0];
 
-        /*AIzaSyAEfTn6B8-W9g80G52yihV0-tpcspdRcU4*/ //<--Elevation api key google
-
-        /*TODO get elevation and calculate real altitude*/
-
-        /*$.ajax({
-            method: "GET",
-            url: `https://crossorigin.me/https://maps.googleapis.com/maps/api/elevation/json?locations=${imageLat},${imageLong}&key=AIzaSyAEfTn6B8-W9g80G52yihV0-tpcspdRcU4`
-        }).then(function (data) {
-            console.log(data)
-        })*/
-
-        let imageDisplayString = `<blockquote><h5><strong>${imageAlt}m</strong> a.s.l.</h5></blockquote><img class='materialboxed' width="${imageWidth}" src=${imageUrl}>`;
+        let imageDisplayString = `<blockquote class="white-text center-align"><h5><strong>${imageAlt}m</strong> a.s.l.</h5></blockquote><img class='materialboxed mapImage' width="${imageWidth}" src=${imageUrl}>`;
         L.marker([imageLat, imageLong], {icon: markerIcon})
             .bindPopup(imageDisplayString, {
                 autoPanPadding: L.point(20, 20),

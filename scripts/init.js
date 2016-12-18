@@ -13,12 +13,19 @@ $(document).ready(function () {
     );
     $('select').material_select();
 
-    var config = {
+    /*var config = {
         apiKey: "AIzaSyCkH7eapxWelLQqYWZel8H2vlaaQ7wGkVU",
         authDomain: "dronemapper-83b1a.firebaseapp.com",
         databaseURL: "https://dronemapper-83b1a.firebaseio.com",
         storageBucket: "dronemapper-83b1a.appspot.com",
         messagingSenderId: "915987875489"
+    };*/
+    var config = {
+        apiKey: "AIzaSyAOoo_aN9aGtzqsZeW-itQP3iOtZIs14Y0",
+        authDomain: "dronemapper-2.firebaseapp.com",
+        databaseURL: "https://dronemapper-2.firebaseio.com",
+        storageBucket: "dronemapper-2.appspot.com",
+        messagingSenderId: "439163309533"
     };
     firebase.initializeApp(config);
 
