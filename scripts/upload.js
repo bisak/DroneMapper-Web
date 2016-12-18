@@ -1,5 +1,4 @@
-function uploadImages (evt) {
-    let resize = new window.resize();
+function uploadImages(evt) {
     let dbRef = firebase.database().ref();
     let storageRef = firebase.storage().ref();
     let uid = firebase.auth().currentUser.uid;
@@ -7,67 +6,92 @@ function uploadImages (evt) {
     let files = evt.target.files;
     for (let i = 0; i < files.length; i++) {
         let file = evt.target.files[i];
-        uploadImage(file)
+        getMetadata(file)
+    }
 
+    function getMetadata(image) {
+        EXIF.getData(image, function () {
+            let lat = EXIF.getTag(image, 'GPSLatitude');
+            let lng = EXIF.getTag(image, 'GPSLongitude');
+            let alt = EXIF.getTag(image, 'GPSAltitude');
+            let maker = EXIF.getTag(image, 'Make') || "INVALID";
 
-        EXIF.getData(file, function () {
-            let key = dbRef.push().key;
-            let lat = EXIF.getTag(file, 'GPSLatitude');
-            let longt = EXIF.getTag(file, 'GPSLongitude');
-            let alt = EXIF.getTag(file, 'GPSAltitude');
-            let maker = EXIF.getTag(file, 'Make') || "INVALID";
-            lat = lat[0].numerator + lat[1].numerator /
-                (60 * lat[1].denominator) + lat[2].numerator / (3600 * lat[2].denominator);
-            longt = longt[0].numerator + longt[1].numerator /
-                (60 * longt[1].denominator) + longt[2].numerator / (3600 * longt[2].denominator);
-            alt = alt.numerator / alt.denominator;
+            let metadata = {
+                lat: getRealLatLng(lat),
+                longt: getRealLatLng(lng),
+                alt: alt.numerator / alt.denominator,
+                name: image.name.split(".")[0]
+            };
+
             if (maker.substring(0, 3) == "DJI") {
-                $(".bars").append(`<div class="${key}"><p>${fileName}</p><div class="progress"><div class="determinate" id="${key}"></div></div><div class="divider"></div></div>`);
-                let pictureUploadTask = storageRef.child('images/' + uid + "/" + key).put(file);
-                pictureUploadTask.on('state_changed',
-                    function (snapshot) {
-                        var progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-                        $(`#${key}`).css('width', progress + "%");
-                    }, function () {
-                        $('#upload-file-info').append("ERROR");
-                    }, function () {
-                        resize.photo(file, 500, function (thumbnail) {
-                            let thumbnailUploadTask = storageRef.child('thumbnails/' + uid + "/" + key).put(thumbnail);
-                            thumbnailUploadTask.on('state_changed',
-                                function (snapshot) {
-                                    var progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-                                }, function () {
-                                    $('#upload-file-info').append("ERROR");
-                                }, function () {
-                                    let imageData = {};
-                                    imageData.name = fileName;
-                                    imageData.alt = alt;
-                                    imageData.lat = lat;
-                                    imageData.longt = longt;
-                                    imageData.url = pictureUploadTask.snapshot.downloadURL;
-                                    imageData.thumbnailUrl = thumbnailUploadTask.snapshot.downloadURL;
-                                    dbRef.child("/images/" + uid + "/" + key).set(imageData)
-                                        .then(function () {
-                                            alertify.success('Sync success!');
-                                            $(`.${key}`).remove();
-                                        })
-                                        .catch(function (error) {
-                                            alertify.error('Synchronization failed');
-                                        });
-                                });
-                        });
-
-                    });
+                compressImage(image, metadata)
             } else {
-                alertify.error('Only DJI Drone pictures allowed');
+                showErrorAlert('Only DJI Drone pictures allowed');
             }
         });
     }
 
-    function uploadImage(image) {
-        let fileName = image.name.split(".")[0];
-        let fileExt = image.name.split(".")[1];
+    function compressImage(image, metadata) {
+        let resize = new window.resize();
+        resize.photo(image, 2500, 'file', imageCompressed);
+        function imageCompressed(compressedImage) {
+            resize.photo(image, 500, 'file', thumbnailCompressed);
+            function thumbnailCompressed(thumbnail) {
+                uploadImage(compressedImage, thumbnail, metadata);
+            }
+        }
+    }
 
-        /*TODO*/
+    function uploadImage(compressedImage, thumbnail, metadata) {
+        let key = dbRef.push().key;
+
+        let compressedImageUploadTask = storageRef.child('images/' + uid + "/" + key).put(compressedImage);
+        compressedImageUploadTask.on('state_changed', pictureUploadProgress, pictureUploadError, pictureUploadSuccess);
+
+        function pictureUploadProgress(snapshot) {
+            if ($(`.${key}`).length == 0) {
+                $(".bars").append(`<div class="${key}"><p>${metadata.name}</p><div class="progress"><div class="determinate" id="${key}"></div></div><div class="divider"></div></div>`);
+            }
+            let progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+            $(`#${key}`).css('width', progress + "%");
+        }
+
+        function pictureUploadError(error) {
+            showErrorAlert("Image Upload Error.");
+            console.log(error)
+        }
+
+        function pictureUploadSuccess() {
+            let thumbnailUploadTask = storageRef.child('thumbnails/' + uid + "/" + key).put(thumbnail);
+            thumbnailUploadTask.on('state_changed', thumbnailUploadProgress, thumbnailUploadError, thumbnailUploadSuccess);
+
+            function thumbnailUploadProgress(snapshot) {
+                let thumbnailProgress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+            }
+
+            function thumbnailUploadError(error) {
+                showErrorAlert("Thumbnail Upload Error.");
+                console.log(error)
+            }
+
+            function thumbnailUploadSuccess() {
+                metadata.url = compressedImageUploadTask.snapshot.downloadURL;
+                metadata.thumbnailUrl = thumbnailUploadTask.snapshot.downloadURL;
+                uploadMetadata(metadata);
+            }
+
+            function uploadMetadata(metadata) {
+                dbRef.child("/images/" + uid + "/" + key).set(metadata).then(writeMetadataSuccess).catch(writeMetadataError);
+
+                function writeMetadataSuccess() {
+                    showSuccessAlert('Image uploaded successfully');
+                    $(`.${key}`).remove();
+                }
+
+                function writeMetadataError(error) {
+                    showErrorAlert("Image upload error")
+                }
+            }
+        }
     }
 }

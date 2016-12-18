@@ -29,3 +29,7 @@ function escape(string) {
         return entityMap[s];
     });
 }
+
+function getRealLatLng(data) {
+    return data[0].numerator + data[1].numerator / (60 * data[1].denominator) + data[2].numerator / (3600 * data[2].denominator)
+}
