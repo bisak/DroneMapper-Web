@@ -63,7 +63,7 @@ function realtimeFlightsVisualize() {
     let realtimeFlightsRef = dbRef.child("realtime-flights");
     let savedFlightsRef = dbRef.child("saved-flights");
     let droneIcon = L.icon({
-        iconUrl: '/img/drone-hdg.png',
+        iconUrl: 'styles/images/drone-hdg.png',
         iconSize: [28, 28],
         iconAnchor: [14, 14],
     });

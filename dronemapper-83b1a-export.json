@@ -1,0 +1,2235 @@
+{
+  "saved-flights" : {
+    "-KXpNHCLW-mdTR0y2Hb4" : {
+      "-KXpNHCTqlmUnYq8RLoW" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : -103.6,
+        "latitude" : 42.68180906139307,
+        "longitude" : 26.314820202137422,
+        "speed" : 0,
+        "time" : 1480511791
+      },
+      "-KXpNHZonCKVG-10RoeH" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : -117.4,
+        "latitude" : 42.68181110086186,
+        "longitude" : 26.314821940467546,
+        "speed" : 0.1,
+        "time" : 1480511792
+      },
+      "-KXpNHwEhXjyu3bbsSIG" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : -120.3,
+        "latitude" : 42.68181221889973,
+        "longitude" : 26.31482554543783,
+        "speed" : 0,
+        "time" : 1480511793
+      },
+      "-KXpNIIfFN1Py4r2RXPM" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : -114.8,
+        "latitude" : 42.68181242272571,
+        "longitude" : 26.314827760769408,
+        "speed" : 0,
+        "time" : 1480511795
+      },
+      "-KXpNIf6vimxJ_leozLc" : {
+        "altitude" : 1.7,
+        "distance" : 0.30000001192092896,
+        "heading" : -116.5,
+        "latitude" : 42.681811411725114,
+        "longitude" : 26.31483126329827,
+        "speed" : 0.2,
+        "time" : 1480511796
+      },
+      "-KXpNJ1Yhop_s4VgEglB" : {
+        "altitude" : 7.4,
+        "distance" : 0.8999999761581421,
+        "heading" : -112.9,
+        "latitude" : 42.681805878780146,
+        "longitude" : 26.31482276181204,
+        "speed" : 0.3,
+        "time" : 1480511798
+      },
+      "-KXpNJOz6bpUxRgeaeXU" : {
+        "altitude" : 8.8,
+        "distance" : 1.2999999523162842,
+        "heading" : -114.8,
+        "latitude" : 42.68180223926333,
+        "longitude" : 26.31482941353654,
+        "speed" : 0.4,
+        "time" : 1480511799
+      },
+      "-KXpNJlQ_2pNaCHvpKqa" : {
+        "altitude" : 11.5,
+        "distance" : 0.800000011920929,
+        "heading" : -93.2,
+        "latitude" : 42.68180867678115,
+        "longitude" : 26.314835448308802,
+        "speed" : 0.2,
+        "time" : 1480511801
+      },
+      "-KXpNK7s_fRCIOZRXewV" : {
+        "altitude" : 13.9,
+        "distance" : 1,
+        "heading" : -43.9,
+        "latitude" : 42.68180636857624,
+        "longitude" : 26.31483196665335,
+        "speed" : 0.1,
+        "time" : 1480511802
+      },
+      "-KXpNKVIL_41CCGsFVhN" : {
+        "altitude" : 14.7,
+        "distance" : 1,
+        "heading" : -16.5,
+        "latitude" : 42.68180384943697,
+        "longitude" : 26.31483231045124,
+        "speed" : 0,
+        "time" : 1480511804
+      },
+      "-KXpNKrlobpiiE88LwU3" : {
+        "altitude" : 14.5,
+        "distance" : 0.800000011920929,
+        "heading" : -13.7,
+        "latitude" : 42.68180752250417,
+        "longitude" : 26.314834260237877,
+        "speed" : 0.1,
+        "time" : 1480511805
+      },
+      "-KXpNLEAqWiaCLJDlu_7" : {
+        "altitude" : 14.5,
+        "distance" : 0.5,
+        "heading" : -13.8,
+        "latitude" : 42.68180941867786,
+        "longitude" : 26.31483157858886,
+        "speed" : 0.1,
+        "time" : 1480511807
+      },
+      "-KXpNLab0HSGv_mGftiE" : {
+        "altitude" : 14.4,
+        "distance" : 0.5,
+        "heading" : -13.9,
+        "latitude" : 42.68180887926332,
+        "longitude" : 26.314829750642247,
+        "speed" : 0.1,
+        "time" : 1480511808
+      },
+      "-KXpNLy2bi9fA2kRiRQr" : {
+        "altitude" : 14.4,
+        "distance" : 0.5,
+        "heading" : -14.1,
+        "latitude" : 42.681809328542165,
+        "longitude" : 26.31482924395453,
+        "speed" : 0,
+        "time" : 1480511810
+      },
+      "-KXpNMKUbHWXPQItqJWF" : {
+        "altitude" : 14.5,
+        "distance" : 1.2999999523162842,
+        "heading" : -13.9,
+        "latitude" : 42.681822401500234,
+        "longitude" : 26.314822785620574,
+        "speed" : 1.9,
+        "time" : 1480511811
+      },
+      "-KXpNMgv9UKkXp7JEDMi" : {
+        "altitude" : 14.5,
+        "distance" : 6.599999904632568,
+        "heading" : -14.1,
+        "latitude" : 42.681871104716194,
+        "longitude" : 26.314806844201744,
+        "speed" : 4,
+        "time" : 1480511813
+      },
+      "-KXpNN3MeeDiLOdLwW6_" : {
+        "altitude" : 14.4,
+        "distance" : 15.600000381469727,
+        "heading" : -13.8,
+        "latitude" : 42.68194894576286,
+        "longitude" : 26.314786678349318,
+        "speed" : 5.8,
+        "time" : 1480511814
+      },
+      "-KXpNNQo9j3AhMyIHIyZ" : {
+        "altitude" : 14.3,
+        "distance" : 26.399999618530273,
+        "heading" : -13.9,
+        "latitude" : 42.68204614302375,
+        "longitude" : 26.31476469453047,
+        "speed" : 6.6,
+        "time" : 1480511816
+      },
+      "-KXpNNnEc4teFSf8fCPj" : {
+        "altitude" : 14.2,
+        "distance" : 36,
+        "heading" : -14.5,
+        "latitude" : 42.68212981118878,
+        "longitude" : 26.314736648269026,
+        "speed" : 6.5,
+        "time" : 1480511817
+      },
+      "-KXpNO9fB3uzwZjeHbDS" : {
+        "altitude" : 14.3,
+        "distance" : 46.20000076293945,
+        "heading" : -26,
+        "latitude" : 42.68221500990521,
+        "longitude" : 26.314699529814035,
+        "speed" : 5.5,
+        "time" : 1480511819
+      },
+      "-KXpNOX6ZKAsHz3205ih" : {
+        "altitude" : 15.7,
+        "distance" : 52.900001525878906,
+        "heading" : -47.9,
+        "latitude" : 42.682268202428475,
+        "longitude" : 26.31465179008197,
+        "speed" : 3.8,
+        "time" : 1480511820
+      },
+      "-KXpNOtYNS7icSIs6wzL" : {
+        "altitude" : 17.9,
+        "distance" : 56.099998474121094,
+        "heading" : -76.1,
+        "latitude" : 42.68228363374175,
+        "longitude" : 26.314587173737916,
+        "speed" : 3.7,
+        "time" : 1480511822
+      },
+      "-KXpNPG-bJomWLVjyGW9" : {
+        "altitude" : 20.1,
+        "distance" : 57.20000076293945,
+        "heading" : -95.6,
+        "latitude" : 42.68226322355904,
+        "longitude" : 26.31448975434652,
+        "speed" : 5.9,
+        "time" : 1480511823
+      },
+      "-KXpNPcQwe3aQxsq8wGC" : {
+        "altitude" : 22.3,
+        "distance" : 57.900001525878906,
+        "heading" : -106,
+        "latitude" : 42.6822124843892,
+        "longitude" : 26.31437488660409,
+        "speed" : 6.3,
+        "time" : 1480511825
+      },
+      "-KXpNPzr_LtmBVZTI5xl" : {
+        "altitude" : 24.4,
+        "distance" : 57.79999923706055,
+        "heading" : -119.4,
+        "latitude" : 42.68214593613719,
+        "longitude" : 26.314283071235156,
+        "speed" : 5.6,
+        "time" : 1480511826
+      },
+      "-KXpNQMl1EnABGpwgFKT" : {
+        "altitude" : 26.5,
+        "distance" : 57.20000076293945,
+        "heading" : -137.8,
+        "latitude" : 42.68208232158369,
+        "longitude" : 26.314232767098588,
+        "speed" : 4.8,
+        "time" : 1480511828
+      },
+      "-KXpNQijws9uPO_LVS4j" : {
+        "altitude" : 28.6,
+        "distance" : 55.29999923706055,
+        "heading" : -151.5,
+        "latitude" : 42.6820168734134,
+        "longitude" : 26.31421012613898,
+        "speed" : 4.7,
+        "time" : 1480511829
+      },
+      "-KXpNRFh8ip9m8dgf1k2" : {
+        "altitude" : 30.6,
+        "distance" : 53.5,
+        "heading" : -160.3,
+        "latitude" : 42.6819556013186,
+        "longitude" : 26.314203940328113,
+        "speed" : 4.6,
+        "time" : 1480511832
+      },
+      "-KXpNRSbDmNJL6UymklS" : {
+        "altitude" : 31.6,
+        "distance" : 52.599998474121094,
+        "heading" : -152.9,
+        "latitude" : 42.681922206224634,
+        "longitude" : 26.314201759028027,
+        "speed" : 4.9,
+        "time" : 1480511832
+      },
+      "-KXpNRp2eW64o2sPRosw" : {
+        "altitude" : 33.1,
+        "distance" : 52.70000076293945,
+        "heading" : -131.8,
+        "latitude" : 42.681860024124475,
+        "longitude" : 26.314186907999506,
+        "speed" : 4.6,
+        "time" : 1480511834
+      },
+      "-KXpNSBUG1vug8ufpNae" : {
+        "altitude" : 34.9,
+        "distance" : 55.79999923706055,
+        "heading" : -117.2,
+        "latitude" : 42.68180717771959,
+        "longitude" : 26.314144457563252,
+        "speed" : 4.7,
+        "time" : 1480511835
+      },
+      "-KXpNSYvK12cmyd7RQfF" : {
+        "altitude" : 37.7,
+        "distance" : 62.29999923706055,
+        "heading" : -97.4,
+        "latitude" : 42.6817677098332,
+        "longitude" : 26.314066939123812,
+        "speed" : 4.8,
+        "time" : 1480511837
+      },
+      "-KXpNSvMKZUHmXbX3NO-" : {
+        "altitude" : 40.7,
+        "distance" : 69.5999984741211,
+        "heading" : -76.1,
+        "latitude" : 42.68175019209713,
+        "longitude" : 26.313979655262745,
+        "speed" : 5.3,
+        "time" : 1480511838
+      },
+      "-KXpNTHn3OdqPYC0Xn60" : {
+        "altitude" : 43.8,
+        "distance" : 78.5999984741211,
+        "heading" : -57.6,
+        "latitude" : 42.68175784582252,
+        "longitude" : 26.31386752102307,
+        "speed" : 6.1,
+        "time" : 1480511840
+      },
+      "-KXpNTeERz-d0b3grmCs" : {
+        "altitude" : 46.3,
+        "distance" : 88,
+        "heading" : -37.5,
+        "latitude" : 42.68179819664689,
+        "longitude" : 26.31375063636157,
+        "speed" : 6.4,
+        "time" : 1480511841
+      },
+      "-KXpNU0g1vSrpxbRdr8U" : {
+        "altitude" : 47.9,
+        "distance" : 94.5999984741211,
+        "heading" : -12.8,
+        "latitude" : 42.681851767645426,
+        "longitude" : 26.313671616106145,
+        "speed" : 6.1,
+        "time" : 1480511843
+      },
+      "-KXpNUOCokdRPlU0Y6gz" : {
+        "altitude" : 49.4,
+        "distance" : 100.19999694824219,
+        "heading" : 30.6,
+        "latitude" : 42.68195440641618,
+        "longitude" : 26.313616010031318,
+        "speed" : 5.8,
+        "time" : 1480511844
+      },
+      "-KXpNUkYacB3nQ6ZQ2hH" : {
+        "altitude" : 50.7,
+        "distance" : 100.0999984741211,
+        "heading" : 77.6,
+        "latitude" : 42.682043473153364,
+        "longitude" : 26.31364490362625,
+        "speed" : 4.8,
+        "time" : 1480511846
+      },
+      "-KXpNV6z-ZZHGfZEUuFg" : {
+        "altitude" : 51.5,
+        "distance" : 96.30000305175781,
+        "heading" : 122.6,
+        "latitude" : 42.682093533129205,
+        "longitude" : 26.313713608741285,
+        "speed" : 4.6,
+        "time" : 1480511847
+      },
+      "-KXpNVUQkMco6md-8n_B" : {
+        "altitude" : 49.2,
+        "distance" : 89,
+        "heading" : 129.2,
+        "latitude" : 42.68210474998991,
+        "longitude" : 26.313814750962816,
+        "speed" : 4.9,
+        "time" : 1480511849
+      },
+      "-KXpNVqsZyfiTmHMYRN_" : {
+        "altitude" : 44.5,
+        "distance" : 80,
+        "heading" : 124.8,
+        "latitude" : 42.682085444057684,
+        "longitude" : 26.313923139533703,
+        "speed" : 5.5,
+        "time" : 1480511850
+      },
+      "-KXpNWDJztnLi5QHl9Ui" : {
+        "altitude" : 39.7,
+        "distance" : 70.80000305175781,
+        "heading" : 127.6,
+        "latitude" : 42.68203882785126,
+        "longitude" : 26.31401539238642,
+        "speed" : 5.7,
+        "time" : 1480511852
+      },
+      "-KXpNW_kkO416R4dK_A4" : {
+        "altitude" : 35.1,
+        "distance" : 63.900001525878906,
+        "heading" : 126.8,
+        "latitude" : 42.681959718974134,
+        "longitude" : 26.314071643903056,
+        "speed" : 6.4,
+        "time" : 1480511853
+      },
+      "-KXpNWxAjBk7Qm16ErUT" : {
+        "altitude" : 30.6,
+        "distance" : 59.5,
+        "heading" : 129,
+        "latitude" : 42.681846692609255,
+        "longitude" : 26.314100388704,
+        "speed" : 8.1,
+        "time" : 1480511855
+      },
+      "-KXpNXJbkI1fpVNBkLH8" : {
+        "altitude" : 28.8,
+        "distance" : 59.29999923706055,
+        "heading" : 127.7,
+        "latitude" : 42.681718634279605,
+        "longitude" : 26.314114569972602,
+        "speed" : 8.4,
+        "time" : 1480511856
+      },
+      "-KXpNXg3NC3c73v8_ejZ" : {
+        "altitude" : 28.8,
+        "distance" : 62.70000076293945,
+        "heading" : 128.2,
+        "latitude" : 42.68158963420686,
+        "longitude" : 26.314120830451486,
+        "speed" : 8.1,
+        "time" : 1480511858
+      },
+      "-KXpNY2VH7YG0jDl9hUl" : {
+        "altitude" : 29.5,
+        "distance" : 66.69999694824219,
+        "heading" : 127.2,
+        "latitude" : 42.68148310462746,
+        "longitude" : 26.314144566700687,
+        "speed" : 6.1,
+        "time" : 1480511859
+      },
+      "-KXpNYPvU1F23eFFF3e0" : {
+        "altitude" : 30.2,
+        "distance" : 67,
+        "heading" : 126.3,
+        "latitude" : 42.681434587762524,
+        "longitude" : 26.31418783342838,
+        "speed" : 4.1,
+        "time" : 1480511861
+      },
+      "-KXpNYmMbcoIe23875QR" : {
+        "altitude" : 29.4,
+        "distance" : 61.5,
+        "heading" : 126.6,
+        "latitude" : 42.681440739131475,
+        "longitude" : 26.314267448779496,
+        "speed" : 4.9,
+        "time" : 1480511862
+      },
+      "-KXpNZ8o_vYkzFyN1XvL" : {
+        "altitude" : 25.9,
+        "distance" : 52.599998474121094,
+        "heading" : 127.7,
+        "latitude" : 42.68147504056687,
+        "longitude" : 26.314372127240468,
+        "speed" : 6.6,
+        "time" : 1480511864
+      },
+      "-KXpNZWGBstip1d2rgZe" : {
+        "altitude" : 22.9,
+        "distance" : 42.599998474121094,
+        "heading" : 127.8,
+        "latitude" : 42.68152482417356,
+        "longitude" : 26.31448026762385,
+        "speed" : 6.2,
+        "time" : 1480511865
+      },
+      "-KXpNZsfI_s7Qj144IEz" : {
+        "altitude" : 22.9,
+        "distance" : 34.400001525878906,
+        "heading" : 129.3,
+        "latitude" : 42.681565216498754,
+        "longitude" : 26.314575539265935,
+        "speed" : 4.1,
+        "time" : 1480511867
+      },
+      "-KXpN_F6vbtzAuzpOMr3" : {
+        "altitude" : 23,
+        "distance" : 33.599998474121094,
+        "heading" : 128.1,
+        "latitude" : 42.6815596303912,
+        "longitude" : 26.314600354878355,
+        "speed" : 0.7,
+        "time" : 1480511868
+      },
+      "-KXpN_b_0UBLWgG_KATu" : {
+        "altitude" : 23,
+        "distance" : 34.29999923706055,
+        "heading" : 128.4,
+        "latitude" : 42.68155444185716,
+        "longitude" : 26.314600925993368,
+        "speed" : 0.6,
+        "time" : 1480511870
+      },
+      "-KXpN_yz1j1VB5LGV68l" : {
+        "altitude" : 22.8,
+        "distance" : 33.599998474121094,
+        "heading" : 128.9,
+        "latitude" : 42.68155792437374,
+        "longitude" : 26.314608106470494,
+        "speed" : 0.2,
+        "time" : 1480511871
+      },
+      "-KXpNaLRdU5UcT48AcgC" : {
+        "altitude" : 22.9,
+        "distance" : 34,
+        "heading" : 129.2,
+        "latitude" : 42.6815543464926,
+        "longitude" : 26.314608364133818,
+        "speed" : 0.1,
+        "time" : 1480511873
+      },
+      "-KXpNahsZkTW2-BusbqM" : {
+        "altitude" : 22.8,
+        "distance" : 33.900001525878906,
+        "heading" : 129.8,
+        "latitude" : 42.681554172282176,
+        "longitude" : 26.314609716789516,
+        "speed" : 0,
+        "time" : 1480511874
+      },
+      "-KXpNb4J3cN2VUj3ouv_" : {
+        "altitude" : 22.9,
+        "distance" : 33.900001525878906,
+        "heading" : 128.7,
+        "latitude" : 42.68155347931706,
+        "longitude" : 26.314609169113403,
+        "speed" : 0.1,
+        "time" : 1480511876
+      },
+      "-KXpNbRjPPAj2MB9fQ_d" : {
+        "altitude" : 22.9,
+        "distance" : 33.599998474121094,
+        "heading" : 128.8,
+        "latitude" : 42.68155481235157,
+        "longitude" : 26.314607127044567,
+        "speed" : 0.1,
+        "time" : 1480511877
+      },
+      "-KXpNboCwBS8PB24iA12" : {
+        "altitude" : 22.8,
+        "distance" : 34,
+        "heading" : 129.1,
+        "latitude" : 42.68155474589984,
+        "longitude" : 26.314607377707013,
+        "speed" : 0.1,
+        "time" : 1480511879
+      },
+      "-KXpNcAbCLc8r2f9-Jt0" : {
+        "altitude" : 22.8,
+        "distance" : 33.70000076293945,
+        "heading" : 128.7,
+        "latitude" : 42.68155534138023,
+        "longitude" : 26.314605493155582,
+        "speed" : 0,
+        "time" : 1480511880
+      },
+      "-KXpNcY2mVt_Ndnq1h8K" : {
+        "altitude" : 22.8,
+        "distance" : 33.70000076293945,
+        "heading" : 129.5,
+        "latitude" : 42.68155692264872,
+        "longitude" : 26.314605298550283,
+        "speed" : 0.1,
+        "time" : 1480511882
+      },
+      "-KXpNcuUjU7RpexF--k1" : {
+        "altitude" : 22.7,
+        "distance" : 33.20000076293945,
+        "heading" : 128.8,
+        "latitude" : 42.68155889435684,
+        "longitude" : 26.314607554722254,
+        "speed" : 0,
+        "time" : 1480511883
+      },
+      "-KXpNdGwNpc7aLr_UvF4" : {
+        "altitude" : 23,
+        "distance" : 33.70000076293945,
+        "heading" : 128.1,
+        "latitude" : 42.68155806442114,
+        "longitude" : 26.314606289940627,
+        "speed" : 0,
+        "time" : 1480511885
+      },
+      "-KXpNddM2KjxLBJZiY5Y" : {
+        "altitude" : 22.9,
+        "distance" : 33.29999923706055,
+        "heading" : 80.8,
+        "latitude" : 42.68155893000256,
+        "longitude" : 26.31460551295614,
+        "speed" : 0,
+        "time" : 1480511886
+      },
+      "-KXpNe-o6FEPeCbEMWqr" : {
+        "altitude" : 22.8,
+        "distance" : 32.599998474121094,
+        "heading" : 10.5,
+        "latitude" : 42.68156581180672,
+        "longitude" : 26.31461395438853,
+        "speed" : 1.4,
+        "time" : 1480511888
+      },
+      "-KXpNeNE0Ha-O1cDNVL6" : {
+        "altitude" : 22.8,
+        "distance" : 29,
+        "heading" : -4,
+        "latitude" : 42.68160365655215,
+        "longitude" : 26.314616386056898,
+        "speed" : 3.6,
+        "time" : 1480511889
+      },
+      "-KXpNejfuICBXYQqUnOZ" : {
+        "altitude" : 22.9,
+        "distance" : 24.5,
+        "heading" : -5,
+        "latitude" : 42.68166234857761,
+        "longitude" : 26.31460655776253,
+        "speed" : 4.3,
+        "time" : 1480511891
+      },
+      "-KXpNf66SaxfOS8Cd1pT" : {
+        "altitude" : 22.9,
+        "distance" : 21.600000381469727,
+        "heading" : -5.5,
+        "latitude" : 42.681721300267704,
+        "longitude" : 26.314594940813933,
+        "speed" : 5.1,
+        "time" : 1480511892
+      },
+      "-KXpNfTZcxCw67fEXj3s" : {
+        "altitude" : 22.7,
+        "distance" : 20,
+        "heading" : -4.8,
+        "latitude" : 42.6818002976797,
+        "longitude" : 26.314581927092114,
+        "speed" : 6.5,
+        "time" : 1480511894
+      },
+      "-KXpNfpzXycXhwOWvjnF" : {
+        "altitude" : 22.6,
+        "distance" : 22.899999618530273,
+        "heading" : -4.5,
+        "latitude" : 42.681896419517685,
+        "longitude" : 26.314570660971736,
+        "speed" : 7.3,
+        "time" : 1480511895
+      },
+      "-KXpNgCQlV8QY6yx09Mq" : {
+        "altitude" : 22.6,
+        "distance" : 30.100000381469727,
+        "heading" : -4.2,
+        "latitude" : 42.68200020388128,
+        "longitude" : 26.314560717223497,
+        "speed" : 7.6,
+        "time" : 1480511897
+      },
+      "-KXpNgZr4vcsfy0aCxIo" : {
+        "altitude" : 22.4,
+        "distance" : 40.099998474121094,
+        "heading" : -4.3,
+        "latitude" : 42.68210855741284,
+        "longitude" : 26.31455002666273,
+        "speed" : 7.3,
+        "time" : 1480511898
+      },
+      "-KXpNgwIHKqNvqt8eJkr" : {
+        "altitude" : 22.4,
+        "distance" : 49.29999923706055,
+        "heading" : -4.9,
+        "latitude" : 42.68220072786149,
+        "longitude" : 26.314537048632037,
+        "speed" : 6,
+        "time" : 1480511900
+      },
+      "-KXpNhIjMcjJ2Wcf1n3Y" : {
+        "altitude" : 22.1,
+        "distance" : 53.900001525878906,
+        "heading" : -5.6,
+        "latitude" : 42.682244605604595,
+        "longitude" : 26.314525520431125,
+        "speed" : 0.7,
+        "time" : 1480511901
+      },
+      "-KXpNhfBTnBTxgW_qyoQ" : {
+        "altitude" : 25,
+        "distance" : 53.5,
+        "heading" : -5,
+        "latitude" : 42.68223893460357,
+        "longitude" : 26.314525434269687,
+        "speed" : 0.3,
+        "time" : 1480511903
+      },
+      "-KXpNi1bz4XPPcuGf9X1" : {
+        "altitude" : 28.3,
+        "distance" : 53.70000076293945,
+        "heading" : -4.9,
+        "latitude" : 42.68224221716255,
+        "longitude" : 26.314528476894733,
+        "speed" : 0.2,
+        "time" : 1480511904
+      },
+      "-KXpNiP2E2dfhSIc88Ez" : {
+        "altitude" : 31.6,
+        "distance" : 53.79999923706055,
+        "heading" : -4.3,
+        "latitude" : 42.68224284635369,
+        "longitude" : 26.314527837519663,
+        "speed" : 0.1,
+        "time" : 1480511905
+      },
+      "-KXpNilUrBlayb2tJqKb" : {
+        "altitude" : 38.6,
+        "distance" : 53.70000076293945,
+        "heading" : -3.8,
+        "latitude" : 42.68224394533992,
+        "longitude" : 26.314529463689098,
+        "speed" : 0,
+        "time" : 1480511907
+      },
+      "-KXpNj7wf_WZB3MB5YFu" : {
+        "altitude" : 43.4,
+        "distance" : 53.79999923706055,
+        "heading" : -4.1,
+        "latitude" : 42.68224461067039,
+        "longitude" : 26.31452833889607,
+        "speed" : 0.1,
+        "time" : 1480511909
+      },
+      "-KXpNjVM3xpUgcUf0l3F" : {
+        "altitude" : 47.6,
+        "distance" : 53.79999923706055,
+        "heading" : -3.8,
+        "latitude" : 42.68224235340319,
+        "longitude" : 26.31452738126836,
+        "speed" : 0,
+        "time" : 1480511910
+      },
+      "-KXpNjrn2kF8Xea6CTj_" : {
+        "altitude" : 50.9,
+        "distance" : 53.79999923706055,
+        "heading" : -4.1,
+        "latitude" : 42.68224207072647,
+        "longitude" : 26.314527629183868,
+        "speed" : 0,
+        "time" : 1480511912
+      },
+      "-KXpNkEE8mifmRiG0EHA" : {
+        "altitude" : 55,
+        "distance" : 53.79999923706055,
+        "heading" : -3.3,
+        "latitude" : 42.682242566344094,
+        "longitude" : 26.314527189302876,
+        "speed" : 0.1,
+        "time" : 1480511913
+      },
+      "-KXpNkaf29Gcwhdl8XS0" : {
+        "altitude" : 58.6,
+        "distance" : 53.900001525878906,
+        "heading" : -2.5,
+        "latitude" : 42.682242999094925,
+        "longitude" : 26.314526113483144,
+        "speed" : 0,
+        "time" : 1480511915
+      },
+      "-KXpNky6LWOvRCST7cBI" : {
+        "altitude" : 62.6,
+        "distance" : 53.900001525878906,
+        "heading" : -2.1,
+        "latitude" : 42.68224271773056,
+        "longitude" : 26.314526371621938,
+        "speed" : 0,
+        "time" : 1480511916
+      },
+      "-KXpNlKZv7tNNj9FJAVB" : {
+        "altitude" : 66.4,
+        "distance" : 54,
+        "heading" : -2.3,
+        "latitude" : 42.68224337315154,
+        "longitude" : 26.314524499767412,
+        "speed" : 0,
+        "time" : 1480511918
+      },
+      "-KXpNlgz-BLoK7-t5ihA" : {
+        "altitude" : 68.6,
+        "distance" : 53.900001525878906,
+        "heading" : -2.2,
+        "latitude" : 42.68224222772192,
+        "longitude" : 26.314525769018502,
+        "speed" : 0,
+        "time" : 1480511919
+      },
+      "-KXpNm3Rm3nXQO9tEEPe" : {
+        "altitude" : 68.5,
+        "distance" : 53.79999923706055,
+        "heading" : -2.6,
+        "latitude" : 42.68224521107115,
+        "longitude" : 26.3145270447325,
+        "speed" : 0,
+        "time" : 1480511921
+      },
+      "-KXpNmQtokAYlwwU7ZYR" : {
+        "altitude" : 68.4,
+        "distance" : 53.900001525878906,
+        "heading" : -2.6,
+        "latitude" : 42.682244118671846,
+        "longitude" : 26.314524752035453,
+        "speed" : 0.1,
+        "time" : 1480511922
+      },
+      "-KXpNmnIO-YxSBjiA6Cs" : {
+        "altitude" : 68.4,
+        "distance" : 54,
+        "heading" : -2.5,
+        "latitude" : 42.68224169668101,
+        "longitude" : 26.314523349833625,
+        "speed" : 0,
+        "time" : 1480511924
+      },
+      "-KXpNn9koVxlR_KiOngJ" : {
+        "altitude" : 68.3,
+        "distance" : 53.599998474121094,
+        "heading" : -2.4,
+        "latitude" : 42.68224133866199,
+        "longitude" : 26.314523913047644,
+        "speed" : 0.1,
+        "time" : 1480511925
+      },
+      "-KXpNnXBZsIsAdxJ-7Ks" : {
+        "altitude" : 68.4,
+        "distance" : 53.900001525878906,
+        "heading" : -2.1,
+        "latitude" : 42.682241938051554,
+        "longitude" : 26.31452521031552,
+        "speed" : 0.1,
+        "time" : 1480511927
+      },
+      "-KXpNntcRKjGRHVVzAS-" : {
+        "altitude" : 68.4,
+        "distance" : 53.900001525878906,
+        "heading" : -2.3,
+        "latitude" : 42.68224302615628,
+        "longitude" : 26.314524951080998,
+        "speed" : 0,
+        "time" : 1480511928
+      },
+      "-KXpNoG3nC66OcIZudrd" : {
+        "altitude" : 68.5,
+        "distance" : 53.900001525878906,
+        "heading" : -1.9,
+        "latitude" : 42.682243317555084,
+        "longitude" : 26.314525267438167,
+        "speed" : 0.1,
+        "time" : 1480511930
+      },
+      "-KXpNocU2lTIeUpm72Me" : {
+        "altitude" : 68.5,
+        "distance" : 53.900001525878906,
+        "heading" : -2.1,
+        "latitude" : 42.68224337698011,
+        "longitude" : 26.314526033024176,
+        "speed" : 0.1,
+        "time" : 1480511931
+      },
+      "-KXpNozv2x-MPdiWsG7w" : {
+        "altitude" : 68.5,
+        "distance" : 53.79999923706055,
+        "heading" : 17,
+        "latitude" : 42.682243036744474,
+        "longitude" : 26.314526625045875,
+        "speed" : 0,
+        "time" : 1480511933
+      },
+      "-KXpNpMMHtT2PATi-lHh" : {
+        "altitude" : 68.5,
+        "distance" : 53.70000076293945,
+        "heading" : 45.3,
+        "latitude" : 42.682243731438646,
+        "longitude" : 26.31453085238061,
+        "speed" : 0,
+        "time" : 1480511934
+      },
+      "-KXpNpioD7LHI_zPgKoV" : {
+        "altitude" : 68.6,
+        "distance" : 53.599998474121094,
+        "heading" : 65.2,
+        "latitude" : 42.682243583677696,
+        "longitude" : 26.314532327602794,
+        "speed" : 0,
+        "time" : 1480511936
+      },
+      "-KXpNq5ER1Acx_E8kya-" : {
+        "altitude" : 68.6,
+        "distance" : 53.5,
+        "heading" : 87.2,
+        "latitude" : 42.68224338676918,
+        "longitude" : 26.314535561256154,
+        "speed" : 0,
+        "time" : 1480511937
+      },
+      "-KXpNqSfrpZ3r-vstRxE" : {
+        "altitude" : 68.5,
+        "distance" : 53.5,
+        "heading" : 110,
+        "latitude" : 42.682242080052724,
+        "longitude" : 26.314536390067694,
+        "speed" : 0.1,
+        "time" : 1480511939
+      },
+      "-KXpNqp6sQlGHMwFuVDk" : {
+        "altitude" : 68.4,
+        "distance" : 53.20000076293945,
+        "heading" : 133.6,
+        "latitude" : 42.68223886007176,
+        "longitude" : 26.314536087785008,
+        "speed" : 0.3,
+        "time" : 1480511940
+      },
+      "-KXpNrBYhVsysuWz_njV" : {
+        "altitude" : 68.4,
+        "distance" : 50.70000076293945,
+        "heading" : 148.5,
+        "latitude" : 42.682221122046556,
+        "longitude" : 26.314550474363756,
+        "speed" : 2.5,
+        "time" : 1480511942
+      },
+      "-KXpNrZ-dxfsxN9aR4XX" : {
+        "altitude" : 66.2,
+        "distance" : 45.29999923706055,
+        "heading" : 149.5,
+        "latitude" : 42.68218038194986,
+        "longitude" : 26.314582913438542,
+        "speed" : 4.3,
+        "time" : 1480511943
+      },
+      "-KXpNrvQ4nshF5XqG7x9" : {
+        "altitude" : 61.9,
+        "distance" : 37.400001525878906,
+        "heading" : 153.4,
+        "latitude" : 42.68211401569265,
+        "longitude" : 26.314625164178644,
+        "speed" : 6.1,
+        "time" : 1480511945
+      },
+      "-KXpNsHrggzaVqDHmT4U" : {
+        "altitude" : 57.2,
+        "distance" : 27.200000762939453,
+        "heading" : 147.3,
+        "latitude" : 42.68203141693689,
+        "longitude" : 26.31467442274613,
+        "speed" : 6.9,
+        "time" : 1480511946
+      },
+      "-KXpNseInOPuYmbTnU4u" : {
+        "altitude" : 52.9,
+        "distance" : 16.5,
+        "heading" : 152.2,
+        "latitude" : 42.68194076689096,
+        "longitude" : 26.314727248492456,
+        "speed" : 8.3,
+        "time" : 1480511948
+      },
+      "-KXpNt0kqIp-ayPxfmgt" : {
+        "altitude" : 47.4,
+        "distance" : 3.200000047683716,
+        "heading" : 155.6,
+        "latitude" : 42.68182249595898,
+        "longitude" : 26.314791330240894,
+        "speed" : 8.4,
+        "time" : 1480511949
+      },
+      "-KXpNtOAOlc3aA3-Yhvi" : {
+        "altitude" : 42.5,
+        "distance" : 10.199999809265137,
+        "heading" : 162.3,
+        "latitude" : 42.681720433351856,
+        "longitude" : 26.314836497247125,
+        "speed" : 5.7,
+        "time" : 1480511951
+      },
+      "-KXpNtkb_oIo_lR7IkHQ" : {
+        "altitude" : 37.9,
+        "distance" : 17.100000381469727,
+        "heading" : 172.4,
+        "latitude" : 42.68165817163689,
+        "longitude" : 26.314852332628448,
+        "speed" : 4.8,
+        "time" : 1480511952
+      },
+      "-KXpNu72-2NmALZALiAQ" : {
+        "altitude" : 33.4,
+        "distance" : 25.299999237060547,
+        "heading" : -171.7,
+        "latitude" : 42.68158769223517,
+        "longitude" : 26.314872537035,
+        "speed" : 5.6,
+        "time" : 1480511954
+      },
+      "-KXpNuUU7XYdwl0trniY" : {
+        "altitude" : 28.6,
+        "distance" : 34.20000076293945,
+        "heading" : -160.1,
+        "latitude" : 42.68150569622344,
+        "longitude" : 26.314880514250742,
+        "speed" : 6.3,
+        "time" : 1480511955
+      },
+      "-KXpNuqvFbTrwnUEB_Ql" : {
+        "altitude" : 26.5,
+        "distance" : 44.70000076293945,
+        "heading" : -164.3,
+        "latitude" : 42.68141258644527,
+        "longitude" : 26.314878548728554,
+        "speed" : 7,
+        "time" : 1480511957
+      },
+      "-KXpNvDNMitjwqAjPDEJ" : {
+        "altitude" : 25.1,
+        "distance" : 56.099998474121094,
+        "heading" : -161.8,
+        "latitude" : 42.68131011743942,
+        "longitude" : 26.31486578046545,
+        "speed" : 7.7,
+        "time" : 1480511958
+      },
+      "-KXpNv_oTSbmXOT_rL-E" : {
+        "altitude" : 24.9,
+        "distance" : 67,
+        "heading" : -162.5,
+        "latitude" : 42.68121123104571,
+        "longitude" : 26.314841165918594,
+        "speed" : 7.9,
+        "time" : 1480511960
+      },
+      "-KXpNvxFlOcCm4sFlrhc" : {
+        "altitude" : 25.1,
+        "distance" : 80.19999694824219,
+        "heading" : -157.2,
+        "latitude" : 42.68109289544074,
+        "longitude" : 26.314803356704395,
+        "speed" : 8.6,
+        "time" : 1480511961
+      },
+      "-KXpNwJf9uDJ5hV4Cg0Y" : {
+        "altitude" : 25.1,
+        "distance" : 92.69999694824219,
+        "heading" : -141.6,
+        "latitude" : 42.68098031877662,
+        "longitude" : 26.314754715980335,
+        "speed" : 8.7,
+        "time" : 1480511963
+      },
+      "-KXpNwg7ekX13LTCoes4" : {
+        "altitude" : 25.2,
+        "distance" : 104.5,
+        "heading" : -105.7,
+        "latitude" : 42.68087750468365,
+        "longitude" : 26.314688388039716,
+        "speed" : 7.9,
+        "time" : 1480511964
+      },
+      "-KXpNx2ZVVOdVuzHz_7l" : {
+        "altitude" : 25.3,
+        "distance" : 113.4000015258789,
+        "heading" : -89.8,
+        "latitude" : 42.68080378777288,
+        "longitude" : 26.314612232994012,
+        "speed" : 6.8,
+        "time" : 1480511966
+      },
+      "-KXpNxPzvjcOlmsmBJ1y" : {
+        "altitude" : 25.2,
+        "distance" : 120.5,
+        "heading" : -68.7,
+        "latitude" : 42.68075248049087,
+        "longitude" : 26.314520956194624,
+        "speed" : 5.1,
+        "time" : 1480511967
+      },
+      "-KXpNxmQaV_Fu55VOKeA" : {
+        "altitude" : 24.9,
+        "distance" : 123.30000305175781,
+        "heading" : -52.3,
+        "latitude" : 42.68073913209623,
+        "longitude" : 26.31443909285514,
+        "speed" : 4.2,
+        "time" : 1480511969
+      },
+      "-KXpNy8rnyQQtjJlOc1s" : {
+        "altitude" : 24.9,
+        "distance" : 123.69999694824219,
+        "heading" : -31.7,
+        "latitude" : 42.68075340106911,
+        "longitude" : 26.314368350115682,
+        "speed" : 3.7,
+        "time" : 1480511970
+      },
+      "-KXpNyWIpXei_75VedFF" : {
+        "altitude" : 24.7,
+        "distance" : 121.5,
+        "heading" : -14,
+        "latitude" : 42.680786870148815,
+        "longitude" : 26.314318609972364,
+        "speed" : 3.4,
+        "time" : 1480511972
+      },
+      "-KXpNyskFW2K6ofU-d7b" : {
+        "altitude" : 24.6,
+        "distance" : 117.30000305175781,
+        "heading" : 8,
+        "latitude" : 42.68083189228167,
+        "longitude" : 26.314297830697935,
+        "speed" : 3.3,
+        "time" : 1480511973
+      },
+      "-KXpNzFBEhlimpqPsdEo" : {
+        "altitude" : 24.5,
+        "distance" : 112.4000015258789,
+        "heading" : 26,
+        "latitude" : 42.68087721487295,
+        "longitude" : 26.314304517579234,
+        "speed" : 3.2,
+        "time" : 1480511975
+      },
+      "-KXpNzbcnqqiIp4iQpkt" : {
+        "altitude" : 24.5,
+        "distance" : 107.30000305175781,
+        "heading" : 28.3,
+        "latitude" : 42.68091846338282,
+        "longitude" : 26.31432689682852,
+        "speed" : 3.1,
+        "time" : 1480511976
+      },
+      "-KXpNzz3xd6Y-hd_fwEl" : {
+        "altitude" : 24.5,
+        "distance" : 103.30000305175781,
+        "heading" : 29.7,
+        "latitude" : 42.680955274152666,
+        "longitude" : 26.31434193276106,
+        "speed" : 2.9,
+        "time" : 1480511978
+      },
+      "-KXpO-LUOmfU5pDkIim-" : {
+        "altitude" : 24.5,
+        "distance" : 98.30000305175781,
+        "heading" : 29.3,
+        "latitude" : 42.68100083073218,
+        "longitude" : 26.31435326371967,
+        "speed" : 3.3,
+        "time" : 1480511979
+      },
+      "-KXpO-hvBBsQ4_CAHF6j" : {
+        "altitude" : 24.7,
+        "distance" : 92.80000305175781,
+        "heading" : 28.5,
+        "latitude" : 42.681049799282654,
+        "longitude" : 26.314366314350263,
+        "speed" : 3.6,
+        "time" : 1480511981
+      },
+      "-KXpO04MsOWSrokAhpcm" : {
+        "altitude" : 24.8,
+        "distance" : 87.4000015258789,
+        "heading" : 28.3,
+        "latitude" : 42.68109891060379,
+        "longitude" : 26.314376573251966,
+        "speed" : 3.5,
+        "time" : 1480511982
+      },
+      "-KXpO0RoaBMW7LsbgTUF" : {
+        "altitude" : 24.8,
+        "distance" : 82.4000015258789,
+        "heading" : 28.8,
+        "latitude" : 42.681144059545574,
+        "longitude" : 26.31439076315484,
+        "speed" : 3.4,
+        "time" : 1480511984
+      },
+      "-KXpO0oEi2x-DdVsbAcy" : {
+        "altitude" : 24.7,
+        "distance" : 76.5,
+        "heading" : 29.2,
+        "latitude" : 42.68119279118351,
+        "longitude" : 26.314417649394585,
+        "speed" : 4,
+        "time" : 1480511985
+      },
+      "-KXpO1Af3f6BAy4ZBAoF" : {
+        "altitude" : 24.7,
+        "distance" : 69.80000305175781,
+        "heading" : 29.2,
+        "latitude" : 42.68124686176462,
+        "longitude" : 26.314454535975127,
+        "speed" : 4.4,
+        "time" : 1480511987
+      },
+      "-KXpO1Y7IxPr2E5RQaby" : {
+        "altitude" : 24.8,
+        "distance" : 62.900001525878906,
+        "heading" : 28.6,
+        "latitude" : 42.681302531803006,
+        "longitude" : 26.31449723955484,
+        "speed" : 4.7,
+        "time" : 1480511988
+      },
+      "-KXpO1uZmg6rXsE2lwyY" : {
+        "altitude" : 24.8,
+        "distance" : 55.900001525878906,
+        "heading" : 28.8,
+        "latitude" : 42.681356306485256,
+        "longitude" : 26.314545009125755,
+        "speed" : 4.7,
+        "time" : 1480511990
+      },
+      "-KXpO2H-HSdet6OoLlfI" : {
+        "altitude" : 24.4,
+        "distance" : 48.20000076293945,
+        "heading" : 28.2,
+        "latitude" : 42.68141052978577,
+        "longitude" : 26.31460008436399,
+        "speed" : 5.3,
+        "time" : 1480511991
+      },
+      "-KXpO2dQAFkasvLDdhVr" : {
+        "altitude" : 24.4,
+        "distance" : 40.400001525878906,
+        "heading" : 28,
+        "latitude" : 42.681468986978416,
+        "longitude" : 26.31466527318465,
+        "speed" : 5.4,
+        "time" : 1480511993
+      },
+      "-KXpO3-rnvgU_vwxOlO5" : {
+        "altitude" : 24.4,
+        "distance" : 35.400001525878906,
+        "heading" : 27.2,
+        "latitude" : 42.68150619968544,
+        "longitude" : 26.314703660539486,
+        "speed" : 1,
+        "time" : 1480511994
+      },
+      "-KXpO3NJFGlpl2fC4zmn" : {
+        "altitude" : 24.6,
+        "distance" : 35.400001525878906,
+        "heading" : 26.1,
+        "latitude" : 42.68150528613317,
+        "longitude" : 26.314702336166096,
+        "speed" : 0.1,
+        "time" : 1480511996
+      },
+      "-KXpO3jkm32H37dfuuq_" : {
+        "altitude" : 24.8,
+        "distance" : 35.29999923706055,
+        "heading" : 9.7,
+        "latitude" : 42.68150655917483,
+        "longitude" : 26.314706821984146,
+        "speed" : 0.1,
+        "time" : 1480511997
+      },
+      "-KXpO46A-l_7kv0Rpidf" : {
+        "altitude" : 25,
+        "distance" : 35.400001525878906,
+        "heading" : -9.9,
+        "latitude" : 42.68150635663928,
+        "longitude" : 26.314705201002358,
+        "speed" : 0,
+        "time" : 1480511999
+      },
+      "-KXpO4TdIsCKHl2GNY_A" : {
+        "altitude" : 24.9,
+        "distance" : 35.900001525878906,
+        "heading" : -21,
+        "latitude" : 42.681505168032515,
+        "longitude" : 26.314700728501265,
+        "speed" : 0,
+        "time" : 1480512000
+      },
+      "-KXpO4q23-c0KtcwJ5Hd" : {
+        "altitude" : 25.1,
+        "distance" : 35.900001525878906,
+        "heading" : -30.6,
+        "latitude" : 42.68150494485936,
+        "longitude" : 26.3146993097859,
+        "speed" : 0.2,
+        "time" : 1480512002
+      },
+      "-KXpO5CU_nXROtrn8P2i" : {
+        "altitude" : 25.1,
+        "distance" : 35.900001525878906,
+        "heading" : -44.4,
+        "latitude" : 42.68150519519079,
+        "longitude" : 26.31470090179312,
+        "speed" : 0.1,
+        "time" : 1480512003
+      },
+      "-KXpO5Zw6xF_Q-Qafrcl" : {
+        "altitude" : 25,
+        "distance" : 35.5,
+        "heading" : -65.6,
+        "latitude" : 42.68150541017373,
+        "longitude" : 26.314701643922927,
+        "speed" : 0.1,
+        "time" : 1480512005
+      },
+      "-KXpO5wNvtOLEvJRXT3p" : {
+        "altitude" : 25.1,
+        "distance" : 35.900001525878906,
+        "heading" : -105.8,
+        "latitude" : 42.6815040249716,
+        "longitude" : 26.314701215688707,
+        "speed" : 0,
+        "time" : 1480512006
+      },
+      "-KXpO6IoVceTSAbbbnNU" : {
+        "altitude" : 25.1,
+        "distance" : 36.29999923706055,
+        "heading" : -151.8,
+        "latitude" : 42.681499998781895,
+        "longitude" : 26.314700744770334,
+        "speed" : 0.1,
+        "time" : 1480512008
+      },
+      "-KXpO6fFQ3gzK1ihIRvx" : {
+        "altitude" : 24.9,
+        "distance" : 36.599998474121094,
+        "heading" : 160.2,
+        "latitude" : 42.68149427049257,
+        "longitude" : 26.314706340162243,
+        "speed" : 0.2,
+        "time" : 1480512009
+      },
+      "-KXpO71fuGTMtfF87UP-" : {
+        "altitude" : 24.8,
+        "distance" : 36.79999923706055,
+        "heading" : 127.6,
+        "latitude" : 42.68149102368303,
+        "longitude" : 26.31471266881096,
+        "speed" : 0.8,
+        "time" : 1480512011
+      },
+      "-KXpO7P7wuVndOrqyc80" : {
+        "altitude" : 25,
+        "distance" : 39.400001525878906,
+        "heading" : 118.8,
+        "latitude" : 42.681463222510445,
+        "longitude" : 26.314757754234524,
+        "speed" : 4.4,
+        "time" : 1480512012
+      },
+      "-KXpO7lYd6umyNlhadX9" : {
+        "altitude" : 25,
+        "distance" : 44.099998474121094,
+        "heading" : 137.1,
+        "latitude" : 42.681415580311096,
+        "longitude" : 26.314838234857316,
+        "speed" : 5.7,
+        "time" : 1480512014
+      },
+      "-KXpO87zp87phJpM8SOC" : {
+        "altitude" : 27.2,
+        "distance" : 51,
+        "heading" : 137,
+        "latitude" : 42.68136007094898,
+        "longitude" : 26.314918789931358,
+        "speed" : 5.7,
+        "time" : 1480512015
+      },
+      "-KXpO8VQZ9vUJAVCwZm9" : {
+        "altitude" : 31.1,
+        "distance" : 58.099998474121094,
+        "heading" : 137.1,
+        "latitude" : 42.68130374566322,
+        "longitude" : 26.314995277965192,
+        "speed" : 5.7,
+        "time" : 1480512017
+      },
+      "-KXpO8rrGhpoQVxwcP_J" : {
+        "altitude" : 34.3,
+        "distance" : 65.19999694824219,
+        "heading" : 137.1,
+        "latitude" : 42.681252301971455,
+        "longitude" : 26.315061263022187,
+        "speed" : 5.2,
+        "time" : 1480512018
+      },
+      "-KXpO9EJ4jzHMmNKU_8r" : {
+        "altitude" : 37.1,
+        "distance" : 72.69999694824219,
+        "heading" : 137.3,
+        "latitude" : 42.681198314681154,
+        "longitude" : 26.315132168474467,
+        "speed" : 5.3,
+        "time" : 1480512020
+      },
+      "-KXpO9akOz9o-AMubaoV" : {
+        "altitude" : 37.8,
+        "distance" : 80.30000305175781,
+        "heading" : 137.1,
+        "latitude" : 42.68114308881063,
+        "longitude" : 26.31520304914137,
+        "speed" : 5.9,
+        "time" : 1480512021
+      },
+      "-KXpO9yB8peKEMFdPv4A" : {
+        "altitude" : 38.2,
+        "distance" : 89.5,
+        "heading" : 137,
+        "latitude" : 42.68107913774799,
+        "longitude" : 26.315281862287602,
+        "speed" : 6.7,
+        "time" : 1480512023
+      },
+      "-KXpOAKc4nUaPqQfF5mh" : {
+        "altitude" : 38.3,
+        "distance" : 99.19999694824219,
+        "heading" : 137.1,
+        "latitude" : 42.68101071578562,
+        "longitude" : 26.31536171905598,
+        "speed" : 7.3,
+        "time" : 1480512024
+      },
+      "-KXpOAh3U9FolsBoQCzd" : {
+        "altitude" : 38.2,
+        "distance" : 110.69999694824219,
+        "heading" : 136.3,
+        "latitude" : 42.68092976328449,
+        "longitude" : 26.31545551212158,
+        "speed" : 6,
+        "time" : 1480512026
+      },
+      "-KXpOB3VkpnCiFHwuy-n" : {
+        "altitude" : 38.3,
+        "distance" : 116.9000015258789,
+        "heading" : 136.5,
+        "latitude" : 42.68088444829809,
+        "longitude" : 26.31550237309373,
+        "speed" : 2.9,
+        "time" : 1480512027
+      },
+      "-KXpOBQvOchWGwMLOj0Y" : {
+        "altitude" : 38.3,
+        "distance" : 119.30000305175781,
+        "heading" : 137.5,
+        "latitude" : 42.680866467879305,
+        "longitude" : 26.315515595588224,
+        "speed" : 0.1,
+        "time" : 1480512029
+      },
+      "-KXpOBnMruWUzExRgPsm" : {
+        "altitude" : 38.2,
+        "distance" : 116.9000015258789,
+        "heading" : 136.6,
+        "latitude" : 42.68088334057581,
+        "longitude" : 26.31549141048662,
+        "speed" : 2.9,
+        "time" : 1480512030
+      },
+      "-KXpOC9oDP2rwGj325Mx" : {
+        "altitude" : 38.1,
+        "distance" : 111.0999984741211,
+        "heading" : 149,
+        "latitude" : 42.680923883604265,
+        "longitude" : 26.31544926492945,
+        "speed" : 3,
+        "time" : 1480512032
+      },
+      "-KXpOCXEBeBk5YHrnDcl" : {
+        "altitude" : 38,
+        "distance" : 109.80000305175781,
+        "heading" : 161.5,
+        "latitude" : 42.68093470167943,
+        "longitude" : 26.315442563322808,
+        "speed" : 0.9,
+        "time" : 1480512033
+      },
+      "-KXpOCtfgjCBgnHUNYPi" : {
+        "altitude" : 38.4,
+        "distance" : 114,
+        "heading" : -157.4,
+        "latitude" : 42.68090155747897,
+        "longitude" : 26.315464738910716,
+        "speed" : 3.1,
+        "time" : 1480512035
+      },
+      "-KXpODG613aVrxpUJCuf" : {
+        "altitude" : 38.5,
+        "distance" : 119.5999984741211,
+        "heading" : -108.7,
+        "latitude" : 42.68085595486354,
+        "longitude" : 26.31549258449468,
+        "speed" : 3.6,
+        "time" : 1480512036
+      },
+      "-KXpODcZjUNFbyvWaVmx" : {
+        "altitude" : 38.4,
+        "distance" : 125.0999984741211,
+        "heading" : -101.5,
+        "latitude" : 42.680807000357156,
+        "longitude" : 26.315509739346403,
+        "speed" : 3.8,
+        "time" : 1480512038
+      },
+      "-KXpODzzYeXYi6s7QwH9" : {
+        "altitude" : 38.1,
+        "distance" : 130.89999389648438,
+        "heading" : -86,
+        "latitude" : 42.68075364669975,
+        "longitude" : 26.315523438481378,
+        "speed" : 3.8,
+        "time" : 1480512039
+      },
+      "-KXpOEMR5CwU_oJLVzgw" : {
+        "altitude" : 38,
+        "distance" : 135.10000610351562,
+        "heading" : -79.4,
+        "latitude" : 42.680710790782165,
+        "longitude" : 26.315521255736726,
+        "speed" : 2.6,
+        "time" : 1480512041
+      },
+      "-KXpOEisCij74vyh2w2P" : {
+        "altitude" : 38.2,
+        "distance" : 135.1999969482422,
+        "heading" : -73.4,
+        "latitude" : 42.6806944345492,
+        "longitude" : 26.3154770339292,
+        "speed" : 3.2,
+        "time" : 1480512042
+      },
+      "-KXpOF5JwXCqAwFsGotx" : {
+        "altitude" : 38.3,
+        "distance" : 133.10000610351562,
+        "heading" : -77.2,
+        "latitude" : 42.68069384579775,
+        "longitude" : 26.315410110022167,
+        "speed" : 4.7,
+        "time" : 1480512044
+      },
+      "-KXpOFSjozG0sqGrAO8n" : {
+        "altitude" : 38.3,
+        "distance" : 128.5,
+        "heading" : -73.3,
+        "latitude" : 42.680711046084554,
+        "longitude" : 26.31529782551292,
+        "speed" : 5.3,
+        "time" : 1480512045
+      },
+      "-KXpOFpApye7GM0JhMT1" : {
+        "altitude" : 38.2,
+        "distance" : 124,
+        "heading" : -64,
+        "latitude" : 42.68073342218978,
+        "longitude" : 26.31520569564209,
+        "speed" : 5.1,
+        "time" : 1480512047
+      },
+      "-KXpOGBbYYB8_p90SI2B" : {
+        "altitude" : 38.2,
+        "distance" : 119,
+        "heading" : -60.5,
+        "latitude" : 42.68076185312995,
+        "longitude" : 26.315116960574862,
+        "speed" : 5.1,
+        "time" : 1480512048
+      },
+      "-KXpOGZ2NCDfaKU8RLKV" : {
+        "altitude" : 38.2,
+        "distance" : 114,
+        "heading" : -51.9,
+        "latitude" : 42.68079764096123,
+        "longitude" : 26.315024882295134,
+        "speed" : 5.8,
+        "time" : 1480512050
+      },
+      "-KXpOGvUeKvXOQbKl25T" : {
+        "altitude" : 38.1,
+        "distance" : 108.0999984741211,
+        "heading" : -43.6,
+        "latitude" : 42.680841650725675,
+        "longitude" : 26.314932607113366,
+        "speed" : 6,
+        "time" : 1480512051
+      },
+      "-KXpOHHwb9cJKVN5msnZ" : {
+        "altitude" : 38,
+        "distance" : 101.80000305175781,
+        "heading" : -33.6,
+        "latitude" : 42.680896924327236,
+        "longitude" : 26.314844060326006,
+        "speed" : 6.4,
+        "time" : 1480512053
+      },
+      "-KXpOHeML9AsUui6b9pH" : {
+        "altitude" : 38.1,
+        "distance" : 94.30000305175781,
+        "heading" : -21.7,
+        "latitude" : 42.6809642585977,
+        "longitude" : 26.314769136019997,
+        "speed" : 6.5,
+        "time" : 1480512054
+      },
+      "-KXpOI0nJtQE5h0Pp8m4" : {
+        "altitude" : 37.9,
+        "distance" : 87.4000015258789,
+        "heading" : -16.6,
+        "latitude" : 42.681029875524175,
+        "longitude" : 26.314723822672114,
+        "speed" : 6.6,
+        "time" : 1480512056
+      },
+      "-KXpOIOGUw4t1-qQc6kU" : {
+        "altitude" : 37.2,
+        "distance" : 78.5,
+        "heading" : -11.2,
+        "latitude" : 42.68111378530279,
+        "longitude" : 26.31468235210852,
+        "speed" : 5.4,
+        "time" : 1480512057
+      },
+      "-KXpOIkfegD2cNYf1B2T" : {
+        "altitude" : 33.8,
+        "distance" : 71,
+        "heading" : -9.4,
+        "latitude" : 42.6811860816981,
+        "longitude" : 26.3146527396002,
+        "speed" : 4.4,
+        "time" : 1480512059
+      },
+      "-KXpOJ76Kc2BffJbQ5kD" : {
+        "altitude" : 30.7,
+        "distance" : 64.19999694824219,
+        "heading" : 1,
+        "latitude" : 42.681249787870335,
+        "longitude" : 26.31463990006341,
+        "speed" : 5.2,
+        "time" : 1480512060
+      },
+      "-KXpOJUYwcxLMElsbkv6" : {
+        "altitude" : 28.5,
+        "distance" : 55.599998474121094,
+        "heading" : 5.9,
+        "latitude" : 42.681330784493994,
+        "longitude" : 26.31463842622631,
+        "speed" : 6,
+        "time" : 1480512062
+      },
+      "-KXpOJqz_OAUZW7SGZXu" : {
+        "altitude" : 26.2,
+        "distance" : 46.79999923706055,
+        "heading" : 14.7,
+        "latitude" : 42.6814128594832,
+        "longitude" : 26.314649307392408,
+        "speed" : 6.2,
+        "time" : 1480512063
+      },
+      "-KXpOKDQPqK7hRa-QbN4" : {
+        "altitude" : 23.9,
+        "distance" : 37.79999923706055,
+        "heading" : 19.6,
+        "latitude" : 42.68149326695859,
+        "longitude" : 26.314674401398857,
+        "speed" : 6.6,
+        "time" : 1480512065
+      },
+      "-KXpOK_sfj9fMjuHRoSD" : {
+        "altitude" : 21.7,
+        "distance" : 27,
+        "heading" : 18.8,
+        "latitude" : 42.68158425166962,
+        "longitude" : 26.31471575053643,
+        "speed" : 6.1,
+        "time" : 1480512066
+      },
+      "-KXpOKxJloemk5za4FfX" : {
+        "altitude" : 20,
+        "distance" : 17.799999237060547,
+        "heading" : 14.3,
+        "latitude" : 42.68165838913394,
+        "longitude" : 26.314761435588043,
+        "speed" : 5.5,
+        "time" : 1480512068
+      },
+      "-KXpOLJk5Kc-QMFhl1qs" : {
+        "altitude" : 18.2,
+        "distance" : 11.899999618530273,
+        "heading" : -81.5,
+        "latitude" : 42.681708892136875,
+        "longitude" : 26.314788428599492,
+        "speed" : 1.5,
+        "time" : 1480512069
+      },
+      "-KXpOLgBJQ0ETRuSntcN" : {
+        "altitude" : 16.9,
+        "distance" : 13.100000381469727,
+        "heading" : -153.1,
+        "latitude" : 42.6817029437945,
+        "longitude" : 26.314773902074602,
+        "speed" : 0.9,
+        "time" : 1480512071
+      },
+      "-KXpOM2bUHRRRKRzj9mZ" : {
+        "altitude" : 16.8,
+        "distance" : 14.699999809265137,
+        "heading" : -159.8,
+        "latitude" : 42.6816848211587,
+        "longitude" : 26.314770707188615,
+        "speed" : 0.9,
+        "time" : 1480512072
+      },
+      "-KXpOMQ2M_1tUfEQ9k0-" : {
+        "altitude" : 17,
+        "distance" : 16.200000762939453,
+        "heading" : -159.7,
+        "latitude" : 42.68167291843294,
+        "longitude" : 26.31477666079962,
+        "speed" : 0.4,
+        "time" : 1480512074
+      }
+    },
+    "-KXprEXpFuMO_D4lWieE" : {
+      "-KXprEXt5dfPcc4uLOau" : {
+        "altitude" : 0,
+        "distance" : 6.199999809265137,
+        "heading" : -154.1,
+        "latitude" : 42.681794848996994,
+        "longitude" : 26.314845120396726,
+        "speed" : 0,
+        "time" : 1480519906
+      },
+      "-KXprEuHQbw9pnMPCRCm" : {
+        "altitude" : 0,
+        "distance" : 6.199999809265137,
+        "heading" : -154,
+        "latitude" : 42.68179427785679,
+        "longitude" : 26.314845296867883,
+        "speed" : 0,
+        "time" : 1480519908
+      },
+      "-KXprFGjy1HAGGxYrVTG" : {
+        "altitude" : 0,
+        "distance" : 6.199999809265137,
+        "heading" : -154.1,
+        "latitude" : 42.681793544121625,
+        "longitude" : 26.314845370624642,
+        "speed" : 0,
+        "time" : 1480519909
+      },
+      "-KXprFd9l936Zn65AVLv" : {
+        "altitude" : 0,
+        "distance" : 6.199999809265137,
+        "heading" : -154.1,
+        "latitude" : 42.68179287246523,
+        "longitude" : 26.31484538722226,
+        "speed" : 0,
+        "time" : 1480519911
+      },
+      "-KXprG-a0KVwnKF69lLq" : {
+        "altitude" : 0,
+        "distance" : 6.599999904632568,
+        "heading" : -154.1,
+        "latitude" : 42.68179096082715,
+        "longitude" : 26.314845782817898,
+        "speed" : 0,
+        "time" : 1480519912
+      },
+      "-KXprGN1jLbJfaZxBDuG" : {
+        "altitude" : 0,
+        "distance" : 6.599999904632568,
+        "heading" : -154.1,
+        "latitude" : 42.68178994032727,
+        "longitude" : 26.314846009615184,
+        "speed" : 0,
+        "time" : 1480519914
+      },
+      "-KXprGjUdFaFpXSdwEmZ" : {
+        "altitude" : 0,
+        "distance" : 6.599999904632568,
+        "heading" : -154.1,
+        "latitude" : 42.681788298875375,
+        "longitude" : 26.314846408943303,
+        "speed" : 0,
+        "time" : 1480519915
+      },
+      "-KXprH5uSigxKCWe_VYe" : {
+        "altitude" : 0,
+        "distance" : 7,
+        "heading" : -154.1,
+        "latitude" : 42.68178661898052,
+        "longitude" : 26.314846692508116,
+        "speed" : 0,
+        "time" : 1480519917
+      },
+      "-KXprHTLGdqvfEZg2k-R" : {
+        "altitude" : 0,
+        "distance" : 7,
+        "heading" : -154.1,
+        "latitude" : 42.681786129889595,
+        "longitude" : 26.314846916140745,
+        "speed" : 0,
+        "time" : 1480519918
+      },
+      "-KXprHpmqs-ypWOd4akS" : {
+        "altitude" : 0,
+        "distance" : 7,
+        "heading" : -154.2,
+        "latitude" : 42.68178566281614,
+        "longitude" : 26.314846995853365,
+        "speed" : 0,
+        "time" : 1480519920
+      },
+      "-KXprICDLUUDbImkLtw8" : {
+        "altitude" : 0,
+        "distance" : 7,
+        "heading" : -154.1,
+        "latitude" : 42.68178572389238,
+        "longitude" : 26.314847209908024,
+        "speed" : 0,
+        "time" : 1480519921
+      },
+      "-KXprIZf_CDiCKxWPuQT" : {
+        "altitude" : 0,
+        "distance" : 7,
+        "heading" : -154.1,
+        "latitude" : 42.68178643751224,
+        "longitude" : 26.314846930149557,
+        "speed" : 0,
+        "time" : 1480519923
+      },
+      "-KXprIw50SsXR1HQ1lI5" : {
+        "altitude" : 0,
+        "distance" : 6.599999904632568,
+        "heading" : -154.1,
+        "latitude" : 42.681788432348,
+        "longitude" : 26.31484668365044,
+        "speed" : 0,
+        "time" : 1480519924
+      },
+      "-KXprJIXm5pqzL7dS-BD" : {
+        "altitude" : 0,
+        "distance" : 6.599999904632568,
+        "heading" : -154.2,
+        "latitude" : 42.68178961930993,
+        "longitude" : 26.31484658230731,
+        "speed" : 0,
+        "time" : 1480519926
+      },
+      "-KXprJf-Xu6e8IBcff2B" : {
+        "altitude" : 0,
+        "distance" : 6.599999904632568,
+        "heading" : -154.2,
+        "latitude" : 42.68179012100903,
+        "longitude" : 26.314846524871083,
+        "speed" : 0,
+        "time" : 1480519927
+      },
+      "-KXprK1QOhU7z-JAhOl9" : {
+        "altitude" : 0.4,
+        "distance" : 6.599999904632568,
+        "heading" : -86.3,
+        "latitude" : 42.681790032215375,
+        "longitude" : 26.314846979916243,
+        "speed" : 1.3,
+        "time" : 1480519929
+      },
+      "-KXprKOsaZZiWsRaGA28" : {
+        "altitude" : 0,
+        "distance" : 6.599999904632568,
+        "heading" : 58.7,
+        "latitude" : 42.681790032215375,
+        "longitude" : 26.314846979916243,
+        "speed" : 0.4,
+        "time" : 1480519930
+      },
+      "-KXprKlJEe1RVVi9uXbO" : {
+        "altitude" : 0,
+        "distance" : 6.599999904632568,
+        "heading" : 132.2,
+        "latitude" : 42.681790032215375,
+        "longitude" : 26.314846979916243,
+        "speed" : 0.2,
+        "time" : 1480519932
+      },
+      "-KXprL7h1Sr8I3ahNIRD" : {
+        "altitude" : 0,
+        "distance" : 6.599999904632568,
+        "heading" : 174,
+        "latitude" : 42.681790032215375,
+        "longitude" : 26.314846979916243,
+        "speed" : 0.2,
+        "time" : 1480519933
+      },
+      "-KXprLV9Hu2i1uPYHclH" : {
+        "altitude" : 0,
+        "distance" : 6.599999904632568,
+        "heading" : -153.1,
+        "latitude" : 42.68178924539146,
+        "longitude" : 26.314847189796144,
+        "speed" : 0,
+        "time" : 1480519935
+      },
+      "-KXprLrbh3zar2yFjs0s" : {
+        "altitude" : 0,
+        "distance" : 5.099999904632568,
+        "heading" : -121.3,
+        "latitude" : 42.68180079157459,
+        "longitude" : 26.314857469387512,
+        "speed" : 0,
+        "time" : 1480519936
+      },
+      "-KXprME2a77GDCN8bHFI" : {
+        "altitude" : 0,
+        "distance" : 4.699999809265137,
+        "heading" : -80.3,
+        "latitude" : 42.681804222397,
+        "longitude" : 26.31486558617937,
+        "speed" : 0,
+        "time" : 1480519938
+      },
+      "-KXprMaUZxUKFJL3n3Sp" : {
+        "altitude" : 0,
+        "distance" : 4.699999809265137,
+        "heading" : -49.6,
+        "latitude" : 42.68180324564891,
+        "longitude" : 26.314876065531042,
+        "speed" : 0.1,
+        "time" : 1480519939
+      },
+      "-KXprMxuozHBENkubE5d" : {
+        "altitude" : 0,
+        "distance" : 5.099999904632568,
+        "heading" : -5.1,
+        "latitude" : 42.681800663484836,
+        "longitude" : 26.314874178658666,
+        "speed" : 0.1,
+        "time" : 1480519941
+      },
+      "-KXprNKLUs6l5mTteyIx" : {
+        "altitude" : 0,
+        "distance" : 4.900000095367432,
+        "heading" : 1.8,
+        "latitude" : 42.68180353185342,
+        "longitude" : 26.3148833120433,
+        "speed" : 0.2,
+        "time" : 1480519942
+      },
+      "-KXprNgma7uBg0EcN2I-" : {
+        "altitude" : 0,
+        "distance" : 4.5,
+        "heading" : 43,
+        "latitude" : 42.68180761401821,
+        "longitude" : 26.31488577050414,
+        "speed" : 0.7,
+        "time" : 1480519944
+      },
+      "-KXprO3DD02Gf6JYPbMK" : {
+        "altitude" : 0,
+        "distance" : 4.900000095367432,
+        "heading" : -59.4,
+        "latitude" : 42.68180369958033,
+        "longitude" : 26.314886147453787,
+        "speed" : 0.2,
+        "time" : 1480519945
+      }
+    },
+    "-KXuJg028l4XyTx6xL6b" : {
+      "-KXuJg0FQ5pKjO3TNIKy" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : 10.1,
+        "latitude" : 42.6818010387595,
+        "longitude" : 26.314862685219904,
+        "speed" : 0,
+        "time" : 1480594735
+      },
+      "-KXuJgNT7MilCGjrRCs-" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : 10.1,
+        "latitude" : 42.68180095873041,
+        "longitude" : 26.314863280100493,
+        "speed" : 0,
+        "time" : 1480594736
+      },
+      "-KXuJgjwTKO6xQ3GyFW6" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : 9.4,
+        "latitude" : 42.68180055290173,
+        "longitude" : 26.314863983591167,
+        "speed" : 0.1,
+        "time" : 1480594738
+      },
+      "-KXuJh6L0iw4JafeNpOs" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : -34,
+        "latitude" : 42.68180055290173,
+        "longitude" : 26.314863983591167,
+        "speed" : 0,
+        "time" : 1480594739
+      },
+      "-KXuJhTlcJxejMLU5kQo" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : -67.8,
+        "latitude" : 42.68180055290173,
+        "longitude" : 26.314863983591167,
+        "speed" : 0,
+        "time" : 1480594741
+      },
+      "-KXuJhqDUNsDE3hVxUSj" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : -101.8,
+        "latitude" : 42.68180055290173,
+        "longitude" : 26.314863983591167,
+        "speed" : 0,
+        "time" : 1480594742
+      },
+      "-KXuJiCeaV4Cvl5ZEaMj" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : -99.9,
+        "latitude" : 42.68180055290173,
+        "longitude" : 26.314863983591167,
+        "speed" : 0,
+        "time" : 1480594744
+      },
+      "-KXuJi_5U445037yA7g3" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : -33.6,
+        "latitude" : 42.68180055290173,
+        "longitude" : 26.314863983591167,
+        "speed" : 0,
+        "time" : 1480594745
+      },
+      "-KXuJiwWGvCfJbLZK7C5" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : -13.1,
+        "latitude" : 42.68180055290173,
+        "longitude" : 26.314863983591167,
+        "speed" : 0,
+        "time" : 1480594747
+      },
+      "-KXuJjIzXrx5NhCg6tFB" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : -2.1,
+        "latitude" : 42.68180055290173,
+        "longitude" : 26.314863983591167,
+        "speed" : 0,
+        "time" : 1480594748
+      },
+      "-KXuJjfP2XrwrYoWFXzX" : {
+        "altitude" : 0,
+        "distance" : 0,
+        "heading" : -2.5,
+        "latitude" : 42.681809959043825,
+        "longitude" : 26.314899293756778,
+        "speed" : 0.2,
+        "time" : 1480594750
+      }
+    },
+    "-KXuNaI1FPMdRc-i5_Ph" : {
+      "-KXuNaI2lCVtS69uamMR" : {
+        "altitude" : 0,
+        "distance" : 3.799999952316284,
+        "heading" : 8.5,
+        "latitude" : 42.6818178080205,
+        "longitude" : 26.3149168023526,
+        "speed" : 0,
+        "time" : 1480595760
+      },
+      "-KXuNaeHfqlzjEsk0WUI" : {
+        "altitude" : 0,
+        "distance" : 3.700000047683716,
+        "heading" : 8.5,
+        "latitude" : 42.68181815129161,
+        "longitude" : 26.314916802114816,
+        "speed" : 0,
+        "time" : 1480595761
+      },
+      "-KXuNb0hfhfBjiSxnKpn" : {
+        "altitude" : 0,
+        "distance" : 3.700000047683716,
+        "heading" : 8.6,
+        "latitude" : 42.68181862180518,
+        "longitude" : 26.314916654230334,
+        "speed" : 0,
+        "time" : 1480595763
+      },
+      "-KXuNbO9cwkWdmtNMZhw" : {
+        "altitude" : 0,
+        "distance" : 3.700000047683716,
+        "heading" : 8.6,
+        "latitude" : 42.68181841959573,
+        "longitude" : 26.314916405192243,
+        "speed" : 0,
+        "time" : 1480595764
+      },
+      "-KXuNbk_TYm_75CDEQxy" : {
+        "altitude" : 0,
+        "distance" : 3.700000047683716,
+        "heading" : 8.6,
+        "latitude" : 42.681818869900034,
+        "longitude" : 26.314916313095686,
+        "speed" : 0,
+        "time" : 1480595766
+      },
+      "-KXuNc70xVSuLom9zbA6" : {
+        "altitude" : 0,
+        "distance" : 3.700000047683716,
+        "heading" : 8.6,
+        "latitude" : 42.681819715692306,
+        "longitude" : 26.31491595116606,
+        "speed" : 0,
+        "time" : 1480595767
+      },
+      "-KXuNcUTDc4jZOkM6jaa" : {
+        "altitude" : 0,
+        "distance" : 3.5999999046325684,
+        "heading" : -36.3,
+        "latitude" : 42.681819887237985,
+        "longitude" : 26.314915577655697,
+        "speed" : 0.1,
+        "time" : 1480595769
+      },
+      "-KXuNcqt6PvHsby14dTO" : {
+        "altitude" : 0,
+        "distance" : 3.5999999046325684,
+        "heading" : -66.1,
+        "latitude" : 42.681819887237985,
+        "longitude" : 26.314915577655697,
+        "speed" : 0,
+        "time" : 1480595770
+      },
+      "-KXuNdDJ9lIOLc4O2tz2" : {
+        "altitude" : 0,
+        "distance" : 3.5999999046325684,
+        "heading" : -101.5,
+        "latitude" : 42.681819887237985,
+        "longitude" : 26.314915577655697,
+        "speed" : 0,
+        "time" : 1480595772
+      },
+      "-KXuNd_lCsZZ8StStGhN" : {
+        "altitude" : 0,
+        "distance" : 3.5999999046325684,
+        "heading" : -129,
+        "latitude" : 42.681819887237985,
+        "longitude" : 26.314915577655697,
+        "speed" : 0,
+        "time" : 1480595773
+      },
+      "-KXuNdxCf4zjU_WqxrZ9" : {
+        "altitude" : 0,
+        "distance" : 3.5999999046325684,
+        "heading" : -29.6,
+        "latitude" : 42.681819887237985,
+        "longitude" : 26.314915577655697,
+        "speed" : 0.1,
+        "time" : 1480595775
+      },
+      "-KXuNeJd60_so-K2PecF" : {
+        "altitude" : 0,
+        "distance" : 5.599999904632568,
+        "heading" : 2.9,
+        "latitude" : 42.68178732604839,
+        "longitude" : 26.3149197371015,
+        "speed" : 0.3,
+        "time" : 1480595776
+      },
+      "-KXuNeg4IgTM8xYrx3af" : {
+        "altitude" : 0,
+        "distance" : 2.5,
+        "heading" : 4.9,
+        "latitude" : 42.68183113003585,
+        "longitude" : 26.31489717115184,
+        "speed" : 0,
+        "time" : 1480595778
+      },
+      "-KXuNf2WF_Suuh8Voo8o" : {
+        "altitude" : 0,
+        "distance" : 2.5,
+        "heading" : 6.3,
+        "latitude" : 42.681822866811615,
+        "longitude" : 26.31490047392798,
+        "speed" : 0,
+        "time" : 1480595779
+      },
+      "-KXuNfQ-kpr9HlVdwOGl" : {
+        "altitude" : 0,
+        "distance" : 2.5,
+        "heading" : 7.3,
+        "latitude" : 42.68181957353013,
+        "longitude" : 26.3149011836787,
+        "speed" : 0,
+        "time" : 1480595781
+      },
+      "-KXuNfmOrFT0C5HjlrCj" : {
+        "altitude" : 0,
+        "distance" : 2.5,
+        "heading" : 8,
+        "latitude" : 42.681816458432905,
+        "longitude" : 26.31490172687229,
+        "speed" : 0,
+        "time" : 1480595782
+      },
+      "-KXuNg8p9ue4DyvytQ89" : {
+        "altitude" : 0,
+        "distance" : 2.5999999046325684,
+        "heading" : 8.6,
+        "latitude" : 42.68181397288374,
+        "longitude" : 26.314901875715314,
+        "speed" : 0,
+        "time" : 1480595784
+      },
+      "-KXuNgWG2EhOdZWeXcQR" : {
+        "altitude" : 0,
+        "distance" : 2.5999999046325684,
+        "heading" : -6.9,
+        "latitude" : 42.681813472681995,
+        "longitude" : 26.314900805829662,
+        "speed" : 0,
+        "time" : 1480595785
+      },
+      "-KXuNgshwZBFyKWLg5fF" : {
+        "altitude" : 0,
+        "distance" : 2.5999999046325684,
+        "heading" : 10.9,
+        "latitude" : 42.681813472681995,
+        "longitude" : 26.314900805829662,
+        "speed" : 0,
+        "time" : 1480595787
+      }
+    }
+  }
+}
