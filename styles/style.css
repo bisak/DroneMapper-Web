@@ -36,3 +36,34 @@ main {
     margin-bottom: 5px;
     margin-right: 10px;
 }
+
+
+main > section {
+    display: none;
+}
+
+nav ul li a {
+    display: none;
+}
+
+/*.chip {
+    background-color: #0094ff;
+    color: #ffffff;
+}*/
+
+blockquote {
+    border-left: 5px solid #2196f3;
+    background-color: rgba(25, 25, 25, 0.16);
+    padding-left: 1rem;
+}
+
+.gallery-images{
+    width: 75%;
+}
+
+.divider {
+    height: 3px;
+    background-color: #2196f3;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
