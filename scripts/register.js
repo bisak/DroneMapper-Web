@@ -9,8 +9,9 @@ function registerUser() {
     let email = $("#register-email").val().trim();
     let password = $("#register-password").val();
     let passwordConfirm = $("#register-password-confirm").val();
+    let avatar = $("#register-avatar").attr("src");
     let drones = [];
-    $('#drone-select :selected').each(function (i, sel) {
+    $('#register-drone-select :selected').each(function (i, sel) {
         drones.push($(sel).text());
     });
 
@@ -23,11 +24,15 @@ function registerUser() {
     }
 
     function registerSuccess(user) {
-        dbRef.child("users/" + user.uid).set({
+        let uid = user.uid;
+        let userData = {
             name: firstName + " " + lastName,
             username: username,
-            drones: drones
-        }).then(registerDataSuccess).catch(registerDataError);
+            drones: drones,
+            avatar: avatar
+        };
+        console.log(userData);
+        dbRef.child("users/" + uid).set(userData).then(registerDataSuccess).catch(registerDataError);
 
         function registerDataSuccess(data) {
             $("#registerForm").trigger("reset")
@@ -43,5 +48,14 @@ function registerUser() {
     function registerError(error) {
         showErrorAlert(error.message)
         console.log(error)
+    }
+}
+
+function setAvatar(evt) {
+    let resize = new window.resize();
+    let file = evt.target.files[0];
+    resize.photo(file, 150, 'dataURL', avatarResizeSuccess);
+    function avatarResizeSuccess(resizedImage) {
+        $("#register-avatar").attr("src", resizedImage);
     }
 }

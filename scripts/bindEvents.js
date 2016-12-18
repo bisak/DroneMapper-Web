@@ -10,5 +10,6 @@ $(document).ready(function () {
     $(".loginButton").click(loginUser);
     $(".registerButton").click(registerUser);
     $("#uploadSlector").change(uploadImages);
+    $("#uploadAvatarSlector").change(setAvatar)
     $("#homeMap").on('click', '.leaflet-marker-icon', makeImageOnMapEnlargeable);
 });

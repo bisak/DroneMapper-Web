@@ -48,7 +48,7 @@ function loadImagesOnMap(user) {
         let markerIcon = new L.Icon.Default();
         markerIcon.options.shadowSize = [0, 0];
 
-        let imageDisplayString = `<blockquote class="white-text center-align"><h5><strong>${imageAlt}m</strong> a.s.l.</h5></blockquote><img class='materialboxed mapImage' width="${imageWidth}" src=${imageUrl}>`;
+        let imageDisplayString = `<blockquote class="white-text center-align"><h5><strong>${escape(imageAlt)}m</strong> a.s.l.</h5></blockquote><img class='materialboxed mapImage' width="${imageWidth}" src=${imageUrl}>`;
         L.marker([imageLat, imageLong], {icon: markerIcon})
             .bindPopup(imageDisplayString, {
                 autoPanPadding: L.point(20, 20),
@@ -91,7 +91,7 @@ function realtimeFlightsVisualize() {
             let droneHDG = snapshotTwo.val().heading;
             let droneSpeed = snapshotTwo.val().speed;
             let droneAltitude = snapshotTwo.val().altitude;
-            let displayDiv = `<div class="telemetryData">Speed: ${droneSpeed}<br><hr>Altitude: ${droneAltitude}</div>`;
+            let displayDiv = `<div class="telemetryData">Speed: ${escape(droneSpeed)}<br><hr>Altitude: ${escape(droneAltitude)}</div>`;
             drone.bindPopup(displayDiv);
             drone.setLatLng([droneLat, droneLng]);
             drone.setRotationAngle(droneHDG);

@@ -19,14 +19,14 @@ main {
 
 @media (min-width: 1025px) {
     .badgeGooglePlay {
-        width: 200px;
+        width: 250px;
         margin-left: -14px;
     }
 }
 
 @media (max-width: 1024px) {
     .badgeGooglePlay {
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -45,11 +45,6 @@ main > section {
 nav ul li a {
     display: none;
 }
-
-/*.chip {
-    background-color: #0094ff;
-    color: #ffffff;
-}*/
 
 blockquote {
     border-left: 5px solid #2196f3;
@@ -70,5 +65,9 @@ blockquote {
 }
 
 .mapImage{
+    border-radius: 3px;
+}
+
+.gallery-image{
     border-radius: 3px;
 }

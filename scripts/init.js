@@ -13,20 +13,26 @@ $(document).ready(function () {
     );
     $('select').material_select();
 
-    /*var config = {
-        apiKey: "AIzaSyCkH7eapxWelLQqYWZel8H2vlaaQ7wGkVU",
-        authDomain: "dronemapper-83b1a.firebaseapp.com",
-        databaseURL: "https://dronemapper-83b1a.firebaseio.com",
-        storageBucket: "dronemapper-83b1a.appspot.com",
-        messagingSenderId: "915987875489"
-    };*/
-    var config = {
-        apiKey: "AIzaSyAOoo_aN9aGtzqsZeW-itQP3iOtZIs14Y0",
-        authDomain: "dronemapper-2.firebaseapp.com",
-        databaseURL: "https://dronemapper-2.firebaseio.com",
-        storageBucket: "dronemapper-2.appspot.com",
-        messagingSenderId: "439163309533"
-    };
+    let db = 1;
+    var config;
+    if (db == 1) {
+        config = {
+            apiKey: "AIzaSyCkH7eapxWelLQqYWZel8H2vlaaQ7wGkVU",
+            authDomain: "dronemapper-83b1a.firebaseapp.com",
+            databaseURL: "https://dronemapper-83b1a.firebaseio.com",
+            storageBucket: "dronemapper-83b1a.appspot.com",
+            messagingSenderId: "915987875489"
+        };
+    }
+    if (db == 2) {
+        config = {
+            apiKey: "AIzaSyAOoo_aN9aGtzqsZeW-itQP3iOtZIs14Y0",
+            authDomain: "dronemapper-2.firebaseapp.com",
+            databaseURL: "https://dronemapper-2.firebaseio.com",
+            storageBucket: "dronemapper-2.appspot.com",
+            messagingSenderId: "439163309533"
+        };
+    }
     firebase.initializeApp(config);
 
     let auth = firebase.auth();
@@ -38,10 +44,26 @@ $(document).ready(function () {
             $(".galleryViewButton").show();
             $(".uploadViewButton").show();
             $(".logoutButton").show();
+            $("#avatarContainer").show();
+            setUserGreeting(user);
         } else {
             $(".loginViewButton").show();
             $(".registerViewButton").show();
+            $("#avatarContainer").hide();
         }
     });
 
+    function setUserGreeting(user) {
+        let dbRef = firebase.database().ref();
+        let uid = user.uid;
+        dbRef.child("users/" + uid).on('child_added', getAvatarSuccess);
+        function getAvatarSuccess(data) {
+            if (data.key == "avatar") {
+                $("#avatarImage").attr("src", data.val());
+            }
+            if(data.key == "username"){
+                $("#usernameContainer").text(data.val());
+            }
+        }
+    }
 });
