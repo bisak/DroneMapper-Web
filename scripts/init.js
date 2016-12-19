@@ -56,14 +56,10 @@ $(document).ready(function () {
     function setUserGreeting(user) {
         let dbRef = firebase.database().ref();
         let uid = user.uid;
-        dbRef.child("users/" + uid).on('child_added', getAvatarSuccess);
+        dbRef.child("users/" + uid).once('value', getAvatarSuccess);
         function getAvatarSuccess(data) {
-            if (data.key == "avatar") {
-                $("#avatarImage").attr("src", data.val());
-            }
-            if(data.key == "username"){
-                $("#usernameContainer").text(data.val());
-            }
+            $("#avatarImage").attr("src", data.val().avatar);
+            $("#usernameContainer").text(data.val().username);
         }
     }
 });

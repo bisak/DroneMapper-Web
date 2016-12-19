@@ -49,16 +49,22 @@ nav ul li a {
 blockquote {
     border-left: 5px solid #2196f3;
     border-radius: 3px;
-    background-color: rgba(25, 25, 25, 0.40);
     padding-left: 1rem;
 }
 
-.gallery-images{
-    width: 75%;
+.mapMetadata{
+    text-shadow: 1px 1px 4px #000000;
 }
 
 .divider {
     height: 3px;
+    background-color: #2196f3;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bars .divider {
+    height: 2px;
     background-color: #2196f3;
     margin-top: 10px;
     margin-bottom: 10px;

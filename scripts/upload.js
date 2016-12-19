@@ -36,7 +36,7 @@ function uploadImages(evt) {
 
     function compressImage(image, metadata) {
         let resize = new window.resize();
-        resize.photo(image, 2250, 'file', imageCompressed);
+        resize.photo(image, 2000, 'file', imageCompressed);
         function imageCompressed(compressedImage) {
             resize.photo(image, 500, 'file', thumbnailCompressed);
             function thumbnailCompressed(thumbnail) {

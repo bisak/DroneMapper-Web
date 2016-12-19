@@ -5,7 +5,7 @@ function showHomeView() {
     realtimeFlightsVisualize();
     let user = firebase.auth().currentUser;
     if (user) {
-        loadImagesOnMap(user)
+        loadImagesOnMap()
     }
 }
 
@@ -30,10 +30,15 @@ function showFaqView() {
     showView("faqView");
 }
 
+function showEditImageView(image) {
+    setupEditImageView(image);
+    showView("editImageView");
+}
+
 function showView(view) {
     $('main > section').hide();
     $(`#${view}`).show();
-    /*Take care of highligiting in menus and navs */
+    /*Takes care of highligiting in menus and navs */
     $('nav div ul li.active').removeAttr("class");
     $(`.${view}Button`).parent().addClass("active");
 }

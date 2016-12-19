@@ -33,8 +33,9 @@ function initMap() {
     map.setMaxBounds([[90, -180], [-90, 180]]);
 }
 
-function loadImagesOnMap(user) {
+function loadImagesOnMap() {
     let dbRef = firebase.database().ref();
+    let user = firebase.auth().currentUser;
     let uid = user.uid;
     dbRef.child("images/" + uid).on('child_added', loadImagesSuccess);
 
@@ -48,7 +49,7 @@ function loadImagesOnMap(user) {
         let markerIcon = new L.Icon.Default();
         markerIcon.options.shadowSize = [0, 0];
 
-        let imageDisplayString = `<blockquote class="white-text center-align"><h5><strong>${escape(imageAlt)}m</strong> a.s.l.</h5></blockquote><img class='materialboxed mapImage' width="${imageWidth}" src=${imageUrl}>`;
+        let imageDisplayString = `<blockquote class="white-text z-depth-2 mapMetadata"><h5><strong>${escape(imageAlt)}m</strong> a.s.l.</h5></blockquote><img class='materialboxed mapImage z-depth-2' width="${imageWidth}" src=${imageUrl}>`;
         L.marker([imageLat, imageLong], {icon: markerIcon})
             .bindPopup(imageDisplayString, {
                 autoPanPadding: L.point(20, 20),
