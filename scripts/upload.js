@@ -11,19 +11,31 @@ function uploadImages(evt) {
 
     function getMetadata(image) {
         EXIF.getData(image, function () {
+            //console.log(EXIF.getAllTags(this));
             let lat = EXIF.getTag(image, 'GPSLatitude');
             let lng = EXIF.getTag(image, 'GPSLongitude');
             let alt = EXIF.getTag(image, 'GPSAltitude');
-            let maker = EXIF.getTag(image, 'Make') || "INVALID";
+            alt = Math.round(alt.numerator / alt.denominator);
+            let maker = EXIF.getTag(image, 'Make').replace(/\0/g, '') || "INVALID"; //removes \u0000\u0000\u0000 (null) characters'
+            let takenDate = EXIF.getTag(image, 'DateTime');
+            let cameraModel = EXIF.getTag(image, 'Model').replace(/\0/g, '');
+            let resolution = `${EXIF.getTag(image, 'PixelXDimension')}x${EXIF.getTag(image, 'PixelYDimension')}`;
 
             if (lat && lng && alt) {
                 let metadata = {
                     lat: getRealLatLng(lat),
                     longt: getRealLatLng(lng),
-                    alt: alt.numerator / alt.denominator,
-                    name: image.name.split(".")[0]
+                    alt: alt,
+                    name: image.name.split(".")[0],
+                    dateUploaded: getTimeNow(),
+                    dateTaken: takenDate,
+                    dateEdited: " - ",
+                    description: " - ",
+                    cameraModel: cameraModel,
+                    resolution: resolution,
+                    droneTaken: " - "
                 };
-                if (maker.substring(0, 3) == "DJI") {
+                if (maker == "DJI") {
                     compressImage(image, metadata)
                 } else {
                     showErrorAlert('Only DJI Drone pictures allowed');
@@ -36,7 +48,7 @@ function uploadImages(evt) {
 
     function compressImage(image, metadata) {
         let resize = new window.resize();
-        resize.photo(image, 2000, 'file', imageCompressed);
+        resize.photo(image, 1500, 'file', imageCompressed);
         function imageCompressed(compressedImage) {
             resize.photo(image, 500, 'file', thumbnailCompressed);
             function thumbnailCompressed(thumbnail) {

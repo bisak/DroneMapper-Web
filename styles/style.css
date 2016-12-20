@@ -70,6 +70,22 @@ blockquote {
     margin-bottom: 10px;
 }
 
+.collection .divider{
+    height: 1px;
+    background-color: #2196f3;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.infoCollection{
+    display: none;
+    word-break: break-all;
+}
+
+.btnGalleryExtra{
+    margin: 5px;
+}
+
 .mapImage{
     border-radius: 3px;
 }
