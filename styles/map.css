@@ -8,9 +8,9 @@
     background-color: rgba(0, 0, 0, 0.10);
 }
 
-#materialbox-overlay {
+/*#materialbox-overlay {
     background-color: transparent;
-}
+}*/
 
 img.materialboxed.initialized {
     width: 100%;
@@ -25,10 +25,17 @@ img.materialboxed.initialized {
     width: 130px;
 }
 
-.leaflet-container a.leaflet-popup-close-button{
+.leaflet-container a.leaflet-popup-close-button {
     color: black;
 }
 
-.leaflet-container a.leaflet-popup-close-button:hover{
+.leaflet-container a.leaflet-popup-close-button:hover {
     color: darkred;
+}
+
+#sharedImageMap {
+    width: 100%;
+    height: 500px;
+    border-radius: 2px;
+    border: 1px solid lightgray;
 }

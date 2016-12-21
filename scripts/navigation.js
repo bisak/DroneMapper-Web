@@ -35,6 +35,11 @@ function showEditImageView(image) {
     showView("editImageView");
 }
 
+function showSharedImageView(imageId) {
+    showView("sharedImageView");
+    initSharedImageView(imageId);
+}
+
 function showView(view) {
     $('main > section').hide();
     $(`#${view}`).show();

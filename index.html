@@ -4,16 +4,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <title>DroneMapper</title>
-    <link href="styles/images/favicon.png" rel="icon" type="image/x-icon"/>
+    <link href="styles/images/favicon.png" rel="icon" type="image/x-icon">
 
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"/>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css"/>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/themes/default.min.css"/>
-    <link href="styles/map.css" rel="stylesheet">
-    <link href="styles/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/themes/default.min.css">
+    <link rel="stylesheet" href="styles/map.css">
+    <link rel="stylesheet" href="styles/style.css">
+
 </head>
 <body>
 <nav class="blue darken-3" role="navigation">
@@ -82,7 +82,7 @@
         <div class="container">
             <div class="row">
                 <br>
-                <h3 class="center">Edit Image</h3>
+                <h3 class="center">Edit Picture</h3>
                 <div id="topDividerEditImage" class="divider green"></div>
             </div>
 
@@ -93,7 +93,8 @@
                         <div class="section">
                             <div class="row">
                                 <div class="galleryImageHolder col s10 offset-s1">
-                                    <img id="editImage-image" style="width: 100%" class="materialboxed responsive-img z-depth-2"
+                                    <img id="editImage-image" style="width: 100%"
+                                         class="materialboxed responsive-img z-depth-2"
                                          src="">
                                 </div>
                             </div>
@@ -165,7 +166,7 @@
         <div class="container">
             <div>
                 <br>
-                <h3 class="center">Upload Photos</h3>
+                <h3 class="center">Upload Pictures</h3>
                 <div id="topDividerUpload" class="divider green"></div>
                 <br>
                 <div class="section">
@@ -323,7 +324,6 @@
                 <h4>Disclaimer</h4>
                 <p class="red-text">We are not responsible for any damage caused while using our software nor the
                     uploaded pictures.</p>
-
                 <p>DroneMapper is fully open source project. Sources are found on GitHub:</p>
                 <p>Web: <a href="https://github.com/biskazz/DroneFlightMapper-Web">https://github.com/biskazz/DroneFlightMapper-Web</a>
                     <br>
@@ -340,16 +340,39 @@
             </div>
         </div>
     </section>
+
+    <section id="sharedImageView">
+        <div class="container">
+            <div class="row">
+                <br>
+                <h3 class="center">Shared Picture</h3>
+                <div id="topDividerSharedImage" class="divider green"></div>
+            </div>
+
+            <div class="section">
+                <div class="row">
+                    <form id="sharedImageForm" class="col s12 z-depth-1">
+                        <br>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </main>
 
 <footer class="page-footer blue-grey darken-3">
     <div class="container">
         <div class="row">
             <div class="col l4 s12">
-                <h5 class="white-text">Get DroneMapper</h5>
-                <a href='https://play.google.com/store/apps/details?id=com.dronemapper&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
-                        class="responsive-img" style="max-width: 60%" alt='Get it on Google Play'
-                        src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+                <h5 class="white-text">Github</h5>
+                <ul>
+                    <li><a class="white-text" href="https://github.com/biskazz/DroneFlightMapper-Web">Web</a></li>
+                    <li><a class="white-text" href="https://github.com/biskazz/DroneFlightMapper-Android">Android</a>
+                    </li>
+                </ul>
             </div>
             <div class="col l4 s12">
                 <h5 class="white-text">Contact</h5>
@@ -361,18 +384,15 @@
                 </ul>
             </div>
             <div class="col l4 s12">
-                <h5 class="white-text">Github</h5>
-                <ul>
-                    <li><a class="white-text" href="https://github.com/biskazz/DroneFlightMapper-Web">Web</a></li>
-                    <li><a class="white-text" href="https://github.com/biskazz/DroneFlightMapper-Android">Android</a>
-                    </li>
-                </ul>
+                <a href='https://play.google.com/store/apps/details?id=com.dronemapper&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
+                        class="badgeGooglePlay responsive-img" alt='Get it on Google Play'
+                        src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
             </div>
         </div>
     </div>
     <div class="footer-copyright">
         <div class="container">
-            Made by <a class="orange-text text-lighten-3" href="#">Biser Atanasov</a>
+            DroneMapper - Open Source Project 2016
         </div>
     </div>
 </footer>
@@ -383,8 +403,8 @@
 <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-<script src="scripts/libs/leaflet.rotatedMarker.js"></script>
 <script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
+<script src="scripts/libs/leaflet.rotatedMarker.js"></script>
 <script src="scripts/libs/exif.js"></script>
 <script src="scripts/libs/resize.js"></script>
 
@@ -399,6 +419,7 @@
 <script src="scripts/register.js"></script>
 <script src="scripts/login.js"></script>
 <script src="scripts/logout.js"></script>
+<script src="scripts/sharedImage.js"></script>
 <!--Add your scripts ABOVE bindEvents.js-->
 <script src="scripts/bindEvents.js"></script>
 </body>

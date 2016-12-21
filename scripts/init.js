@@ -36,8 +36,15 @@ $(document).ready(function () {
     firebase.initializeApp(config);
 
     let auth = firebase.auth();
-    auth.onAuthStateChanged(function (user) {
-        showHomeView(user);
+    auth.onAuthStateChanged(handleStateChanged);
+
+    function handleStateChanged (user) {
+        let sharedImageId = getParameterByName("sharedImage");
+        if(sharedImageId){
+            showSharedImageView(sharedImageId);
+        }else{
+            showHomeView(user);
+        }
         $("nav ul li a").hide();
         $(".homeViewButton").show();
         if (user) {
@@ -51,7 +58,7 @@ $(document).ready(function () {
             $(".registerViewButton").show();
             $("#avatarContainer").hide();
         }
-    });
+    };
 
     function setUserGreeting(user) {
         let dbRef = firebase.database().ref();

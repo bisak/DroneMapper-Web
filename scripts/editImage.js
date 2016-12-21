@@ -38,6 +38,5 @@ function setupEditImageView(image) {
     $("#editImage-dateTaken").val(image.val().dateTaken);
     $("#editImage-dateEdited").val(image.val().dateEdited);
     $("#editImage-dateUploaded").val(image.val().dateUploaded);
-
 }
 

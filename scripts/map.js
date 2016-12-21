@@ -49,7 +49,7 @@ function loadImagesOnMap() {
         let markerIcon = new L.Icon.Default();
         markerIcon.options.shadowSize = [0, 0];
 
-        let imageDisplayString = `<blockquote class="white-text z-depth-2 mapMetadata"><h5><strong>${escape(imageAlt)}m</strong> a.s.l.</h5></blockquote><img class='materialboxed mapImage z-depth-2' width="${imageWidth}" src=${imageUrl}>`;
+        let imageDisplayString = `<blockquote class="white-text z-depth-2 mapMetadata"><h5><strong>${escape(imageAlt)}m</strong> a.s.l.</h5></blockquote><img class='materialboxed z-depth-2' width="${imageWidth}" src=${imageUrl}>`;
         L.marker([imageLat, imageLong], {icon: markerIcon})
             .bindPopup(imageDisplayString, {
                 autoPanPadding: L.point(20, 20),

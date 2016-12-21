@@ -1,9 +1,9 @@
 function loadGalleryImages() {
     let dbRef = firebase.database().ref();
-    let uid = firebase.auth().currentUser.uid;
+    let uid = firebase.auth().currentUser.uid; //TODO fix firebase.auth() to seperate declaration
     $('.gallery-images').empty();
 
-    dbRef.child("images/" + uid).on('child_added', renderImages);
+    dbRef.child("images/" + uid).on('child_added', renderImages); /*TODO fix with once value*/
     function renderImages(image) {
         $(`.noPhotos`).hide();
         $("#topDividerGallery").removeClass("red").addClass("green");
@@ -44,28 +44,16 @@ function deleteImage(image, button) {
     }
 }
 
-
 function getEntryToRender(image) {
     let entryToRender = $(`
             <div class="row">
                 <div class="galleryImageHolder col s12 m10 l9">
                     <img class="materialboxed responsive-img z-depth-2 gallery-image" src="${image.val().url}">  
                     <br>
-                    <ul class="collection with-header z-depth-1 infoCollection">
-                        <li class="collection-header"><h5>Picture Info</h5></li>
-                        <li class="collection-item">Name: <strong>${escape(image.val().name)}</strong></li>
-                        <li class="collection-item">Description: <strong>${escape(image.val().description)}</strong></li>
-                        <li class="collection-item">Date Taken: <strong>${escape(image.val().dateTaken)}</strong></li>
-                        <li class="collection-item">Date Edited: <strong>${escape(image.val().dateEdited)}</strong></li>
-                        <li class="collection-item">Date Uploaded: <strong>${escape(image.val().dateUploaded)}</strong></li>
-                        <li class="collection-item">Resolution: <strong>${escape(image.val().resolution)}</strong></li>
-                        <li class="collection-item">Drone: <strong>${escape(image.val().droneTaken)}</strong></li>
-                        <li class="collection-item">Camera: <strong>${escape(image.val().cameraModel)}</strong></li>
-                        <li class="collection-item">Altitude (a.s.l.): <strong>${escape(image.val().alt)}m</strong></li>
-                    </ul>
+                    ${getShareImageURLElement(image)}
+                    ${getInfoCollectionElement(image)}
                 </div>
             </div>`);
-
 
     let buttonsRow = $(`<div class="row"></div>`);
     let fixerDiv = $(`<div class="col m1 l1"></div>`);
@@ -85,21 +73,29 @@ function getEntryToRender(image) {
     let editButton = $(`<a href="#" class="btnGalleryExtra btn-floating btn-large waves-effect waves-light orange">
                 <i class="material-icons">edit</i></a>`).click(function () {
         let button = this;
-        showEditImageView(image, button);
+        showEditImageView(image);
     });
 
     let shareButton = $(`<a class="btnGalleryExtra btn-floating btn-large waves-effect waves-light blue">
                 <i class="material-icons">share</i></a>`).click(function () {
-
+        entryToRender.find(".shareUrlHolder").fadeToggle("fast", "linear");
+        entryToRender.find(".shareUrl").val(makeShareImageURL(image.key, firebase.auth().currentUser.uid)); //TODO fix this
     });
 
     let showMoreButton = $(`<a class="btnGalleryExtra btn-floating btn-large waves-effect waves-light green accent-4">
                 <i class="material-icons">view_list</i></a>`).click(function () {
-        entryToRender.find(".infoCollection").fadeToggle("slow", "linear");
+        entryToRender.find(".infoCollection").fadeToggle("fast", "linear");
     });
 
     fixerDiv.append(showMoreButton).append(shareButton).append(editButton).append(deleteButton);
     buttonsRow.append(fixerDiv);
     entryToRender.append(buttonsRow).append(divider);
     return entryToRender;
+}
+
+function getShareImageURLElement(image) {
+    return`<div class="shareUrlHolder">
+                <span>URL</span>
+                <input disabled type="text" class="grey-text shareUrl active">
+           </div>`;
 }
