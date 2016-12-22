@@ -45,6 +45,11 @@ function makeShareImageURL(imageId, dbParentKey) {
     return `${window.location.origin + window.location.pathname}#?sharedImage=${dbParentKey}//${imageId}`;
 }
 
+function handleUnknownError(error) {
+    showErrorAlert("Something happened.");
+    console.log(error);
+}
+
 function getInfoCollectionElement(image, params = "") {
     return `<ul class="collection with-header ${params} infoCollection">
                 <li class="collection-header"><h5>Picture Info</h5></li>

@@ -22,7 +22,7 @@ function getGalleryEntryToRender(currentImage, currentImageId, dbParentKey) {
     let row = $(`<div class="row"></div>`);
     let galleryImageHolderDiv = $(`<div class="galleryImageHolder col s12 m9 l9"></div>`);
     let galleryImageInfoHolderDiv = $(`<div class="galleryImageInfoHolder col s12 m9 l9"></div>`);
-    let imageElement = $(`<img class="materialboxed responsive-img z-depth-2 gallery-image" src="${currentImage.url}"><br>`);
+    let imageElement = $(`<img class="materialboxed responsive-img z-depth-2 gallery-image" src="${currentImage.url}">`);
     let imageShareUrl = $(getShareImageURLElement(currentImage));
     let imageInfo = $(getInfoCollectionElement(currentImage));
 
@@ -49,8 +49,9 @@ function getGalleryEntryToRender(currentImage, currentImageId, dbParentKey) {
 
     let linkButton = $(`<a class="btnGalleryExtra btn-floating btn-large waves-effect waves-light blue">
                 <i class="material-icons">web</i></a>`).click(function () {
-        alertify.confirm('Confirm', `Share picture - <strong>${escape(currentImage.name)}</strong>`, function () {
-            shareImageOnWall(currentImage, currentImageId);
+        let button = this;
+        alertify.confirm('Confirm', `Share picture to wall - <strong>${escape(currentImage.name)}</strong>`, function () {
+            handleShareImageOnWall(currentImage, currentImageId, button);
         }, function () {
         });
     });
@@ -66,6 +67,17 @@ function getGalleryEntryToRender(currentImage, currentImageId, dbParentKey) {
         galleryImageInfoHolderDiv.find(".infoCollection").fadeToggle("fast", "linear");
     });
 
+    if (currentImage.isSharedOnWall) {
+        linkButton.removeClass("blue").addClass("green").addClass("lighten-2");
+        linkButton.click(function () {
+            let button = this;
+            alertify.confirm('Confirm', `Remove picture from wall - <strong>${escape(currentImage.name)}</strong>`, function () {
+                handleShareImageOnWall(currentImage, currentImageId, button);
+            }, function () {
+            });
+        })
+    }
+
     buttonsHolder.append(linkButton).append(wallShareButton).append(editButton).append(deleteButton).append(showMoreButton);
     row.append(galleryImageHolderDiv).append(buttonsHolder).append(galleryImageInfoHolderDiv).append(divider);
     return row;
@@ -77,7 +89,7 @@ function deleteImage(image, imageId, button) {
     let uid = firebase.auth().currentUser.uid;
 
     dbRef.child("/images/" + uid + "/" + imageId).remove().then(removeImageFromDBSuccess).catch(removeImageError);
-    dbRef.child("/sharedImagesOnWall/"+ imageId).remove();
+    dbRef.child("/sharedImagesOnWall/" + imageId).remove();
     storageRef.child('thumbnails/' + uid + "/" + imageId).delete().then(deleteThumbnailSuccess).catch(removeImageError);
     storageRef.child('images/' + uid + "/" + imageId).delete().then(deleteImageSuccess).catch(removeImageError);
 
@@ -102,22 +114,61 @@ function deleteImage(image, imageId, button) {
 
 function getShareImageURLElement(image) {
     return `<div class="shareUrlHolder">
-                <span>URL</span>
+                <p>URL</p>
                 <input disabled type="text" class="grey-text shareUrl active">
            </div>`;
 }
 
-function shareImageOnWall(image, imageId) {
+
+function handleShareImageOnWall(image, imageId, button) {
     let dbRef = firebase.database().ref();
+    let uid = firebase.auth().currentUser.uid;
 
+    if (image.isSharedOnWall) {
+        removeImageFromWall(image, imageId, button);
+    } else {
+        shareImageOnWall(image, imageId, button);
+    }
 
-    image.uploaderUsername = sessionStorage.getItem("dbUsername");
-    image.uploaderId = firebase.auth().currentUser.uid;
+    function shareImageOnWall(image, imageId, button) {
+        image.uploaderUsername = sessionStorage.getItem("dbUsername");
+        image.uploaderId = firebase.auth().currentUser.uid;
 
-    dbRef.child("/sharedImagesOnWall/" + imageId).set(image).then(imageShareSuccess).catch(handleImageShareError);
+        dbRef.child("/sharedImagesOnWall/" + imageId).set(image).then(imageShareSuccess).catch(handleImageShareError);
+        dbRef.child("/images/" + uid + "/" + imageId).update({isSharedOnWall: 1}).catch(handleImageShareError);
 
-    function imageShareSuccess() {
-        showSuccessAlert('Image shared successfully.');
+        function imageShareSuccess() {
+            image.isSharedOnWall = 1;
+            $(button).find("i").removeClass("blue").addClass("green").addClass("lighten-2");
+            $(button).click(function () {
+                let button = this;
+                alertify.confirm('Confirm', `Remove picture from wall - <strong>${escape(image.name)}</strong>`, function () {
+                    handleShareImageOnWall(image, imageId, button);
+                }, function () {
+                });
+            });
+
+            showSuccessAlert('Image shared to wall.');
+        }
+    }
+
+    function removeImageFromWall(image, imageId, button) {
+        dbRef.child("/sharedImagesOnWall/" + imageId).remove().then(imageRemoveFromWallSuccess).catch(handleImageShareError);
+        dbRef.child("/images/" + uid + "/" + imageId).update({isSharedOnWall: 0}).catch(handleImageShareError);
+
+        function imageRemoveFromWallSuccess() {
+            image.isSharedOnWall = 0;
+            $(button).find("i").addClass("blue").removeClass("green").removeClass("lighten-2");
+            $(button).click(function () {
+                let button = this;
+                alertify.confirm('Confirm', `Share picture to wall - <strong>${escape(image.name)}</strong>`, function () {
+                    handleShareImageOnWall(image, imageId, button);
+                }, function () {
+                });
+            });
+
+            showSuccessAlert('Image removed from wall.');
+        }
     }
 
     function handleImageShareError(error) {

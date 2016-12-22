@@ -41,8 +41,8 @@ function showWallView() {
 }
 
 function showSharedImageView(imageId) {
-    showView("sharedImageView");
     initSharedImageView(imageId);
+    showView("sharedImageView");
 }
 
 function showView(view) {

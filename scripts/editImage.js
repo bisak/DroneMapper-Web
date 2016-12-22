@@ -1,7 +1,7 @@
 function editImage() {
     let dbRef = firebase.database().ref();
     let uid = firebase.auth().currentUser.uid;
-    let key = $("#editImage-id").val().trim();
+    let imageId = $("#editImage-id").val().trim();
 
     let newName = $("#editImage-name").val().trim();
     let newDrone = $("#editImage-drone-select").val() || " - ";
@@ -14,12 +14,12 @@ function editImage() {
         dateEdited: getTimeNow()
     };
 
-    dbRef.child("/images/" + uid + "/" + key).update(newData).then(editImageSuccess).catch(editImageError);
+    dbRef.child("/images/" + uid + "/" + imageId).update(newData).then(editImageSuccess).catch(editImageError);
 
-    dbRef.child("/sharedImagesOnWall/" + key).once("value", checkIfExists)
+    dbRef.child("/sharedImagesOnWall/" + imageId).once("value", checkIfExists);
     function checkIfExists(data) {
         if (data.val()) {
-            dbRef.child("/sharedImagesOnWall/" + key).update(newData);
+            dbRef.child("/sharedImagesOnWall/" + imageId).update(newData);
         }
     }
 
