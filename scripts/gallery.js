@@ -8,7 +8,6 @@ function loadGalleryImages() {
         let images = imagesData.val();
 
         $('.gallery-images').empty();
-w
         for (let image in images) {
             $(`.noPhotos`).hide();
             $("#topDividerGallery").removeClass("red").addClass("green");
