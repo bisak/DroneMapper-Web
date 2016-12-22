@@ -41,22 +41,21 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-function makeShareImageURL(pictureId, userId) {
-    let currentHref = window.location.href;
-    return `${currentHref}?sharedImage=${userId}//${pictureId}`;
+function makeShareImageURL(imageId, dbParentKey) {
+    return `${window.location.origin + window.location.pathname}#?sharedImage=${dbParentKey}//${imageId}`;
 }
 
 function getInfoCollectionElement(image, params = "") {
     return `<ul class="collection with-header ${params} infoCollection">
                 <li class="collection-header"><h5>Picture Info</h5></li>
-                <li class="collection-item">Name: <strong>${escape(image.val().name)}</strong></li>
-                <li class="collection-item">Description: <strong>${escape(image.val().description)}</strong></li>
-                <li class="collection-item">Date Taken: <strong>${escape(image.val().dateTaken)}</strong></li>
-                <li class="collection-item">Date Edited: <strong>${escape(image.val().dateEdited)}</strong></li>
-                <li class="collection-item">Date Uploaded: <strong>${escape(image.val().dateUploaded)}</strong></li>
-                <li class="collection-item">Resolution: <strong>${escape(image.val().resolution)}</strong></li>
-                <li class="collection-item">Drone: <strong>${escape(image.val().droneTaken)}</strong></li>
-                <li class="collection-item">Camera: <strong>${escape(image.val().cameraModel)}</strong></li>
-                <li class="collection-item">Altitude (a.s.l.): <strong>${escape(image.val().alt)}m</strong></li>
+                <li class="collection-item">Name: <strong>${escape(image.name)}</strong></li>
+                <li class="collection-item">Description: <strong>${escape(image.description)}</strong></li>
+                <li class="collection-item">Date Taken: <strong>${escape(image.dateTaken)}</strong></li>
+                <li class="collection-item">Date Edited: <strong>${escape(image.dateEdited)}</strong></li>
+                <li class="collection-item">Date Uploaded: <strong>${escape(image.dateUploaded)}</strong></li>
+                <li class="collection-item">Resolution: <strong>${escape(image.resolution)}</strong></li>
+                <li class="collection-item">Drone: <strong>${escape(image.droneTaken)}</strong></li>
+                <li class="collection-item">Camera: <strong>${escape(image.cameraModel)}</strong></li>
+                <li class="collection-item">Altitude (a.s.l.): <strong>${escape(image.alt)}m</strong></li>
             </ul>`
 }

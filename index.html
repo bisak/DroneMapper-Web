@@ -18,9 +18,10 @@
 <body>
 <nav class="blue darken-3" role="navigation">
     <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo"><img id="logo" src="styles/images/logo.png">DroneMapper</a>
+        <a id="logo-container" href="/" class="brand-logo"><img id="logo" src="styles/images/logo.png">DroneMapper</a>
         <ul class="right hide-on-med-and-down">
             <li class="active"><a href="#" class="homeViewButton">Home</a></li>
+            <li><a href="#" class="wallViewButton">Wall</a></li>
             <li><a href="#" class="galleryViewButton">Gallery</a></li>
             <li><a href="#" class="uploadViewButton">Upload</a></li>
             <li><a href="#" class="loginViewButton">Login</a></li>
@@ -36,6 +37,7 @@
         </ul>
         <ul id="nav-mobile" class="side-nav">
             <li><a href="#" class="homeViewButton">Home</a></li>
+            <li><a href="#" class="wallViewButton">Wall</a></li>
             <li><a href="#" class="galleryViewButton">Gallery</a></li>
             <li><a href="#" class="uploadViewButton">Upload</a></li>
             <li><a href="#" class="loginViewButton">Login</a></li>
@@ -51,6 +53,23 @@
         <div class="section no-pad">
             <div id="homeMap">
 
+            </div>
+        </div>
+    </section>
+
+    <section id="wallView">
+        <div class="container">
+            <div>
+                <br>
+                <h3 class="center">Wall</h3>
+                <div id="topDividerWall" class="divider green"></div>
+                <br>
+            </div>
+
+            <div class="section">
+                <div class="wall-images">
+
+                </div>
             </div>
         </div>
     </section>
@@ -352,7 +371,6 @@
             <div class="section">
                 <div class="row">
                     <form id="sharedImageForm" class="col s12 z-depth-1">
-                        <br>
 
                     </form>
                 </div>
@@ -420,6 +438,8 @@
 <script src="scripts/login.js"></script>
 <script src="scripts/logout.js"></script>
 <script src="scripts/sharedImage.js"></script>
+<script src="scripts/wall.js"></script>
+
 <!--Add your scripts ABOVE bindEvents.js-->
 <script src="scripts/bindEvents.js"></script>
 </body>

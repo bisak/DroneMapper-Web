@@ -5,6 +5,7 @@ function logoutUser() {
 
     function logoutSuccess () {
         showSuccessAlert("Logout success");
+        sessionStorage.removeItem('dbUsername');
     }
 
     function logoutError(error) {

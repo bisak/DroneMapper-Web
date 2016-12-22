@@ -4,7 +4,7 @@ function editImage() {
     let key = $("#editImage-id").val().trim();
 
     let newName = $("#editImage-name").val().trim();
-    let newDrone = $("#editImage-drone-select").val();
+    let newDrone = $("#editImage-drone-select").val() || " - ";
     let newDescription = $("#editImage-description").val().trim();
 
     let newData = {
@@ -15,6 +15,13 @@ function editImage() {
     };
 
     dbRef.child("/images/" + uid + "/" + key).update(newData).then(editImageSuccess).catch(editImageError);
+
+    dbRef.child("/sharedImagesOnWall/" + key).once("value", checkIfExists)
+    function checkIfExists(data) {
+        if (data.val()) {
+            dbRef.child("/sharedImagesOnWall/" + key).update(newData);
+        }
+    }
 
     function editImageSuccess() {
         showSuccessAlert("Image edit success.");
@@ -27,16 +34,15 @@ function editImage() {
     }
 }
 
-function setupEditImageView(image) {
+function setupEditImageView(image, id) {
     $("#editImageForm label").addClass("active");
-    let id = image.key;
     $("#editImage-id").val(id);
-    $("#editImage-name").val(image.val().name);
-    $("#editImage-image").attr("src", image.val().url);
-    $("#editImage-description").val(image.val().description).trigger('autoresize');
-    $("#editImage-drone-select").val(image.val().droneTaken).material_select();
-    $("#editImage-dateTaken").val(image.val().dateTaken);
-    $("#editImage-dateEdited").val(image.val().dateEdited);
-    $("#editImage-dateUploaded").val(image.val().dateUploaded);
+    $("#editImage-name").val(image.name);
+    $("#editImage-image").attr("src", image.url);
+    $("#editImage-description").val(image.description).trigger('autoresize');
+    $("#editImage-drone-select").val(image.droneTaken).material_select();
+    $("#editImage-dateTaken").val(image.dateTaken);
+    $("#editImage-dateEdited").val(image.dateEdited);
+    $("#editImage-dateUploaded").val(image.dateUploaded);
 }
 

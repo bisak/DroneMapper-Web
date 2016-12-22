@@ -1,3 +1,4 @@
+let shareMap;
 function initSharedImageView(id) {
     let tokens = id.split("\/\/");
     let uploader = tokens[0];
@@ -7,12 +8,14 @@ function initSharedImageView(id) {
     dbRef.child("images/" + uploader + "/" + imageId).once('value', renderSharedImage);
 
     function renderSharedImage(image) {
-        let lat = image.val().lat;
-        let lng = image.val().longt;
+        image = image.val();
+        let lat = image.lat;
+        let lng = image.longt;
         let entryToRender = $(`
+            <br>
             <div class="row">
                 <div class="sharedImageHolder col s12">
-                    <img class="materialboxed responsive-img z-depth-2" src="${image.val().url}">  
+                    <img class="materialboxed responsive-img z-depth-2" src="${image.url}">  
                     <br>
                     <div class="col s12 m6 l6">
                         ${getInfoCollectionElement(image)}
@@ -26,7 +29,7 @@ function initSharedImageView(id) {
             </div>`);
 
 
-        $("#sharedImageForm").append(entryToRender);
+        $("#sharedImageForm").empty().append(entryToRender);
         $('.materialboxed').materialbox();
 
         $(window).resize(function () {
@@ -44,17 +47,19 @@ function initSharedImageView(id) {
         };
 
         /*Create map and append it to body*/
-        let newMap = L.map('sharedImageMap', {
+        if (shareMap) {
+            shareMap.remove();
+            $("#sharedImageMap").empty();
+        }
+        shareMap = L.map('sharedImageMap', {
             center: [lat, lng],
             zoom: 10,
             layers: baseMaps.Outdoors,
             minZoom: 3,
             zoomControl: false
         });
-        let imageDisplayString = `<img class='materialboxed z-depth-2' width="${150}px" src=${image.val().url}>`;
-        L.marker([lat, lng]).bindPopup(imageDisplayString).addTo(newMap);
-
-
+        let imageDisplayString = `<img class='materialboxed z-depth-2' width="${150}px" src=${image.url}>`;
+        L.marker([lat, lng]).bindPopup(imageDisplayString).addTo(shareMap);
 
     }
 

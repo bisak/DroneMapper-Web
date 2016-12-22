@@ -16,7 +16,7 @@ function uploadImages(evt) {
             let lng = EXIF.getTag(image, 'GPSLongitude');
             let alt = EXIF.getTag(image, 'GPSAltitude');
             alt = Math.round(alt.numerator / alt.denominator);
-            let maker = EXIF.getTag(image, 'Make').replace(/\0/g, '') || "INVALID"; //removes \u0000\u0000\u0000 (null) characters'
+            let maker = EXIF.getTag(image, 'Make').replace(/\0/g, '') || "INVALID"; //the regexp removes \u0000\u0000\u0000 (null) characters'
             let takenDate = EXIF.getTag(image, 'DateTime');
             let cameraModel = EXIF.getTag(image, 'Model').replace(/\0/g, '');
             let resolution = `${EXIF.getTag(image, 'PixelXDimension')}x${EXIF.getTag(image, 'PixelYDimension')}`;
@@ -97,7 +97,6 @@ function uploadImages(evt) {
         function handleUploadError(error) {
             showErrorAlert("Error uploading image.");
             $("#topDividerGallery").removeClass("green").addClass("red");
-
             console.log(error);
         }
     }

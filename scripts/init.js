@@ -38,17 +38,18 @@ $(document).ready(function () {
     let auth = firebase.auth();
     auth.onAuthStateChanged(handleStateChanged);
 
-    function handleStateChanged (user) {
+    function handleStateChanged(user) {
         let sharedImageId = getParameterByName("sharedImage");
-        if(sharedImageId){
+        if (sharedImageId) {
             showSharedImageView(sharedImageId);
-        }else{
+        } else {
             showHomeView(user);
         }
         $("nav ul li a").hide();
         $(".homeViewButton").show();
         if (user) {
             $(".galleryViewButton").show();
+            $(".wallViewButton").show();
             $(".uploadViewButton").show();
             $(".logoutButton").show();
             $("#avatarContainer").show();
@@ -58,7 +59,7 @@ $(document).ready(function () {
             $(".registerViewButton").show();
             $("#avatarContainer").hide();
         }
-    };
+    }
 
     function setUserGreeting(user) {
         let dbRef = firebase.database().ref();
@@ -67,6 +68,7 @@ $(document).ready(function () {
         function getAvatarSuccess(data) {
             $("#avatarImage").attr("src", data.val().avatar);
             $("#usernameContainer").text(data.val().username);
+            sessionStorage.setItem('dbUsername', data.val().username);
         }
     }
 });

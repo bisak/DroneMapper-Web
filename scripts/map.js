@@ -37,7 +37,7 @@ function loadImagesOnMap() {
     let dbRef = firebase.database().ref();
     let user = firebase.auth().currentUser;
     let uid = user.uid;
-    dbRef.child("images/" + uid).on('child_added', loadImagesSuccess);
+    dbRef.child("images/" + uid).on('child_added', loadImagesSuccess); /*TODO fix with once value*/
 
     function loadImagesSuccess(data) {
         let imageUrl = data.val().url;

@@ -30,9 +30,14 @@ function showFaqView() {
     showView("faqView");
 }
 
-function showEditImageView(image) {
-    setupEditImageView(image);
+function showEditImageView(image, id) {
     showView("editImageView");
+    setupEditImageView(image, id);
+}
+
+function showWallView() {
+    showView("wallView");
+    loadWallImages();
 }
 
 function showSharedImageView(imageId) {

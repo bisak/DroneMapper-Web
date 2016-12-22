@@ -1,6 +1,7 @@
 /*Add events handling here*/
 $(document).ready(function () {
     $(".homeViewButton").click(showHomeView);
+    $(".wallViewButton").click(showWallView);
     $(".galleryViewButton").click(showGalleryView);
     $(".uploadViewButton").click(showUploadView);
     $(".registerViewButton").click(showRegisterView);

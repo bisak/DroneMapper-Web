@@ -31,7 +31,6 @@ function registerUser() {
             drones: drones,
             avatar: avatar
         };
-        console.log(userData);
         dbRef.child("users/" + uid).set(userData).then(registerDataSuccess).catch(registerDataError);
 
         function registerDataSuccess(data) {
