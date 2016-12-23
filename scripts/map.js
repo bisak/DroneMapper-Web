@@ -17,7 +17,8 @@ function initMap() {
     };
     /*Make map responsive*/
     $(window).resize(function () {
-        $('#homeMap').css("height", Math.round($(window).height() / 1.3) + "px");
+        //$('#homeMap').css("height", Math.round($(window).height() / 1.3) + "px");
+        $('#homeMap').animate({height: Math.round($(window).height() / 1.3) + "px"}, 500);
     });
     $(window).trigger("resize");
 
@@ -38,7 +39,8 @@ function loadImagesOnMap() {
     let dbRef = firebase.database().ref();
     let user = firebase.auth().currentUser;
     let uid = user.uid;
-    dbRef.child("images/" + uid).on('child_added', loadImagesSuccess); /*TODO fix with once value*/
+    dbRef.child("images/" + uid).on('child_added', loadImagesSuccess);
+    /*TODO fix with once value*/
 
     function loadImagesSuccess(data) {
         let imageUrl = data.val().url;
