@@ -16,10 +16,11 @@ function initMap() {
         "OpenStreetMap": L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://openstreetmap.org">оpenStreetMap</a> оpenStreetMap'})
     };
     /*Make map responsive*/
-    $('#homeMap').css("height", Math.round($(window).height() / 1.2) + "px");
     $(window).resize(function () {
-        $('#homeMap').css("height", Math.round($(window).height() / 1.2) + "px");
+        $('#homeMap').css("height", Math.round($(window).height() / 1.3) + "px");
     });
+    $(window).trigger("resize");
+
     /*Create map and append it to body*/
     map = L.map('homeMap', {
         center: [42.7339, 25.4858],
