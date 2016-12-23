@@ -88,6 +88,10 @@ blockquote {
     margin: 3px;
 }
 
+.wallUser{
+    margin: 3px;
+}
+
 .galleryImageInfoHolder .infoCollection {
     display: none;
 }
@@ -95,3 +99,11 @@ blockquote {
 img {
     border-radius: 3px;
 }
+
+
+.wallUser{
+    margin-left: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+

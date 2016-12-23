@@ -29,12 +29,13 @@ function registerUser() {
             name: firstName + " " + lastName,
             username: username,
             drones: drones,
-            avatar: avatar
+            avatar: avatar,
+            dateRegistered: getTimeNow()
         };
         dbRef.child("users/" + uid).set(userData).then(registerDataSuccess).catch(registerDataError);
 
         function registerDataSuccess(data) {
-            $("#registerForm").trigger("reset")
+            $("#registerForm").trigger("reset");
             showSuccessAlert("Register success.")
         }
 

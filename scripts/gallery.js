@@ -30,7 +30,7 @@ function getGalleryEntryToRender(currentImage, currentImageId, dbParentKey) {
     galleryImageInfoHolderDiv.append(imageShareUrl).append(imageInfo);
 
     let divider = $("<div class='row'><div class='col s12 m9 l9'><div class='divider'></div></div></div>");
-    let buttonsHolder = $(`<div class="col s12 m3 l2"></div>`);
+    let buttonsHolder = $(`<div class="col s12 m1 l1"></div>`);
 
     let deleteButton =
         $(`<a class="btnGalleryExtra btn-floating btn-large waves-effect waves-light red">
@@ -68,7 +68,7 @@ function getGalleryEntryToRender(currentImage, currentImageId, dbParentKey) {
     });
 
     if (currentImage.isSharedOnWall) {
-        linkButton.removeClass("blue").addClass("green").addClass("lighten-2");
+        linkButton.find('a').addClass("lighten-4");
         linkButton.click(function () {
             let button = this;
             alertify.confirm('Confirm', `Remove picture from wall - <strong>${escape(currentImage.name)}</strong>`, function () {
@@ -116,7 +116,7 @@ function getShareImageURLElement(image) {
     return `<div class="shareUrlHolder">
                 <p>URL</p>
                 <input disabled type="text" class="grey-text shareUrl active">
-           </div>`;
+            </div>`;
 }
 
 
@@ -131,7 +131,6 @@ function handleShareImageOnWall(image, imageId, button) {
     }
 
     function shareImageOnWall(image, imageId, button) {
-        image.uploaderUsername = sessionStorage.getItem("dbUsername");
         image.uploaderId = firebase.auth().currentUser.uid;
 
         dbRef.child("/sharedImagesOnWall/" + imageId).set(image).then(imageShareSuccess).catch(handleImageShareError);
@@ -139,7 +138,8 @@ function handleShareImageOnWall(image, imageId, button) {
 
         function imageShareSuccess() {
             image.isSharedOnWall = 1;
-            $(button).find("i").removeClass("blue").addClass("green").addClass("lighten-2");
+            $(button).addClass("lighten-4");
+            console.log("here")
             $(button).click(function () {
                 let button = this;
                 alertify.confirm('Confirm', `Remove picture from wall - <strong>${escape(image.name)}</strong>`, function () {
@@ -158,7 +158,7 @@ function handleShareImageOnWall(image, imageId, button) {
 
         function imageRemoveFromWallSuccess() {
             image.isSharedOnWall = 0;
-            $(button).find("i").addClass("blue").removeClass("green").removeClass("lighten-2");
+            $(button).removeClass("lighten-4");
             $(button).click(function () {
                 let button = this;
                 alertify.confirm('Confirm', `Share picture to wall - <strong>${escape(image.name)}</strong>`, function () {

@@ -43,6 +43,7 @@ function showWallView() {
 function showSharedImageView(imageId) {
     showView("sharedImageView");
     initSharedImageView(imageId);
+    $("html, body").animate({ scrollTop: 0 }, "slow");
 }
 
 function showView(view) {

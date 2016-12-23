@@ -53,7 +53,7 @@ function initSharedImageView(id) {
         }
         shareMap = L.map('sharedImageMap', {
             center: [lat, lng],
-            zoom: 10,
+            zoom: 14,
             layers: baseMaps.Outdoors,
             minZoom: 3,
             zoomControl: false
