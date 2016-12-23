@@ -68,7 +68,7 @@ function getGalleryEntryToRender(currentImage, currentImageId, dbParentKey) {
     });
 
     if (currentImage.isSharedOnWall) {
-        linkButton.find('a').addClass("lighten-4");
+        linkButton.addClass("lighten-4");
         linkButton.click(function () {
             let button = this;
             alertify.confirm('Confirm', `Remove picture from wall - <strong>${escape(currentImage.name)}</strong>`, function () {
