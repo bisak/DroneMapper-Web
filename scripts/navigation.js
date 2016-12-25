@@ -11,6 +11,7 @@ function showHomeView() {
 
 function showGalleryView() {
     showView("galleryView");
+    $('.gallery-images').empty();
     loadGalleryImages();
 }
 
@@ -37,19 +38,21 @@ function showEditImageView(image, id) {
 
 function showWallView() {
     showView("wallView");
+    $('.wall-images').empty();
     loadWallImages();
 }
 
 function showSharedImageView(imageId) {
     showView("sharedImageView");
     initSharedImageView(imageId);
-    $("html, body").animate({ scrollTop: 0 }, "slow");
+    $("html, body").animate({scrollTop: 0}, "slow");
 }
 
 function showView(view) {
+    $(window).unbind('scroll');
     $('main > section').hide();
     $(`#${view}`).show();
     /*Takes care of highligiting in menus and navs */
     $('nav div ul li.active').removeAttr("class");
-    $(`.${view}Button`).parent().addClass("active");
+    $(`nav div ul li .${view}Button`).parent().addClass("active");
 }

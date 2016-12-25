@@ -1,19 +1,32 @@
 function loadGalleryImages() {
     let dbRef = firebase.database().ref();
     let uid = firebase.auth().currentUser.uid;
+    let lastKnownGalleryImageKey = "";
 
-    dbRef.child("images/" + uid).once('value', renderImages);
-    function renderImages(imagesData) {
-        let dbParentKey = imagesData.key;
-        let images = imagesData.val();
+    loadNextGalleryImages();
 
-        $('.gallery-images').empty();
-        for (let image in images) {
-            $(`.noPhotos`).hide();
-            $("#topDividerGallery").removeClass("red").addClass("green");
-            let entryToRender = getGalleryEntryToRender(images[image], image, dbParentKey);
-            $('.gallery-images').prepend(entryToRender);
-            $('.materialboxed').materialbox();
+    $(window).scroll(handleGalleryScrolling);
+
+    function handleGalleryScrolling() {
+        if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+            loadNextGalleryImages()
+        }
+    }
+
+    function loadNextGalleryImages() {
+        dbRef.child("images/" + uid).orderByKey().startAt(lastKnownGalleryImageKey).limitToFirst(5).once('value', renderImages);
+        function renderImages(imagesData) {
+            let dbParentKey = imagesData.key;
+            let images = imagesData.val();
+            for (let image in images) {
+                if (image != lastKnownGalleryImageKey) {
+                    $(`.noPhotos`).hide();
+                    let entryToRender = getGalleryEntryToRender(images[image], image, dbParentKey);
+                    lastKnownGalleryImageKey = image;
+                    $('.gallery-images').append(entryToRender);
+                    $('.materialboxed').materialbox();
+                }
+            }
         }
     }
 }

@@ -58,7 +58,7 @@ function initSharedImageView(id) {
             minZoom: 3,
             zoomControl: false
         });
-        let imageDisplayString = `<img class='materialboxed z-depth-2' width="${150}px" src=${image.url}>`;
+        let imageDisplayString = `<img class='z-depth-2' width="${200}px" src=${image.url}>`;
         L.marker([lat, lng]).bindPopup(imageDisplayString).addTo(shareMap);
 
     }

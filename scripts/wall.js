@@ -1,15 +1,32 @@
 function loadWallImages() {
     let dbRef = firebase.database().ref();
-    dbRef.child("/sharedImagesOnWall/").once('value', renderWallImages);
-    function renderWallImages(imagesData) {
-        let images = imagesData.val();
-        $('.wall-images').empty();
+    let lastKnownWallImageKey = "";
 
-        for (let image in images) {
-            let entryToRender = getWallEntryToRender(images[image], image);
-            $('.wall-images').prepend(entryToRender);
+    loadNextWallImages();
+
+    $(window).scroll(handleWallScrolling);
+
+    function handleWallScrolling() {
+        if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+            loadNextWallImages()
         }
     }
+
+    function loadNextWallImages() {
+        dbRef.child("/sharedImagesOnWall/").orderByKey().startAt(lastKnownWallImageKey).limitToFirst(5).once('value', renderWallImages);
+        function renderWallImages(imagesData) {
+            let images = imagesData.val();
+
+            for (let image in images) {
+                if (image != lastKnownWallImageKey) {
+                    let entryToRender = getWallEntryToRender(images[image], image);
+                    lastKnownWallImageKey = image;
+                    $('.wall-images').append(entryToRender);
+                }
+            }
+        }
+    }
+
 }
 
 function getWallEntryToRender(currentImage, imageId) {
