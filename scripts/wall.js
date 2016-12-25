@@ -41,7 +41,7 @@ function getWallEntryToRender(currentImage, imageId) {
         openImageInShare(imageId, uploaderId);
     });
     let uploaderHolder = $(`<div class="wallUser chip blue darken-2 z-depth-1"></div>`).click(function () {
-        console.log("CLICKED USER");
+        showUserView(uploaderId);
     });
 
     let divider = $(`<div class='row'><div class='${width}'><div class='divider'></div></div></div>`);
@@ -76,13 +76,13 @@ function getWallEntryToRender(currentImage, imageId) {
     function setButtons() {
         let buttonsHolder = $(`<div class="col s12 m3 l2"></div>`);
 
-        let wallShareButton = $(`<a class="btnGalleryExtra btn-floating btn-large waves-effect waves-light blue">
+        let wallShareButton = $(`<a class="btnGalleryExtra btn-floating waves-effect waves-light blue">
                 <i class="material-icons">share</i></a>`).click(function () {
             wallImageInfoHolderDiv.find(".shareUrlHolder").fadeToggle("fast", "linear");
-            wallImageInfoHolderDiv.find(".shareUrl").val(makeShareImageURL(imageId, currentImage.uploaderId));
+            wallImageInfoHolderDiv.find(".shareUrl").val(makeShareImageURL(imageId, uploaderId));
         });
 
-        let showMoreButton = $(`<a class="btnGalleryExtra btn-floating btn-large waves-effect waves-light green accent-4">
+        let showMoreButton = $(`<a class="btnGalleryExtra btn-floating waves-effect waves-light green accent-4">
                 <i class="material-icons">view_list</i></a>`).click(function () {
             wallImageInfoHolderDiv.find(".infoCollection").fadeToggle("fast", "linear");
         });

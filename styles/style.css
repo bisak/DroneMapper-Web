@@ -69,11 +69,12 @@ blockquote {
     margin-bottom: 10px;
 }
 
-.collection .divider {
-    height: 1px;
-    background-color: #2196f3;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.loggedInUserAvatarContainer {
+    display: none;
+}
+
+.loggedInUserBadge {
+    cursor: pointer;
 }
 
 .collection {
@@ -85,11 +86,7 @@ blockquote {
 }
 
 .btnGalleryExtra {
-    margin: 3px;
-}
-
-.wallUser{
-    margin: 3px;
+    margin: 2px;
 }
 
 .galleryImageInfoHolder .infoCollection {
@@ -100,10 +97,26 @@ img {
     border-radius: 3px;
 }
 
-
-.wallUser{
+.wallUser {
     margin-left: 15px;
     margin-bottom: 15px;
     cursor: pointer;
 }
 
+.galleryButtonsHolder {
+    margin-top: 8px;
+}
+
+.avatar-big {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black
+}
+
+.userProfileAvatar{
+    margin: 20px;
+}
+
+#userProfileImagesForm{
+    padding: 10px;
+}

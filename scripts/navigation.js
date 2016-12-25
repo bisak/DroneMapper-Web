@@ -42,10 +42,16 @@ function showWallView() {
     loadWallImages();
 }
 
+function showUserView(userId) {
+    showView("userProfileView");
+    loadUserProfile(userId);
+    $("html, body").animate({scrollTop: 0}, "fast");
+}
+
 function showSharedImageView(imageId) {
     showView("sharedImageView");
     initSharedImageView(imageId);
-    $("html, body").animate({scrollTop: 0}, "slow");
+    $("html, body").animate({scrollTop: 0}, "fast");
 }
 
 function showView(view) {
@@ -53,6 +59,6 @@ function showView(view) {
     $('main > section').hide();
     $(`#${view}`).show();
     /*Takes care of highligiting in menus and navs */
-    $('nav div ul li.active').removeAttr("class");
+    $('nav div ul li.active').removeClass("active");
     $(`nav div ul li .${view}Button`).parent().addClass("active");
 }

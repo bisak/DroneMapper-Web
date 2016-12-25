@@ -16,12 +16,12 @@ function loadGalleryImages() {
     function loadNextGalleryImages() {
         dbRef.child("images/" + uid).orderByKey().startAt(lastKnownGalleryImageKey).limitToFirst(5).once('value', renderImages);
         function renderImages(imagesData) {
-            let dbParentKey = imagesData.key;
+            let uploaderId = imagesData.key;
             let images = imagesData.val();
             for (let image in images) {
                 if (image != lastKnownGalleryImageKey) {
                     $(`.noPhotos`).hide();
-                    let entryToRender = getGalleryEntryToRender(images[image], image, dbParentKey);
+                    let entryToRender = getGalleryEntryToRender(images[image], image, uploaderId);
                     lastKnownGalleryImageKey = image;
                     $('.gallery-images').append(entryToRender);
                     $('.materialboxed').materialbox();
@@ -31,7 +31,7 @@ function loadGalleryImages() {
     }
 }
 
-function getGalleryEntryToRender(currentImage, currentImageId, dbParentKey) {
+function getGalleryEntryToRender(currentImage, currentImageId, uploaderId) {
     let row = $(`<div class="row"></div>`);
     let galleryImageHolderDiv = $(`<div class="galleryImageHolder col s12 m9 l9"></div>`);
     let galleryImageInfoHolderDiv = $(`<div class="galleryImageInfoHolder col s12 m9 l9"></div>`);
@@ -43,10 +43,10 @@ function getGalleryEntryToRender(currentImage, currentImageId, dbParentKey) {
     galleryImageInfoHolderDiv.append(imageShareUrl).append(imageInfo);
 
     let divider = $("<div class='row'><div class='col s12 m9 l9'><div class='divider'></div></div></div>");
-    let buttonsHolder = $(`<div class="col s12 m1 l1"></div>`);
+    let buttonsHolder = $(`<div class="galleryButtonsHolder col s12 m2 l1"></div>`);
 
     let deleteButton =
-        $(`<a class="btnGalleryExtra btn-floating btn-large waves-effect waves-light red">
+        $(`<a class="btnGalleryExtra btn-floating waves-effect waves-light red">
                 <i class="material-icons">delete</i></a>`).click(function () {
             let button = this;
             alertify.confirm('Confirm', `Delete picture - <strong>${escape(currentImage.name)}</strong>`, function () {
@@ -55,12 +55,12 @@ function getGalleryEntryToRender(currentImage, currentImageId, dbParentKey) {
             });
         });
 
-    let editButton = $(`<a href="#" class="btnGalleryExtra btn-floating btn-large waves-effect waves-light orange">
+    let editButton = $(`<a href="#" class="btnGalleryExtra btn-floating waves-effect waves-light orange">
                 <i class="material-icons">edit</i></a>`).click(function () {
         showEditImageView(currentImage, currentImageId);
     });
 
-    let linkButton = $(`<a class="btnGalleryExtra btn-floating btn-large waves-effect waves-light blue">
+    let linkButton = $(`<a class="btnGalleryExtra btn-floating waves-effect waves-light blue">
                 <i class="material-icons">web</i></a>`).click(function () {
         let button = this;
         alertify.confirm('Confirm', `Share picture to wall - <strong>${escape(currentImage.name)}</strong>`, function () {
@@ -69,13 +69,13 @@ function getGalleryEntryToRender(currentImage, currentImageId, dbParentKey) {
         });
     });
 
-    let wallShareButton = $(`<a class="btnGalleryExtra btn-floating btn-large waves-effect waves-light blue">
+    let wallShareButton = $(`<a class="btnGalleryExtra btn-floating waves-effect waves-light blue">
                 <i class="material-icons">share</i></a>`).click(function () {
         galleryImageInfoHolderDiv.find(".shareUrlHolder").fadeToggle("fast", "linear");
-        galleryImageInfoHolderDiv.find(".shareUrl").val(makeShareImageURL(currentImageId, dbParentKey));
+        galleryImageInfoHolderDiv.find(".shareUrl").val(makeShareImageURL(currentImageId, uploaderId));
     });
 
-    let showMoreButton = $(`<a class="btnGalleryExtra btn-floating btn-large waves-effect waves-light green accent-4">
+    let showMoreButton = $(`<a class="btnGalleryExtra btn-floating waves-effect waves-light green accent-4">
                 <i class="material-icons">view_list</i></a>`).click(function () {
         galleryImageInfoHolderDiv.find(".infoCollection").fadeToggle("fast", "linear");
     });

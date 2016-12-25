@@ -11,6 +11,7 @@ function initSharedImageView(id) {
         image = image.val();
         let lat = image.lat;
         let lng = image.longt;
+        /*TODO fix this a lil*/
         let entryToRender = $(`
             <br>
             <div class="row">
