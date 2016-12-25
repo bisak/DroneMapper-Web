@@ -39,25 +39,44 @@ function loadImagesOnMap() {
     let dbRef = firebase.database().ref();
     let user = firebase.auth().currentUser;
     let uid = user.uid;
-    dbRef.child("images/" + uid).on('child_added', loadImagesSuccess);
+    dbRef.child("images/" + uid).once('value', loadImagesSuccess);
     /*TODO fix with once value*/
 
     function loadImagesSuccess(data) {
-        let imageUrl = data.val().url;
-        let imageName = data.val().name;
-        let imageLat = data.val().lat;
-        let imageLong = data.val().longt;
-        let imageAlt = Math.round(data.val().alt);
-        let imageWidth = Math.round($(window).width() / 3);
+        let images = data.val();
+        let uploaderId = data.key;
+
         let markerIcon = new L.Icon.Default();
         markerIcon.options.shadowSize = [0, 0];
 
-        let imageDisplayString = `<blockquote class="white-text z-depth-2 mapMetadata"><h5><strong>${escape(imageAlt)}m</strong> a.s.l.</h5></blockquote><img class='materialboxed z-depth-2' width="${imageWidth}" src=${imageUrl}>`;
-        L.marker([imageLat, imageLong], {icon: markerIcon})
-            .bindPopup(imageDisplayString, {
-                autoPanPadding: L.point(20, 20),
-            })
-            .addTo(map);
+        for (let image in images) {
+            let displayString = getStringToDisplay(images[image], image, uploaderId);
+            let imageLat = images[image].lat;
+            let imageLong = images[image].longt;
+
+            L.marker([imageLat, imageLong], {icon: markerIcon})
+                .bindPopup(displayString, {
+                    autoPanPadding: L.point(20, 20),
+                })
+                .addTo(map);
+        }
+
+        function getStringToDisplay(image, imageId, uploaderId) {
+            let imageUrl = image.url;
+            let imageName = image.name;
+            let imageWidth = Math.round($(window).width() / 2);
+
+            let container = $("<div>")
+            let imageToDisplay = $(`<img class='materialboxed z-depth-2' width="${imageWidth}" src=${imageUrl}>`);
+
+            /*TODO fix this. Doesn't work because it's converted to string.*/
+            let showMoreButton = $(`<a class="mapExtraButton btn-floating waves-effect waves-light green accent-4">
+                <i class="material-icons">view_list</i></a>`).click(function () {
+            });
+
+            container/*.append(showMoreButton)*/.append(imageToDisplay);
+            return container[0].outerHTML;
+        }
     }
 }
 

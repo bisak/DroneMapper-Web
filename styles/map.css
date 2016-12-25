@@ -39,3 +39,7 @@ img.materialboxed.initialized {
     border-radius: 2px;
     border: 1px solid lightgray;
 }
+
+.mapExtraButton{
+   margin-bottom: 10px;
+}
