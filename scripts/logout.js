@@ -5,6 +5,8 @@ function logoutUser() {
 
     function logoutSuccess () {
         showSuccessAlert("Logout success");
+        $("input").val("");
+        isAppInitialized = false;
     }
 
     function logoutError(error) {

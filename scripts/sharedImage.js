@@ -1,5 +1,6 @@
 let shareMap;
 function initSharedImageView(id) {
+    $("#sharedImageForm").empty();
     let tokens = id.split("\/\/");
     let uploader = tokens[0];
     let imageId = tokens[1];
@@ -30,7 +31,7 @@ function initSharedImageView(id) {
             </div>`);
 
 
-        $("#sharedImageForm").empty().append(entryToRender);
+        $("#sharedImageForm").append(entryToRender);
         $('.materialboxed').materialbox();
 
         $(window).resize(function () {
@@ -41,13 +42,12 @@ function initSharedImageView(id) {
         });
         $(window).trigger("resize");
 
-
         let baseMaps = {
             "Outdoors": L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Outdoors'}),
             "OpenStreetMap": L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://openstreetmap.org">оpenStreetMap</a> оpenStreetMap'})
         };
 
-        /*Create map and append it to body*/
+        /*Create map and append it to container*/
         if (shareMap) {
             shareMap.remove();
             $("#sharedImageMap").empty();

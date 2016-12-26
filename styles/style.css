@@ -113,10 +113,19 @@ img {
     border: 1px solid black
 }
 
-.userProfileAvatar{
+.userProfileAvatar {
     margin: 20px;
 }
 
-#userProfileImagesForm{
+.loggedInUserProfileAvatar {
+    margin: 20px;
+}
+
+.userProfileImagesForm {
     padding: 10px;
+}
+
+
+.loggedInUserEditProfileButton {
+    margin-bottom: 15px;
 }

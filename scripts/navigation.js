@@ -11,7 +11,6 @@ function showHomeView() {
 
 function showGalleryView() {
     showView("galleryView");
-    $('.gallery-images').empty();
     loadGalleryImages();
 }
 
@@ -38,21 +37,28 @@ function showEditImageView(image, id) {
 
 function showWallView() {
     showView("wallView");
-    $('.wall-images').empty();
     loadWallImages();
 }
 
-function showUserView(userId) {
+function showUserView() {
     showView("userProfileView");
-    loadUserProfile(userId);
     $("html, body").animate({scrollTop: 0}, "fast");
 }
 
-function showSharedImageView(imageId) {
+function showSharedImageView(id) {
     showView("sharedImageView");
-    initSharedImageView(imageId);
+    initSharedImageView(id);
     $("html, body").animate({scrollTop: 0}, "fast");
 }
+
+function showEditProfileView() {
+    showView("editProfileView");
+}
+
+function showReauthUserView() {
+    showView("reauthUserView");
+}
+
 
 function showView(view) {
     $(window).unbind('scroll');

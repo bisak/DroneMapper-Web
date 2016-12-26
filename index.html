@@ -42,6 +42,7 @@
             <li><a href="#" class="uploadViewButton">Upload</a></li>
             <li><a href="#" class="loginViewButton">Login</a></li>
             <li><a href="#" class="registerViewButton">Register</a></li>
+            <li><a href="#" class="loggedInUserBadge">Profile</a></li>
             <li><a href="#" class="logoutButton">Log out</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -217,7 +218,7 @@
             <div class="row">
                 <form id="loginForm" class="col s10 m8 l6 z-depth-1 offset-s1 offset-m2 offset-l3">
                     <h3 class="center">Login</h3>
-                    <div class="divider"></div>
+                    <div class="divider col s10 offset-s1"></div>
                     <br>
                     <div class="row">
                         <div class="input-field col s10 offset-s1 offset-m1 offset-l1">
@@ -233,9 +234,7 @@
                     </div>
                     <div class="row">
                         <div class="center">
-                            <a href="#" class="btn waves-effect waves-light teal z-depth-1 loginButton">
-                                Log In
-                            </a>
+                            <a href="#" class="btn waves-effect waves-light teal z-depth-1 loginButton">Log In</a>
                             <br>
                             <br>
                             Not Registered?
@@ -255,34 +254,34 @@
             <div class="row">
                 <form id="registerForm" class="col s10 offset-s1 z-depth-1">
                     <h3 class="center">Register</h3>
-                    <div class="divider"></div>
+                    <div class="divider col s10 offset-s1"></div>
                     <br>
                     <div class="row">
-                        <div class="input-field col s6">
+                        <div class="input-field col s5 offset-s1">
                             <input id="register-firstName" type="text" class="validate">
                             <label for="register-firstName">First Name</label>
                         </div>
-                        <div class="input-field col s6">
+                        <div class="input-field col s5">
                             <input id="register-lastName" type="text" class="validate">
                             <label for="register-lastName">Last Name</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s6">
+                        <div class="input-field col s5 offset-s1">
                             <input id="register-username" type="text" class="validate">
                             <label for="register-username">Username</label>
                         </div>
-                        <div class="input-field col s6">
+                        <div class="input-field col s5">
                             <input id="register-email" type="email" class="validate">
                             <label for="register-email">Email</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s6">
+                        <div class="input-field col s5 offset-s1">
                             <input id="register-password" type="password" class="validate">
                             <label for="register-password">Password</label>
                         </div>
-                        <div class="input-field col s6">
+                        <div class="input-field col s5">
                             <input id="register-password-confirm" type="password" class="validate">
                             <label for="register-password-confirm">Confirm Password</label>
                         </div>
@@ -290,31 +289,28 @@
                     <div class="row">
                         <div class="input-field col s10 blue-grey-text offset-s1">
                             <select id="register-drone-select" multiple>
-                                <option value="" disabled>Choose your option</option>
-                                <option value="1">DJI Phantom 3 Standard</option>
-                                <option value="2">DJI Phantom 3 4K</option>
-                                <option value="3">DJI Phantom 3 Advanced</option>
-                                <option value="4">DJI Phantom 3 Professional</option>
-                                <option value="5">DJI Phantom 4</option>
-                                <option value="6">DJI Phantom 4 Pro</option>
-                                <option value="7">DJI Mavic</option>
-                                <option value="8">DJI Inspire 1</option>
-                                <option value="9">DJI Inspire 2</option>
-                                <option value="10">Other</option>
+                                <option value="" disabled>Choose your drone</option>
+                                <option value="DJI Phantom 3 Standard">DJI Phantom 3 Standard</option>
+                                <option value="DJI Phantom 3 4K">DJI Phantom 3 4K</option>
+                                <option value="DJI Phantom 3 Advanced">DJI Phantom 3 Advanced</option>
+                                <option value="DJI Phantom 3 Professional">DJI Phantom 3 Professional</option>
+                                <option value="DJI Phantom 4">DJI Phantom 4</option>
+                                <option value="DJI Phantom 4 Pro">DJI Phantom 4 Pro</option>
+                                <option value="DJI Mavic">DJI Mavic</option>
+                                <option value="DJI Inspire 1">DJI Inspire 1</option>
+                                <option value="DJI Inspire 2">DJI Inspire 2</option>
                             </select>
                             <label for="register-drone-select">Select your drone(s)</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s10 offset-s1">
-                            <div class="file-field input-field">
-                                <div class="btn teal z-depth-1">
-                                    <span>Select</span>
-                                    <input id="uploadAvatarSlector" type="file" multiple>
-                                </div>
-                                <div class="file-path-wrapper">
-                                    <input class="file-path validate" type="text" placeholder="Set avatar">
-                                </div>
+                        <div class="file-field input-field col s10 offset-s1">
+                            <div class="btn teal z-depth-1">
+                                <span>Select</span>
+                                <input id="uploadAvatarSlector" type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Avatar">
                             </div>
                         </div>
                     </div>
@@ -338,8 +334,136 @@
         </div>
     </section>
 
-    <section id="loggedInUserProfileView">
-        <!--TODO add-->
+    <section id="reauthUserView">
+        <div class="container">
+            <br>
+            <div class="row">
+                <form id="reauthUserForm" class="col s10 m8 z-depth-1 offset-s1 offset-m2">
+                    <div class="row">
+                        <div class="col s12 m10 offset-m1">
+                            <h4 class="center-align">Edit profile</h4>
+                            <div class="divider center-align col s10 offset-s1"></div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m10 offset-m1">
+                            <h6 class="center-align">Enter your password to continue.</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m10 offset-m1">
+                            <input id="reauth-user-password" type="password" class="validate">
+                            <label for="reauth-user-password">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center">
+                            <a href="#" style="margin-right: 2%"
+                               class="loggedInUserAuthBackButton btn waves-effect waves-light blue z-depth-1">Back
+                            </a>
+                            <a href="#" style="margin-left: 2%"
+                               class="loggedInUserAuthConfirmButton btn waves-effect waves-light green z-depth-1">Confirm
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="editProfileView">
+        <div class="container">
+            <div class="row">
+                <br>
+                <form id="editProfileForm" class="col s10 offset-s1 z-depth-1">
+                    <div class="row">
+                        <div class="col s12 m8 offset-m2">
+                            <h4 class="center-align">Edit profile</h4>
+                            <div class="divider center-align col s10 offset-s1"></div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s5 offset-s1">
+                            <input id="edit-user-firstName" type="text" class="validate">
+                            <label for="edit-user-firstName">First Name</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input id="edit-user-lastName" type="text" class="validate">
+                            <label for="edit-user-lastName">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s5 offset-s1">
+                            <input id="edit-user-username" type="text" class="validate">
+                            <label for="edit-user-username">Username</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input id="edit-user-email" type="email" class="validate">
+                            <label for="edit-user-email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s5 offset-s1">
+                            <input id="edit-user-password" type="password" class="validate">
+                            <label for="edit-user-password">Password</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <input id="edit-user-password-confirm" type="password" class="validate">
+                            <label for="edit-user-password-confirm">Confirm Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s10 blue-grey-text offset-s1">
+                            <select id="edit-user-drone-select" multiple>
+                                <option value="" disabled>Choose your drone</option>
+                                <option value="DJI Phantom 3 Standard">DJI Phantom 3 Standard</option>
+                                <option value="DJI Phantom 3 4K">DJI Phantom 3 4K</option>
+                                <option value="DJI Phantom 3 Advanced">DJI Phantom 3 Advanced</option>
+                                <option value="DJI Phantom 3 Professional">DJI Phantom 3 Professional</option>
+                                <option value="DJI Phantom 4">DJI Phantom 4</option>
+                                <option value="DJI Phantom 4 Pro">DJI Phantom 4 Pro</option>
+                                <option value="DJI Mavic">DJI Mavic</option>
+                                <option value="DJI Inspire 1">DJI Inspire 1</option>
+                                <option value="DJI Inspire 2">DJI Inspire 2</option>
+                            </select>
+                            <label for="edit-user-drone-select">Select your drone(s)</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="file-field input-field col s10 offset-s1">
+                            <div class="btn teal z-depth-1">
+                                <span>Select</span>
+                                <input id="edit-user-uploadAvatarSlector" type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Avatar">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center">
+                            <img id="edit-user-avatar"
+                                 src="data:image/png;base64,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"
+                                 alt="Avatar" class="circle avatar-big">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center">
+                                    <span>By using DroneMapper you agree to our <a class="faqViewButton"
+                                                                                   href="#">disclaimer</a>.</span><br><br>
+                            <a href="#" style="margin-right: 2%"
+                               class="loggedInUserAuthBackButton btn waves-effect waves-light blue z-depth-1">Back
+                            </a>
+                            <a href="#" style="margin-left: 2%"
+                               class="edit-user-confirm btn waves-effect waves-light green z-depth-1">Confirm
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </section>
 
     <section id="userProfileView">
@@ -351,15 +475,17 @@
                         <img class="circle avatar-big userProfileAvatar center-align"
                              src="styles/images/sample-avatar.png">
                     </div>
-                    <div class="col s12 m8 l8 center-align">
+                    <div class="userProfileInfoHolder col s12 m8 l8 center-align">
                         <h4 class="userProfileUsername center-align">&nbsp;</h4>
-                        <div class="divider center-align"></div>
+                        <div class="divider center-align col s10 offset-s1"></div>
+                        <br>
                         <h5 class="userProfileDrones center-align">&nbsp;</h5>
                     </div>
                 </div>
+
             </form>
             <h4 id="userProfileSharedPhotosText" class="center-align">Shared photos by </h4>
-            <form id="userProfileImagesForm" class="col s12 m10 offset-m1 z-depth-1">
+            <form class="col s12 m10 offset-m1 z-depth-1 userProfileImagesForm">
                 <div class="user-shared-images">
 
                 </div>
@@ -470,10 +596,9 @@
 <script src="scripts/logout.js"></script>
 <script src="scripts/sharedImage.js"></script>
 <script src="scripts/wall.js"></script>
-<script src="scripts/loggedInUserProfile.js"></script>
+<script src="scripts/profileEdit.js"></script>
 <script src="scripts/userProfile.js"></script>
 
-<!--Add your scripts ABOVE bindEvents.js-->
 <script src="scripts/bindEvents.js"></script>
 </body>
 </html>

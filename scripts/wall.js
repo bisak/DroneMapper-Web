@@ -1,6 +1,7 @@
 function loadWallImages() {
     let dbRef = firebase.database().ref();
     let lastKnownWallImageKey = "";
+    $(".wall-images").empty()
 
     loadNextWallImages();
 
@@ -41,7 +42,7 @@ function getWallEntryToRender(currentImage, imageId) {
         openImageInShare(imageId, uploaderId);
     });
     let uploaderHolder = $(`<div class="wallUser chip blue darken-2 z-depth-1"></div>`).click(function () {
-        showUserView(uploaderId);
+        loadUserProfile(uploaderId);
     });
 
     let divider = $(`<div class='row'><div class='${width}'><div class='divider'></div></div></div>`);

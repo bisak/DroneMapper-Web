@@ -2,6 +2,7 @@ function loadGalleryImages() {
     let dbRef = firebase.database().ref();
     let uid = firebase.auth().currentUser.uid;
     let lastKnownGalleryImageKey = "";
+    $('.gallery-images').empty();
 
     loadNextGalleryImages();
 

@@ -1,3 +1,5 @@
+let isAppInitialized = false;
+
 $(document).ready(function () {
     /*Initialize Materialize framework responsiveness*/
     $('.button-collapse').sideNav();
@@ -35,14 +37,17 @@ $(document).ready(function () {
     }
     firebase.initializeApp(config);
 
+
     let auth = firebase.auth();
     auth.onAuthStateChanged(handleStateChanged);
 
     function handleStateChanged(user) {
         let sharedImageId = getParameterByName("sharedImage");
-        if (sharedImageId) {
+        if (sharedImageId && !isAppInitialized) {
+            isAppInitialized = true;
             showSharedImageView(sharedImageId);
-        } else {
+        } else if (!isAppInitialized) {
+            isAppInitialized = true;
             showHomeView();
         }
         $("nav ul li a").hide();
@@ -53,16 +58,13 @@ $(document).ready(function () {
             $(".uploadViewButton").show();
             $(".logoutButton").show();
             $(".loggedInUserAvatarContainer").show();
-            setUserGreeting(user);
-            $(".loggedInUserBadge").click(function () {
-                showUserView(user.uid);
-            });
+            $(".loggedInUserBadge").show();
+            setUserGreeting();
         } else {
             $(".loginViewButton").show();
             $(".registerViewButton").show();
             $(".loggedInUserAvatarContainer").hide();
+            isAppInitialized = false;
         }
     }
-
-
 });

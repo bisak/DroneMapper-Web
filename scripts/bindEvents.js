@@ -10,6 +10,11 @@ $(document).ready(function () {
     $(".logoutButton").click(logoutUser);
     $(".loginButton").click(loginUser);
     $(".registerButton").click(registerUser);
+    $(".loggedInUserBadge, .loggedInUserAuthBackButton").click(function () {
+        loadUserProfile();
+    });
+    $(".loggedInUserEditProfileButton").click();
+    $('.loggedInUserAuthConfirmButton').click(reauthLoggedInUser);
     $("#editImage-back").click(showGalleryView);
     $("#editImage-confirm").click(editImage);
     $("#uploadSlector").change(uploadImages);
