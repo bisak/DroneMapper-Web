@@ -85,3 +85,4 @@ function setUserGreeting() {
         $("#loggedInUserUsername").text(data.username);
     }
 }
+

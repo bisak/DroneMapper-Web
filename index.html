@@ -183,10 +183,6 @@
     <section id="uploadView">
         <div class="container">
             <div>
-                <!--<br>
-                <h3 class="center">Upload Pictures</h3>
-                <div id="topDividerUpload" class="divider green"></div>
-                <br>-->
                 <div class="section">
                     <div class="row">
                         <form id="uploadImageForm" class="col s10 offset-s1 z-depth-1">
@@ -482,13 +478,59 @@
                         <h5 class="userProfileDrones center-align">&nbsp;</h5>
                     </div>
                 </div>
-
             </form>
             <h4 id="userProfileSharedPhotosText" class="center-align">Shared photos by </h4>
             <form class="col s12 m10 offset-m1 z-depth-1 userProfileImagesForm">
                 <div class="user-shared-images">
 
                 </div>
+            </form>
+            <br>
+        </div>
+    </section>
+
+    <section id="preferencesView">
+        <div class="container">
+            <br>
+            <form id="preferencesForm" class="col s12 m10 offset-m1 z-depth-1">
+                <br>
+                <h4 class="center-align">Map settings</h4>
+                <div class="row">
+                    <div class="col s10 m5 offset-m1 offset-s1 z-depth-1" style="margin-top: 10px; margin-right: 10px;">
+                        <h5 class="center-align">Pictures</h5>
+                        <div class="divider"></div>
+                        <div class="row" style="margin: 10px;">
+                            <p>
+                                <input type="checkbox" id="gallery-pictures-checkbox"/>
+                                <label for="gallery-pictures-checkbox"">Gallery Pictures</label>
+                            </p>
+                        </div>
+                        <div class="row" style="margin: 10px;">
+                            <p>
+                                <input type="checkbox" id="wall-pictures-checkbox""/>
+                                <label for="wall-pictures-checkbox">Wall Pictures</label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col s10 m5 offset-s1 z-depth-1" style="margin-top: 10px;">
+                        <h5 class="center-align">Flights</h5>
+                        <div class="divider"></div>
+                        <div class="row" style="margin: 10px;">
+                            <p>
+                                <input type="checkbox" id="realtime-flights-checkbox"/>
+                                <label for="realtime-flights-checkbox">Realtime Flights</label>
+                            </p>
+                        </div>
+                        <div class="row" style="margin: 10px;">
+                            <p>
+                                <input type="checkbox" id="recorded-flights-checkbox"/>
+                                <label for="recorded-flights-checkbox">Recorded Flights</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
             </form>
             <br>
         </div>
@@ -598,6 +640,7 @@
 <script src="scripts/wall.js"></script>
 <script src="scripts/editProfile.js"></script>
 <script src="scripts/userProfile.js"></script>
+<script src="scripts/preferences.js"></script>
 
 <script src="scripts/bindEvents.js"></script>
 </body>

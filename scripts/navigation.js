@@ -59,6 +59,10 @@ function showReauthUserView() {
     showView("reauthUserView");
 }
 
+function showPreferencesView() {
+    showView("preferencesView");
+}
+
 
 function showView(view) {
     $(window).unbind('scroll');

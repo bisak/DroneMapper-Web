@@ -59,6 +59,7 @@ $(document).ready(function () {
             $(".loggedInUserAvatarContainer").show();
             $(".loggedInUserBadge").show();
             setUserGreeting();
+            loadUserPreferences();
         } else {
             $(".loginViewButton").show();
             $(".registerViewButton").show();

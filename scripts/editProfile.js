@@ -91,12 +91,11 @@ function editUserProfile() {
     dbRef.child("users/" + userId).update(newUserData).then(registerDataSuccess).catch(registerDataError);
     function registerDataSuccess(data) {
         showSuccessAlert("Data Edit Success.")
-        setUserGreeting()
+        setUserGreeting();
     }
 
     function registerDataError(error) {
         showErrorAlert(error.message);
         console.log(error);
     }
-
 }

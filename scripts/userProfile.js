@@ -20,8 +20,9 @@ function loadUserProfileInfo(userId) {
         $(".userProfileDrones").text(drones);
         $("#userProfileSharedPhotosText").text("Shared photos by " + username);
         if (userId == firebase.auth().currentUser.uid) {
-            let profileEditButton = $(`<a class="waves-effect waves-light btn">Edit Profile</a>`).css("margin-bottom", "10px").click(showReauthUserView);
-            $(".userProfileInfoHolder").append(profileEditButton);
+            let profileEditButton = $(`<a class="waves-effect waves-light btn">Edit Profile</a>`).css("margin-bottom", "10px").css("margin-right", "2%").click(showReauthUserView);
+            let preferencesOpenButton = $(`<a class="waves-effect waves-light btn">Preferences</a>`).css("margin-bottom", "10px").css("margin-left", "2%").click(showPreferencesView);
+            $(".userProfileInfoHolder").append(profileEditButton).append(preferencesOpenButton);
         }
         showUserView();
     }
