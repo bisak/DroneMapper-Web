@@ -24,7 +24,7 @@ function registerUser() {
     }
 
     function registerSuccess(user) {
-        let uid = user.uid;
+        let userId = user.uid;
         let userData = {
             name: firstName + " " + lastName,
             username: username,
@@ -32,7 +32,7 @@ function registerUser() {
             avatar: avatar,
             dateRegistered: getTimeNow()
         };
-        dbRef.child("users/" + uid).set(userData).then(registerDataSuccess).catch(registerDataError);
+        dbRef.child("users/" + userId).set(userData).then(registerDataSuccess).catch(registerDataError);
 
         function registerDataSuccess(data) {
             $("#registerForm").trigger("reset");

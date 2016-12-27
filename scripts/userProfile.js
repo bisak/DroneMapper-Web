@@ -78,3 +78,12 @@ function loadUserProfileImages(userId) {
         }
     }
 }
+
+function setEditAvatar(evt) {
+    let resize = new window.resize();
+    let file = evt.target.files[0];
+    resize.photo(file, 200, 'dataURL', avatarResizeSuccess);
+    function avatarResizeSuccess(resizedImage) {
+        $("#edit-user-avatar").attr("src", resizedImage);
+    }
+}

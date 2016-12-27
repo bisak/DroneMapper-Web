@@ -37,7 +37,6 @@ $(document).ready(function () {
     }
     firebase.initializeApp(config);
 
-
     let auth = firebase.auth();
     auth.onAuthStateChanged(handleStateChanged);
 
