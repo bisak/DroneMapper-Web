@@ -41,7 +41,7 @@ function getWallEntryToRender(currentImage, imageId) {
     let imageElement = $(`<img class="responsive-img z-depth-2 gallery-image" src="${currentImage.url}"><br>`).click(function () {
         openImageInShare(imageId, uploaderId);
     });
-    let uploaderHolder = $(`<div class="wallUser chip blue darken-2 z-depth-1"></div>`).click(function () {
+    let uploaderHolder = $(`<div class="wallUser chip blue darken-3 z-depth-1"></div>`).click(function () {
         loadUserProfile(uploaderId);
     });
 
@@ -69,7 +69,7 @@ function getWallEntryToRender(currentImage, imageId) {
             data = data.val();
             let uploaderData =
                 `<img class="wallAvatarImage" src="${data.avatar || getDefaultAvatar()}">
-                 <span class="wallUsernameContainer">${escape(data.username)}</span>`;
+                 <span class="wallUsernameContainer white-text">${escape(data.username)}</span>`;
             holder.append(uploaderData);
         }
     }

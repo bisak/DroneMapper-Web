@@ -2,10 +2,10 @@
 function showHomeView() {
     showView("homeView");
     initMap();
-    realtimeFlightsVisualize();
+
     let user = firebase.auth().currentUser;
     if (user) {
-        loadImagesOnMap()
+        handleUserPreferences();
     }
 }
 

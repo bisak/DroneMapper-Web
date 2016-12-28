@@ -83,6 +83,14 @@ function setUserGreeting() {
         data = data.val();
         $("#loggedInUserAvatar").attr("src", data.avatar);
         $("#loggedInUserUsername").text(data.username);
+        sessionStorage.setItem("currentUserUsername", data.username);
     }
+}
+
+function getShareImageURLElement(image) {
+    return `<div class="shareUrlHolder">
+                <p>URL</p>
+                <input disabled type="text" class="grey-text shareUrl active">
+            </div>`;
 }
 

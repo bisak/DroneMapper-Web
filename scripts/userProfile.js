@@ -12,12 +12,13 @@ function loadUserProfileInfo(userId) {
         let avatar = data.avatar;
         let name = data.name;
         let username = data.username;
-        let drones = data.drones.join(', ');
+        let drones = data.drones;
+        drones = drones.map((drone, index) => `${index + 1}. ${escape(drone)}`).join("<br>");
 
         $(".userProfileInfoHolder").find(".btn").remove();
         $(".userProfileAvatar").attr("src", avatar || getDefaultAvatar());
         $(".userProfileUsername").text(`${name} (${username})`);
-        $(".userProfileDrones").text(drones);
+        $(".userProfileDrones").html(drones);
         $("#userProfileSharedPhotosText").text("Shared photos by " + username);
         if (userId == firebase.auth().currentUser.uid) {
             let profileEditButton = $(`<a class="waves-effect waves-light btn">Edit Profile</a>`).css("margin-bottom", "10px").css("margin-right", "2%").click(showReauthUserView);
@@ -31,7 +32,7 @@ function loadUserProfileInfo(userId) {
 function loadUserProfileImages(userId) {
     let dbRef = firebase.database().ref();
     $(".user-shared-images").empty();
-    dbRef.child("images/" + userId).orderByChild("isSharedOnWall").equalTo(1).once('value', renderImages);
+    dbRef.child("sharedImagesOnWall/").orderByChild("uploaderId").equalTo(userId).once('value', renderImages);
     function renderImages(imagesData) {
         let images = imagesData.val();
         let uploaderId = imagesData.key;

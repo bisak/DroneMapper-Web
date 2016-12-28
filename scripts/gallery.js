@@ -126,17 +126,9 @@ function deleteImage(image, imageId, button) {
     }
 }
 
-function getShareImageURLElement(image) {
-    return `<div class="shareUrlHolder">
-                <p>URL</p>
-                <input disabled type="text" class="grey-text shareUrl active">
-            </div>`;
-}
-
-
 function handleShareImageOnWall(image, imageId, button) {
     let dbRef = firebase.database().ref();
-    let uid = firebase.auth().currentUser.uid;
+    let userId = firebase.auth().currentUser.uid;
 
     if (image.isSharedOnWall) {
         removeImageFromWall(image, imageId, button);
@@ -146,9 +138,10 @@ function handleShareImageOnWall(image, imageId, button) {
 
     function shareImageOnWall(image, imageId, button) {
         image.uploaderId = firebase.auth().currentUser.uid;
+        image.uploaderUsername = sessionStorage.getItem("currentUserUsername");
 
         dbRef.child("/sharedImagesOnWall/" + imageId).set(image).then(imageShareSuccess).catch(handleImageShareError);
-        dbRef.child("/images/" + uid + "/" + imageId).update({isSharedOnWall: 1}).catch(handleImageShareError);
+        dbRef.child("/images/" + userId + "/" + imageId).update({isSharedOnWall: 1}).catch(handleImageShareError);
 
         function imageShareSuccess() {
             image.isSharedOnWall = 1;
@@ -168,7 +161,7 @@ function handleShareImageOnWall(image, imageId, button) {
 
     function removeImageFromWall(image, imageId, button) {
         dbRef.child("/sharedImagesOnWall/" + imageId).remove().then(imageRemoveFromWallSuccess).catch(handleImageShareError);
-        dbRef.child("/images/" + uid + "/" + imageId).update({isSharedOnWall: 0}).catch(handleImageShareError);
+        dbRef.child("/images/" + userId + "/" + imageId).update({isSharedOnWall: 0}).catch(handleImageShareError);
 
         function imageRemoveFromWallSuccess() {
             image.isSharedOnWall = 0;

@@ -13,7 +13,7 @@ function initMap() {
         "Light": L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Light'}),
         "Satelite": L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Satelite'}),
         "Satelite Streets": L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Satelite Streets'}),
-        "OpenStreetMap": L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://openstreetmap.org">оpenStreetMap</a> оpenStreetMap'})
+        "OpenStreetMap": L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a>'})
     };
     /*Make map responsive*/
     $(window).resize(function () {
@@ -35,75 +35,83 @@ function initMap() {
     map.setMaxBounds([[90, -180], [-90, 180]]);
 }
 
-function loadImagesOnMap() {
+function loadGalleryImagesOnMap() {
     let dbRef = firebase.database().ref();
     let user = firebase.auth().currentUser;
     let uid = user.uid;
     dbRef.child("images/" + uid).once('value', loadImagesSuccess);
-    /*TODO fix with once value*/
 
     function loadImagesSuccess(data) {
         let images = data.val();
-        let uploaderId = data.key;
 
         let markerIcon = new L.Icon.Default();
         markerIcon.options.shadowSize = [0, 0];
 
         for (let image in images) {
-            let displayString = getStringToDisplay(images[image], image, uploaderId);
+            let displayString = getStringToDisplay(images[image]);
             let imageLat = images[image].lat;
             let imageLong = images[image].longt;
 
             L.marker([imageLat, imageLong], {icon: markerIcon})
-                .bindPopup(displayString, {
-                    autoPanPadding: L.point(20, 20),
-                })
+                .bindPopup(displayString)
                 .addTo(map);
         }
 
-        function getStringToDisplay(image, imageId, uploaderId) {
+        function getStringToDisplay(image) {
             let imageUrl = image.url;
-            let imageName = image.name;
             let imageWidth = Math.round($(window).width() / 2);
 
-            let container = $("<div>")
-            let imageToDisplay = $(`<img class='materialboxed z-depth-2' width="${imageWidth}" src=${imageUrl}>`);
+            let imageToDisplay = `<blockquote class="z-depth-1 blue-grey darken-2">
+                                        <h5 class="white-text"><strong>Gallery Picture</strong></h5>
+                                   </blockquote>
+                                   <img class='materialboxed z-depth-2' width="${imageWidth}" src=${imageUrl}>`;
 
-            /*TODO fix this. Doesn't work because it's converted to string.*/
-            let showMoreButton = $(`<a class="mapExtraButton btn-floating waves-effect waves-light green accent-4">
-                <i class="material-icons">view_list</i></a>`).click(function () {
-            });
-
-            container/*.append(showMoreButton)*/.append(imageToDisplay);
-            return container[0].outerHTML;
+            return imageToDisplay;
         }
     }
 }
 
-/*Fix this method */
-function realtimeFlightsVisualize() {
+function loadWallImagesOnMap() {
+    let user = firebase.auth().currentUser;
+    let dbRef = firebase.database().ref();
+
+    dbRef.child("sharedImagesOnWall/").once('value', loadImagesSuccess);
+    function loadImagesSuccess(data) {
+        let images = data.val();
+        let markerIcon = new L.Icon.Default();
+        markerIcon.options.shadowSize = [0, 0];
+        for (let image in images) {
+            let displayString = getStringToDisplay(images[image]);
+            let imageLat = images[image].lat;
+            let imageLong = images[image].longt;
+
+            L.marker([imageLat, imageLong], {icon: markerIcon})
+                .bindPopup(displayString)
+                .addTo(map);
+        }
+        function getStringToDisplay(image) {
+            let imageUrl = image.url;
+            let imageWidth = Math.round($(window).width() / 2);
+
+            let imageToDisplay = `<blockquote class="z-depth-1 blue-grey darken-2">
+                                        <h5 class="white-text"><strong>Shared Picture</strong></h5>
+                                        <h6 class="white-text">by: <strong>${escape(image.uploaderUsername)}</strong></h6>
+                                   </blockquote>
+                                   <img class='materialboxed z-depth-2' width="${imageWidth}" src=${imageUrl}>`;
+
+            return imageToDisplay;
+        }
+    }
+}
+
+/*TODO fix */
+function handleRealtimeFlights() {
     let dbRef = firebase.database().ref();
     let realtimeFlightsRef = dbRef.child("realtime-flights");
-    let savedFlightsRef = dbRef.child("saved-flights");
     let droneIcon = L.icon({
         iconUrl: 'styles/images/drone-hdg.png',
         iconSize: [28, 28],
         iconAnchor: [14, 14],
-    });
-
-    savedFlightsRef.on('child_added', function (snapshotOne) {
-        let polyline = new L.Polyline([], {
-            color: 'orange',
-            weight: 3,
-            opacity: 1,
-            smoothFactor: 0,
-        });
-        savedFlightsRef.child(snapshotOne.key).on('child_added', function (snapshotTwo) {
-            let droneLat = snapshotTwo.val().latitude;
-            let droneLng = snapshotTwo.val().longitude;
-            polyline.addLatLng([droneLat, droneLng]);
-        });
-        map.addLayer(polyline);
     });
 
     realtimeFlightsRef.on('child_added', function (snapshotOne) {
@@ -123,6 +131,26 @@ function realtimeFlightsVisualize() {
             drone.remove();
         });
         drone.addTo(map);
+    });
+}
+
+function handleSavedFlights() {
+    let dbRef = firebase.database().ref();
+    let savedFlightsRef = dbRef.child("saved-flights");
+
+    savedFlightsRef.on('child_added', function (snapshotOne) {
+        let polyline = new L.Polyline([], {
+            color: 'orange',
+            weight: 3,
+            opacity: 1,
+            smoothFactor: 0,
+        });
+        savedFlightsRef.child(snapshotOne.key).on('child_added', function (snapshotTwo) {
+            let droneLat = snapshotTwo.val().latitude;
+            let droneLng = snapshotTwo.val().longitude;
+            polyline.addLatLng([droneLat, droneLng]);
+        });
+        map.addLayer(polyline);
     });
 }
 

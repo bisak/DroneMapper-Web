@@ -5,8 +5,8 @@ function logoutUser() {
 
     function logoutSuccess () {
         showSuccessAlert("Logout success");
-        $("input").val("");
-        isAppInitialized = false;
+        sessionStorage.removeItem("currentUserUsername");
+        showHomeView();
     }
 
     function logoutError(error) {

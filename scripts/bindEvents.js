@@ -13,6 +13,7 @@ $(document).ready(function () {
     $(".loggedInUserBadge, .loggedInUserAuthBackButton").click(function () {
         loadUserProfile();
     });
+    $(".confirm-preferences").click(confirmPreferences)
     $(".edit-user-confirm").click(editUserProfile);
     $(".loggedInUserEditProfileButton").click();
     $('.loggedInUserAuthConfirmButton').click(reauthLoggedInUser);

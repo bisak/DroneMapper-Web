@@ -1,5 +1,4 @@
 function registerUser() {
-
     let auth = firebase.auth();
     let dbRef = firebase.database().ref();
 
@@ -24,30 +23,41 @@ function registerUser() {
     }
 
     function registerSuccess(user) {
+        setAdditionalData(user);
+    }
+
+    function registerError(error) {
+        showErrorAlert(error.message)
+        console.log(error)
+    }
+
+    function setAdditionalData(user) {
         let userId = user.uid;
         let userData = {
             name: firstName + " " + lastName,
             username: username,
             drones: drones,
             avatar: avatar,
-            dateRegistered: getTimeNow()
+            dateRegistered: getTimeNow(),
+            preferences: {
+                showGalleryImages: true,
+                showRealtimeFlights: true,
+                showSavedFlights: true,
+                showWallImages: true
+            }
         };
         dbRef.child("users/" + userId).set(userData).then(registerDataSuccess).catch(registerDataError);
 
         function registerDataSuccess(data) {
             $("#registerForm").trigger("reset");
-            showSuccessAlert("Register success.")
+            showSuccessAlert("Register success.");
+            showHomeView();
         }
 
         function registerDataError(error) {
             showErrorAlert(error.message);
             console.log(error);
         }
-    }
-
-    function registerError(error) {
-        showErrorAlert(error.message)
-        console.log(error)
     }
 }
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/> <!--, maximum-scale=1.0-->
     <title>DroneMapper</title>
     <link href="styles/images/favicon.png" rel="icon" type="image/x-icon">
 
@@ -16,6 +16,7 @@
 
 </head>
 <body>
+
 <nav class="blue darken-3" role="navigation">
     <div class="nav-wrapper container">
         <a id="logo-container" href="/" class="brand-logo"><img id="logo" src="styles/images/logo.png">DroneMapper</a>
@@ -28,10 +29,10 @@
             <li><a href="#" class="registerViewButton">Register</a></li>
             <li><a href="#" class="logoutButton">Log out</a></li>
             <li class="loggedInUserAvatarContainer">
-                <div class="loggedInUserBadge chip blue darken-2 z-depth-1">
+                <div class="loggedInUserBadge chip blue darken-3 z-depth-3">
                     <img id="loggedInUserAvatar"
                          src="styles/images/sample-avatar.png">
-                    <span id="loggedInUserUsername">&nbsp;</span>
+                    <span class="white-text" id="loggedInUserUsername">&nbsp;</span>
                 </div>
             </li>
         </ul>
@@ -50,6 +51,7 @@
 </nav>
 
 <main>
+
     <section id="homeView">
         <div class="section no-pad">
             <div id="homeMap">
@@ -60,13 +62,6 @@
 
     <section id="wallView">
         <div class="container">
-            <!--<div>
-                <br>
-                <h3 class="center">Wall</h3>
-                <div id="topDividerWall" class="divider green"></div>
-                <br>
-            </div>-->
-
             <br>
             <div class="section">
                 <div class="wall-images">
@@ -98,12 +93,6 @@
 
     <section id="editImageView">
         <div class="container">
-            <!--<div class="row">
-                <br>
-                <h3 class="center">Edit Picture</h3>
-                <div id="topDividerEditImage" class="divider green"></div>
-            </div>-->
-
             <div class="section">
                 <div class="row">
                     <form id="editImageForm" class="col s12 m10 offset-m1 z-depth-1">
@@ -187,14 +176,16 @@
                     <div class="row">
                         <form id="uploadImageForm" class="col s10 offset-s1 z-depth-1">
                             <h3 class="center">Upload Pictures</h3>
-
+                            <div class="divider col s10 offset-s1"></div>
+                            <br>
+                            <br>
                             <div class="file-field input-field col s10 offset-s1">
                                 <div class="btn teal">
                                     <span>Select</span>
                                     <input id="uploadSlector" type="file" multiple>
                                 </div>
                                 <div class="file-path-wrapper">
-                                    <input class="file-path validate" type="text" placeholder="Upload picture(s)">
+                                    <input class="file-path validate" type="text" placeholder="Picture(s)">
                                 </div>
                             </div>
                             <div class="bars col s10 m8 l8 offset offset-m2 offset-l2">
@@ -502,13 +493,13 @@
                         <div class="row" style="margin: 10px;">
                             <p>
                                 <input type="checkbox" id="gallery-pictures-checkbox"/>
-                                <label for="gallery-pictures-checkbox"">Gallery Pictures</label>
+                                <label for="gallery-pictures-checkbox" class="black-text">Gallery Pictures</label>
                             </p>
                         </div>
                         <div class="row" style="margin: 10px;">
                             <p>
-                                <input type="checkbox" id="wall-pictures-checkbox""/>
-                                <label for="wall-pictures-checkbox">Wall Pictures</label>
+                                <input type="checkbox" id="wall-pictures-checkbox"/>
+                                <label for="wall-pictures-checkbox" class="black-text">Wall Pictures</label>
                             </p>
                         </div>
                     </div>
@@ -518,16 +509,19 @@
                         <div class="row" style="margin: 10px;">
                             <p>
                                 <input type="checkbox" id="realtime-flights-checkbox"/>
-                                <label for="realtime-flights-checkbox">Realtime Flights</label>
+                                <label for="realtime-flights-checkbox" class="black-text">Realtime Flights</label>
                             </p>
                         </div>
                         <div class="row" style="margin: 10px;">
                             <p>
                                 <input type="checkbox" id="recorded-flights-checkbox"/>
-                                <label for="recorded-flights-checkbox">Recorded Flights</label>
+                                <label for="recorded-flights-checkbox" class="black-text">Recorded Flights</label>
                             </p>
                         </div>
                     </div>
+                </div>
+                <div class="center">
+                    <a class="waves-effect waves-light btn confirm-preferences">Confirm</a>
                 </div>
                 <br>
                 <br>
@@ -562,12 +556,6 @@
 
     <section id="sharedImageView">
         <div class="container">
-            <!--<div class="row">
-                <br>
-                <h3 class="center">Shared Picture</h3>
-                <div id="topDividerSharedImage" class="divider green"></div>
-            </div>-->
-
             <div class="section">
                 <div class="row">
                     <form id="sharedImageForm" class="col s12 z-depth-1">

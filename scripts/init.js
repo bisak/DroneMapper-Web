@@ -39,7 +39,6 @@ $(document).ready(function () {
 
     let auth = firebase.auth();
     auth.onAuthStateChanged(handleStateChanged);
-
     function handleStateChanged(user) {
         let sharedImageId = getParameterByName("sharedImage");
         if (sharedImageId && !isAppInitialized) {
@@ -49,6 +48,7 @@ $(document).ready(function () {
             isAppInitialized = true;
             showHomeView();
         }
+
         $("nav ul li a").hide();
         $(".homeViewButton").show();
         if (user) {
@@ -59,12 +59,10 @@ $(document).ready(function () {
             $(".loggedInUserAvatarContainer").show();
             $(".loggedInUserBadge").show();
             setUserGreeting();
-            loadUserPreferences();
         } else {
             $(".loginViewButton").show();
             $(".registerViewButton").show();
             $(".loggedInUserAvatarContainer").hide();
-            isAppInitialized = false;
         }
     }
 });

@@ -8,6 +8,7 @@ function loginUser() {
 
     function loginSuccess(data) {
         showSuccessAlert("Logged in");
+        showHomeView();
         $("#loginForm").trigger("reset");
     }
 
