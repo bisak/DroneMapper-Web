@@ -52,6 +52,8 @@ function editUserProfile() {
         newDrones.push($(sel).text());
     });
 
+    if(newDrones.length == 0) newDrones = ["No Drones"];
+
     if (user.email != newEmail) {
         user.updateEmail(newEmail).then(emailUpdateSuccess).catch(emailUpdateError);
         function emailUpdateSuccess() {

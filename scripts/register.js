@@ -14,6 +14,8 @@ function registerUser() {
         drones.push($(sel).text());
     });
 
+    if (drones.length == 0) drones = ["No Drones"];
+
     if (password === passwordConfirm && firstName != "" && lastName != "" && email != "") {
         auth.createUserWithEmailAndPassword(email, password)
             .then(registerSuccess)

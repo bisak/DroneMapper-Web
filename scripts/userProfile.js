@@ -35,8 +35,8 @@ function loadUserProfileImages(userId) {
     dbRef.child("sharedImagesOnWall/").orderByChild("uploaderId").equalTo(userId).once('value', renderImages);
     function renderImages(imagesData) {
         let images = imagesData.val();
-        let uploaderId = imagesData.key;
         for (let image in images) {
+            let uploaderId = images[image].uploaderId;
             let entryToRender = getUserSharedImageEntryToRender(images[image], image, uploaderId);
             $(".user-shared-images").append(entryToRender);
             $('.materialboxed').materialbox();
