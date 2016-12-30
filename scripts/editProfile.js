@@ -1,17 +1,25 @@
-function reauthLoggedInUser() {
+function reauthLoggedInUser(password) {
     let user = firebase.auth().currentUser;
-    let currentPassword = $("#reauth-user-password").val();
-    let credentials = firebase.auth.EmailAuthProvider.credential(user.email, currentPassword);
+    let credentials = firebase.auth.EmailAuthProvider.credential(user.email, password);
     user.reauthenticate(credentials).then(reauthSuccess).catch(reauthError);
+
     function reauthSuccess() {
-        $("#reauth-user-password").val("");
-        initEditProfileView();
+        editUserProfile();
     }
 
     function reauthError(error) {
         showErrorAlert("Authentication error. <br>" + error.code);
         console.log(error)
     }
+}
+
+function promptReauth() {
+    alertify.prompt('Authenticate', 'Enter current password', ''
+        , function (evt, password) {
+            reauthLoggedInUser(password);
+        }, function () {
+        }).set('type', 'password');
+    $(".ajs-input").height("15px");
 }
 
 function initEditProfileView() {
@@ -52,7 +60,7 @@ function editUserProfile() {
         newDrones.push($(sel).text());
     });
 
-    if(newDrones.length == 0) newDrones = ["No Drones"];
+    if (newDrones.length == 0) newDrones = ["No Drones"];
 
     if (user.email != newEmail) {
         user.updateEmail(newEmail).then(emailUpdateSuccess).catch(emailUpdateError);
@@ -91,13 +99,22 @@ function editUserProfile() {
     };
 
     dbRef.child("users/" + userId).update(newUserData).then(registerDataSuccess).catch(registerDataError);
-    function registerDataSuccess(data) {
-        showSuccessAlert("Data Edit Success.")
+    function registerDataSuccess() {
+        showSuccessAlert("Data Edit Success.");
         setUserGreeting();
     }
 
     function registerDataError(error) {
         showErrorAlert(error.message);
         console.log(error);
+    }
+}
+
+function setEditAvatar(evt) {
+    let resize = new window.resize();
+    let file = evt.target.files[0];
+    resize.photo(file, 200, 'dataURL', avatarResizeSuccess);
+    function avatarResizeSuccess(resizedImage) {
+        $("#edit-user-avatar").attr("src", resizedImage);
     }
 }

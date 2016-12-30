@@ -161,3 +161,13 @@ function makeImageOnMapEnlargeable() {
     }, 10)
 }
 
+function handleMapContent() {
+    let user = firebase.auth().currentUser;
+    if (user) {
+        handleUserPreferences();
+    }else{
+        handleRealtimeFlights();
+        handleSavedFlights();
+        loadWallImagesOnMap();
+    }
+}

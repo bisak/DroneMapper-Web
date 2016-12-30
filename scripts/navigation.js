@@ -2,11 +2,7 @@
 function showHomeView() {
     showView("homeView");
     initMap();
-
-    let user = firebase.auth().currentUser;
-    if (user) {
-        handleUserPreferences();
-    }
+    handleMapContent();
 }
 
 function showGalleryView() {
@@ -53,10 +49,6 @@ function showSharedImageView(id) {
 
 function showEditProfileView() {
     showView("editProfileView");
-}
-
-function showReauthUserView() {
-    showView("reauthUserView");
 }
 
 function showPreferencesView() {

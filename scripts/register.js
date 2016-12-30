@@ -1,7 +1,7 @@
 function registerUser() {
     let auth = firebase.auth();
     let dbRef = firebase.database().ref();
-
+    let dataIsValid = true;
     let firstName = $("#register-firstName").val().trim();
     let lastName = $("#register-lastName").val().trim();
     let username = $("#register-username").val().trim();
@@ -16,12 +16,18 @@ function registerUser() {
 
     if (drones.length == 0) drones = ["No Drones"];
 
-    if (password === passwordConfirm && firstName != "" && lastName != "" && email != "") {
-        auth.createUserWithEmailAndPassword(email, password)
-            .then(registerSuccess)
-            .catch(registerError);
-    } else {
-        showErrorAlert("Invalid data.");
+    if (password !== passwordConfirm) {
+        showErrorAlert("Passwords didn't match.");
+        dataIsValid = false;
+    }
+
+    if (firstName == "" || lastName == "" || email == "" || username == "") {
+        showErrorAlert("Please fill all fields.");
+        dataIsValid = false;
+    }
+
+    if (dataIsValid) {
+        auth.createUserWithEmailAndPassword(email, password).then(registerSuccess).catch(registerError);
     }
 
     function registerSuccess(user) {
@@ -29,8 +35,8 @@ function registerUser() {
     }
 
     function registerError(error) {
-        showErrorAlert(error.message)
-        console.log(error)
+        showErrorAlert(error.message);
+        console.log(error);
     }
 
     function setAdditionalData(user) {
@@ -43,7 +49,7 @@ function registerUser() {
             dateRegistered: getTimeNow(),
             preferences: {
                 showGalleryImages: true,
-                showRealtimeFlights: true,
+                showRealimeFlights: true,
                 showSavedFlights: true,
                 showWallImages: true
             }
@@ -66,7 +72,7 @@ function registerUser() {
 function setAvatar(evt) {
     let resize = new window.resize();
     let file = evt.target.files[0];
-    resize.photo(file, 200, 'dataURL', avatarResizeSuccess);
+    resize.photo(file, 250, 'dataURL', avatarResizeSuccess);
     function avatarResizeSuccess(resizedImage) {
         $("#register-avatar").attr("src", resizedImage);
     }

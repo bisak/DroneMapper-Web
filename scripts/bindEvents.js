@@ -14,8 +14,7 @@ $(document).ready(function () {
         loadUserProfile();
     });
     $(".confirm-preferences").click(confirmPreferences)
-    $(".edit-user-confirm").click(editUserProfile);
-    $(".loggedInUserEditProfileButton").click();
+    $(".edit-user-confirm").click(promptReauth);
     $('.loggedInUserAuthConfirmButton').click(reauthLoggedInUser);
     $("#editImage-back").click(showGalleryView);
     $("#editImage-confirm").click(editImage);

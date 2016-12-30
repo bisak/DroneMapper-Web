@@ -13,7 +13,7 @@ function loadUserProfileInfo(userId) {
         let name = data.name;
         let username = data.username;
         let drones = data.drones;
-        drones = drones.map((drone, index) => `${index + 1}. ${escape(drone)}`).join("<br>");
+        drones = drones.map((drone, index) => `${index + 1} &rarr;  ${escape(drone)}`).join("<br>");
 
         $(".userProfileInfoHolder").find(".btn").remove();
         $(".userProfileAvatar").attr("src", avatar || getDefaultAvatar());
@@ -21,7 +21,7 @@ function loadUserProfileInfo(userId) {
         $(".userProfileDrones").html(drones);
         $("#userProfileSharedPhotosText").text("Shared photos by " + username);
         if (userId == firebase.auth().currentUser.uid) {
-            let profileEditButton = $(`<a class="waves-effect waves-light btn">Edit Profile</a>`).css("margin-bottom", "10px").css("margin-right", "2%").click(showReauthUserView);
+            let profileEditButton = $(`<a class="waves-effect waves-light btn">Edit Profile</a>`).css("margin-bottom", "10px").css("margin-right", "2%").click(initEditProfileView);
             let preferencesOpenButton = $(`<a class="waves-effect waves-light btn">Preferences</a>`).css("margin-bottom", "10px").css("margin-left", "2%").click(showPreferencesView);
             $(".userProfileInfoHolder").append(profileEditButton).append(preferencesOpenButton);
         }
@@ -78,14 +78,5 @@ function loadUserProfileImages(userId) {
 
             return buttonsHolder;
         }
-    }
-}
-
-function setEditAvatar(evt) {
-    let resize = new window.resize();
-    let file = evt.target.files[0];
-    resize.photo(file, 200, 'dataURL', avatarResizeSuccess);
-    function avatarResizeSuccess(resizedImage) {
-        $("#edit-user-avatar").attr("src", resizedImage);
     }
 }
