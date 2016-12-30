@@ -102,22 +102,19 @@ function deleteImage(image, imageId, button) {
     let dbRef = firebase.database().ref();
     let uid = firebase.auth().currentUser.uid;
 
-    dbRef.child("/images/" + uid + "/" + imageId).remove().then(removeImageFromDBSuccess).catch(removeImageError);
-    dbRef.child("/sharedImagesOnWall/" + imageId).remove();
-    storageRef.child('thumbnails/' + uid + "/" + imageId).delete().then(deleteThumbnailSuccess).catch(removeImageError);
-    storageRef.child('images/' + uid + "/" + imageId).delete().then(deleteImageSuccess).catch(removeImageError);
+    let removeImagePromise = dbRef.child("/images/" + uid + "/" + imageId).remove();
+    let removeThumbnailPromise = dbRef.child("/sharedImagesOnWall/" + imageId).remove();
+    let removeImageStoragePromise = storageRef.child('images/' + uid + "/" + imageId).delete();
+    let removeThumbnailStoragePromise = storageRef.child('thumbnails/' + uid + "/" + imageId).delete();
 
-    function removeImageFromDBSuccess(image) {
+    Promise.all([removeImagePromise, removeThumbnailPromise, removeImageStoragePromise, removeThumbnailStoragePromise])
+        .then(removeImageFromDBSuccess).catch(removeImageError);
+
+    function removeImageFromDBSuccess() {
         showSuccessAlert("Successfully deleted image.");
         $(button).parent().parent().fadeOut(333, function () {
             $(this).remove();
         });
-    }
-
-    function deleteThumbnailSuccess(image) {
-    }
-
-    function deleteImageSuccess(image) {
     }
 
     function removeImageError(error) {
@@ -140,13 +137,14 @@ function handleShareImageOnWall(image, imageId, button) {
         image.uploaderId = firebase.auth().currentUser.uid;
         image.uploaderUsername = sessionStorage.getItem("currentUserUsername");
 
-        dbRef.child("/sharedImagesOnWall/" + imageId).set(image).then(imageShareSuccess).catch(handleImageShareError);
-        dbRef.child("/images/" + userId + "/" + imageId).update({isSharedOnWall: 1}).catch(handleImageShareError);
+        let sharedOnWall = dbRef.child("/sharedImagesOnWall/" + imageId).set(image);
+        let updatedInDir = dbRef.child("/images/" + userId + "/" + imageId).update({isSharedOnWall: 1});
+
+        Promise.all([sharedOnWall, updatedInDir]).then(imageShareSuccess).catch(handleImageShareError);
 
         function imageShareSuccess() {
             image.isSharedOnWall = 1;
             $(button).addClass("lighten-4");
-            console.log("here")
             $(button).click(function () {
                 let button = this;
                 alertify.confirm('Confirm', `Remove picture from wall - <strong>${escape(image.name)}</strong>`, function () {
@@ -154,14 +152,15 @@ function handleShareImageOnWall(image, imageId, button) {
                 }, function () {
                 });
             });
-
             showSuccessAlert('Image shared to wall.');
         }
     }
 
     function removeImageFromWall(image, imageId, button) {
-        dbRef.child("/sharedImagesOnWall/" + imageId).remove().then(imageRemoveFromWallSuccess).catch(handleImageShareError);
-        dbRef.child("/images/" + userId + "/" + imageId).update({isSharedOnWall: 0}).catch(handleImageShareError);
+        let removedFromWall = dbRef.child("/sharedImagesOnWall/" + imageId).remove();
+        let updatedInDir = dbRef.child("/images/" + userId + "/" + imageId).update({isSharedOnWall: 0});
+
+        Promise.all([removedFromWall, updatedInDir]).then(imageRemoveFromWallSuccess).catch(handleImageShareError)
 
         function imageRemoveFromWallSuccess() {
             image.isSharedOnWall = 0;
@@ -173,7 +172,6 @@ function handleShareImageOnWall(image, imageId, button) {
                 }, function () {
                 });
             });
-
             showSuccessAlert('Image removed from wall.');
         }
     }

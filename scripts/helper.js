@@ -57,9 +57,14 @@ function handleUnknownError(error) {
 }
 
 function getInfoCollectionElement(image, params = "") {
+    let usernameLi = ``;
+    if (image.hasOwnProperty("uploaderUsername")) {
+        usernameLi = `<li class="collection-item">Uploader: <strong>${escape(image.uploaderUsername)}</strong></li>`
+    }
     return `<ul class="collection with-header ${params} infoCollection">
                 <li class="collection-header"><h5>Picture Info</h5></li>
                 <li class="collection-item">Name: <strong>${escape(image.name)}</strong></li>
+                ${usernameLi}
                 <li class="collection-item">Description: <strong>${escape(image.description)}</strong></li>
                 <li class="collection-item">Date Taken: <strong>${escape(image.dateTaken)}</strong></li>
                 <li class="collection-item">Date Edited: <strong>${escape(image.dateEdited)}</strong></li>
@@ -94,3 +99,9 @@ function getShareImageURLElement(image) {
             </div>`;
 }
 
+function checkCB(id) {
+    $(id).attr("checked", "checked");
+}
+function unCheckCB(id) {
+    $(id).removeAttr("checked");
+}

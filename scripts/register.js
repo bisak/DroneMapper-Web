@@ -26,8 +26,10 @@ function registerUser() {
         dataIsValid = false;
     }
 
+
     if (dataIsValid) {
         auth.createUserWithEmailAndPassword(email, password).then(registerSuccess).catch(registerError);
+        dbRef.child("users/" + userId).set(userData).then(registerDataSuccess).catch(registerDataError);
     }
 
     function registerSuccess(user) {

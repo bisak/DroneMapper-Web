@@ -4,38 +4,33 @@ function handleUserPreferences() {
     dbRef.child("users/" + userId + "/preferences").once('value', getUserDataSuccess);
     function getUserDataSuccess(data) {
         data = data.val();
-        applyPreferences(data);
-    }
-
-    function applyPreferences(data) {
         if (data.showGalleryImages) {
             loadGalleryImagesOnMap();
-            $("#gallery-pictures-checkbox").attr("checked", "checked");
+            checkCB("#gallery-pictures-checkbox");
         } else {
-            $("#gallery-pictures-checkbox").removeAttr("checked");
+            unCheckCB("#gallery-pictures-checkbox");
         }
 
         if (data.showWallImages) {
             loadWallImagesOnMap();
-            $("#wall-pictures-checkbox").attr("checked", "checked");
+            checkCB("#wall-pictures-checkbox")
         } else {
-            $("#wall-pictures-checkbox").removeAttr("checked");
+            unCheckCB("#wall-pictures-checkbox")
         }
 
         if (data.showRealtimeFlights) {
             handleRealtimeFlights();
-            $("#realtime-flights-checkbox").attr("checked", "checked");
+            checkCB("#realtime-flights-checkbox")
         } else {
-            $("#realtime-flights-checkbox").removeAttr("checked");
+            unCheckCB("#realtime-flights-checkbox")
         }
 
         if (data.showSavedFlights) {
             handleSavedFlights();
-            $("#recorded-flights-checkbox").attr("checked", "checked");
+            checkCB("#recorded-flights-checkbox");
         } else {
-            $("#recorded-flights-checkbox").removeAttr("checked");
+            unCheckCB("#recorded-flights-checkbox")
         }
-
     }
 }
 
@@ -48,7 +43,7 @@ function confirmPreferences() {
         showWallImages: $("#wall-pictures-checkbox").is(":checked"),
         showRealtimeFlights: $("#realtime-flights-checkbox").is(":checked"),
         showSavedFlights: $("#recorded-flights-checkbox").is(":checked")
-    }
+    };
 
     dbRef.child("/users/" + userId + "/preferences").update(newPreferences).then(updatePreferencesSuccess).catch(updatePreferencesError);
 
