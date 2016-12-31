@@ -26,9 +26,8 @@ function showFaqView() {
     showView("faqView");
 }
 
-function showEditImageView(image, id) {
+function showEditImageView() {
     showView("editImageView");
-    setupEditImageView(image, id);
 }
 
 function showWallView() {
@@ -41,9 +40,8 @@ function showUserView() {
     $("html, body").animate({scrollTop: 0}, "fast");
 }
 
-function showSharedImageView(id) {
+function showSharedImageView() {
     showView("sharedImageView");
-    initSharedImageView(id);
     $("html, body").animate({scrollTop: 0}, "fast");
 }
 

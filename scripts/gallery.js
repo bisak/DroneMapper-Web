@@ -58,7 +58,7 @@ function getGalleryEntryToRender(currentImage, currentImageId, uploaderId) {
 
     let editButton = $(`<a href="#" class="btnGalleryExtra btn-floating waves-effect waves-light orange">
                 <i class="material-icons">edit</i></a>`).click(function () {
-        showEditImageView(currentImage, currentImageId);
+        setupEditImageView(currentImage, currentImageId);
     });
 
     let linkButton = $(`<a class="btnGalleryExtra btn-floating waves-effect waves-light blue">

@@ -16,11 +16,14 @@ function initMap() {
         "OpenStreetMap": L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a>'})
     };
     /*Make map responsive*/
-    $(window).resize(function () {
-        //$('#homeMap').css("height", Math.round($(window).height() / 1.3) + "px");
+
+    let resizeMapContainer = debounce (function () {
         $('#homeMap').animate({height: Math.round($(window).height() / 1.3) + "px"}, 500);
-    });
-    $(window).trigger("resize");
+        map.invalidateSize();
+    }, 333);
+
+    $(window).resize(resizeMapContainer);
+
 
     /*Create map and append it to body*/
     map = L.map('homeMap', {
@@ -33,6 +36,7 @@ function initMap() {
     map.zoomControl.setPosition('bottomright');
     L.control.layers(baseMaps).addTo(map);
     map.setMaxBounds([[90, -180], [-90, 180]]);
+    $(window).trigger("resize");
 }
 
 function loadGalleryImagesOnMap() {
@@ -165,7 +169,7 @@ function handleMapContent() {
     let user = firebase.auth().currentUser;
     if (user) {
         handleUserPreferences();
-    }else{
+    } else {
         handleRealtimeFlights();
         handleSavedFlights();
         loadWallImagesOnMap();

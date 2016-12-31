@@ -38,17 +38,16 @@ function getParameterByName(name, url) {
         results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
+    return atob(decodeURIComponent(results[2].replace(/\+/g, " ")));
 }
 
 function makeShareImageURL(imageId, dbParentKey) {
-    return `${window.location.origin + window.location.pathname}#?sharedImage=${dbParentKey}//${imageId}`;
+    return `${window.location.origin + window.location.pathname}#?sharedImage=${btoa(dbParentKey + "//" + imageId)}`;
 }
 
 function openImageInShare(imageId, uploaderId) {
-    window.location.href = makeShareImageURL(imageId, uploaderId);
-    let id = getParameterByName("sharedImage");
-    showSharedImageView(id);
+    let id = getParameterByName("sharedImage", makeShareImageURL(imageId, uploaderId));
+    initSharedImageView(id);
 }
 
 function handleUnknownError(error) {
@@ -99,9 +98,25 @@ function getShareImageURLElement(image) {
             </div>`;
 }
 
-function checkCB(id) {
+function checkCheckBox(id) {
     $(id).attr("checked", "checked");
 }
-function unCheckCB(id) {
+
+function unCheckCheckBox(id) {
     $(id).removeAttr("checked");
+}
+
+function debounce(func, wait, immediate) {
+    let timeout;
+    return function () {
+        let context = this, args = arguments;
+        let later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        let callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
 }

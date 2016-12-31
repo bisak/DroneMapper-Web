@@ -23,24 +23,24 @@ function initSharedImageView(id) {
                         ${getInfoCollectionElement(image)}
                     </div>
                     <div class="col s12 m6 l6 ">
-                        <div id="sharedImageMap">
+                        <div style="height: 500px;" id="sharedImageMap">
 
                         </div>
                     </div>
                 </div>
             </div>`);
 
-
         $("#sharedImageForm").append(entryToRender);
         $('.materialboxed').materialbox();
 
-        $(window).resize(function () {
+        let resizeShareMapContainer = debounce(function () {
             let infoSize = $(".sharedImageHolder .infoCollection").height();
             let infoMargin = $(".sharedImageHolder .infoCollection").css("margin");
             $("#sharedImageMap").height(infoSize);
             $("#sharedImageMap").css("margin", infoMargin);
-        });
-        $(window).trigger("resize");
+        }, 333);
+
+        $(window).resize(resizeShareMapContainer);
 
         let baseMaps = {
             "Outdoors": L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmlza2F6eiIsImEiOiJjaXJkOTFkb3owMDdxaTltZ21vemsxcGViIn0.70mwo4YYnbxY_BJoEsGYxw', {attribution: '&copy; <a href="https://www.mapbox.com">Mapbox</a> Outdoors'}),
@@ -61,7 +61,8 @@ function initSharedImageView(id) {
         });
         let imageDisplayString = `<img class='z-depth-2' width="${200}px" src=${image.url}>`;
         L.marker([lat, lng]).bindPopup(imageDisplayString).addTo(shareMap);
-
+        showSharedImageView();
+        resizeShareMapContainer();
+        shareMap.invalidateSize();
     }
-
 }

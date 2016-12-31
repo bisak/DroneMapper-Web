@@ -6,30 +6,30 @@ function handleUserPreferences() {
         data = data.val();
         if (data.showGalleryImages) {
             loadGalleryImagesOnMap();
-            checkCB("#gallery-pictures-checkbox");
+            checkCheckBox("#gallery-pictures-checkbox");
         } else {
-            unCheckCB("#gallery-pictures-checkbox");
+            unCheckCheckBox("#gallery-pictures-checkbox");
         }
 
         if (data.showWallImages) {
             loadWallImagesOnMap();
-            checkCB("#wall-pictures-checkbox")
+            checkCheckBox("#wall-pictures-checkbox")
         } else {
-            unCheckCB("#wall-pictures-checkbox")
+            unCheckCheckBox("#wall-pictures-checkbox")
         }
 
         if (data.showRealtimeFlights) {
             handleRealtimeFlights();
-            checkCB("#realtime-flights-checkbox")
+            checkCheckBox("#realtime-flights-checkbox")
         } else {
-            unCheckCB("#realtime-flights-checkbox")
+            unCheckCheckBox("#realtime-flights-checkbox")
         }
 
         if (data.showSavedFlights) {
             handleSavedFlights();
-            checkCB("#recorded-flights-checkbox");
+            checkCheckBox("#recorded-flights-checkbox");
         } else {
-            unCheckCB("#recorded-flights-checkbox")
+            unCheckCheckBox("#recorded-flights-checkbox")
         }
     }
 }

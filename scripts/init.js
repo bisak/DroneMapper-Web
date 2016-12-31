@@ -43,7 +43,7 @@ $(document).ready(function () {
         let sharedImageId = getParameterByName("sharedImage");
         if (sharedImageId && !isAppInitialized) {
             isAppInitialized = true;
-            showSharedImageView(sharedImageId);
+            initSharedImageView(sharedImageId);
         } else if (!isAppInitialized) {
             isAppInitialized = true;
             showHomeView();

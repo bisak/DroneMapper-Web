@@ -44,5 +44,6 @@ function setupEditImageView(image, id) {
     $("#editImage-dateTaken").val(image.dateTaken);
     $("#editImage-dateEdited").val(image.dateEdited);
     $("#editImage-dateUploaded").val(image.dateUploaded);
+    showEditImageView();
 }
 

@@ -57,12 +57,6 @@ function getWallEntryToRender(currentImage, imageId) {
 
     return row;
 
-    function openImageInShare(imageId, uploaderId) {
-        window.location.href = makeShareImageURL(imageId, uploaderId);
-        let sharedImageId = getParameterByName("sharedImage");
-        showSharedImageView(sharedImageId);
-    }
-
     function setUploaderAvatarAndUsername(uploaderId, holder) {
         dbRef.child("users/" + uploaderId).once('value', getDataSuccess);
         function getDataSuccess(data) {
