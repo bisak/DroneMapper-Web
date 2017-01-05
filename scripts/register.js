@@ -51,7 +51,7 @@ function registerUser() {
             dateRegistered: getTimeNow(),
             preferences: {
                 showGalleryImages: true,
-                showRealimeFlights: true,
+                showRealtimeFlights: true,
                 showSavedFlights: true,
                 showWallImages: true
             }
