@@ -124,7 +124,7 @@ function handleRealtimeFlights() {
             let droneLat = snapshotTwo.val().latitude;
             let droneLng = snapshotTwo.val().longitude;
             let droneHDG = snapshotTwo.val().heading;
-            let droneSpeed = snapshotTwo.val().speed;
+            let droneSpeed = snapshotTwo.val().horizSpeed;
             let droneAltitude = snapshotTwo.val().altitude;
             let displayDiv = `<div class="telemetryData">Speed: ${escape(droneSpeed)}<br><hr>Altitude: ${escape(droneAltitude)}</div>`;
             drone.bindPopup(displayDiv);
